@@ -1,0 +1,19 @@
+# Build folders
+bin/
+obj/
+.vs/
+
+# User files
+*.user
+*.suo
+*.cache
+*.log
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Build outputs
+*.dll
+*.exe
+*.pdb
