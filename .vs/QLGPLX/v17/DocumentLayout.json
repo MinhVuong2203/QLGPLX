@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\dal\\qlgplxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|solutionrelative:dal\\qlgplxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\dal\\qlgplxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|solutionrelative:dal\\qlgplxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,10 +31,10 @@
       "RelativeMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|solutionrelative:bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|Database{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|NewFolder1{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|Database{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,47 +44,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QLGPLXContext.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\QLGPLXContext.cs",
-              "RelativeDocumentMoniker": "DAL\\QLGPLXContext.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\QLGPLXContext.cs",
-              "RelativeToolTip": "DAL\\QLGPLXContext.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCUAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:38:38.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
-              "RelativeDocumentMoniker": "UI\\Program.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
-              "RelativeToolTip": "UI\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAIAzwAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:09:16.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BLL",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\BLL.csproj",
-              "RelativeDocumentMoniker": "BLL\\BLL.csproj",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\BLL.csproj",
-              "RelativeToolTip": "BLL\\BLL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-08T13:30:54.99Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -87,7 +56,83 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "UI\\Login.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
+              "RelativeToolTip": "UI\\Login.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAIAwwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:11:49.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UI",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\UI.csproj",
+              "RelativeDocumentMoniker": "UI\\UI.csproj",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\UI.csproj",
+              "RelativeToolTip": "UI\\UI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-08T15:05:06.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "UI\\Login.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs [Design]",
+              "RelativeToolTip": "UI\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T15:01:44.512Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QLGPLXContext.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\QLGPLXContext.cs",
+              "RelativeDocumentMoniker": "DAL\\QLGPLXContext.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\QLGPLXContext.cs",
+              "RelativeToolTip": "DAL\\QLGPLXContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T14:38:38.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
+              "RelativeDocumentMoniker": "UI\\Program.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
+              "RelativeToolTip": "UI\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAEwAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T14:09:16.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "BLL.csproj",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\BLL.csproj",
+              "RelativeDocumentMoniker": "BLL\\BLL.csproj",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\BLL.csproj",
+              "RelativeToolTip": "BLL\\BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-08T13:30:54.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Database.sql ",
               "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql",
               "RelativeDocumentMoniker": "..\\GiayPhepLayXe\\Database.sql",
@@ -99,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Class1.cs",
               "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\Class1.cs",
               "RelativeDocumentMoniker": "BLL\\Class1.cs",
@@ -109,18 +154,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T13:30:16.065Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
-              "RelativeDocumentMoniker": "UI\\Login.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs [Design]",
-              "RelativeToolTip": "UI\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T13:27:02.499Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },

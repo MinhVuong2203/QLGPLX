@@ -144,3 +144,6 @@ D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\refint\U
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.pdb
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.genruntimeconfig.cache
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\ref\UI.dll
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\bin\Debug\net8.0-windows\ReaLTaiizor.dll
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.Properties.Resources.resources
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.sourcelink.json
