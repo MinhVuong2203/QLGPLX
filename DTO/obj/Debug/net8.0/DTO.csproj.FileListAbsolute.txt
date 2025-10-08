@@ -1,0 +1,11 @@
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\bin\Debug\net8.0\DTO.deps.json
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\bin\Debug\net8.0\DTO.dll
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\bin\Debug\net8.0\DTO.pdb
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\DTO.dll
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\refint\DTO.dll
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\DTO.pdb
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\DTO\obj\Debug\net8.0\ref\DTO.dll
