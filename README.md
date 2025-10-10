@@ -1,1 +1,1 @@
-Update: Scaffold-DbContext "Data Source=DESKTOP-39G03JV\SQLEXPRESS;Initial Catalog=QLGPLX;User ID=sa;Password=123456789;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -ContextDir ../DAL -OutputDir ../DTO/Models -Context QLGPLXContext -f
+Update: Scaffold-DbContext "Data Source=DESKTOP-39G03JV\SQLEXPRESS;Initial Catalog=QLGPLX;User ID=sa;Password=***;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -ContextDir ../DAL -OutputDir ../DTO/Models -Context QLGPLXContext -f
