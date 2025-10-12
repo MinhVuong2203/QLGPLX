@@ -63,6 +63,16 @@ namespace UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anh34 {
+            get {
+                object obj = ResourceManager.GetObject("anh34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bgGPLX1 {
             get {
                 object obj = ResourceManager.GetObject("bgGPLX1", resourceCulture);
@@ -146,6 +156,26 @@ namespace UI.Properties {
         internal static System.Drawing.Bitmap Home13 {
             get {
                 object obj = ResourceManager.GetObject("Home13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgCalender {
+            get {
+                object obj = ResourceManager.GetObject("imgCalender", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgClock {
+            get {
+                object obj = ResourceManager.GetObject("imgClock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

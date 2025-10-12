@@ -7,6 +7,7 @@ using ReaLTaiizor.Util;
 using DAL;
 
 
+
 namespace UI
 {
     partial class Home
@@ -42,6 +43,12 @@ namespace UI
             btnTrangChu = new CyberButton();
             btnKyThi = new CyberButton();
             panel1 = new System.Windows.Forms.Panel();
+            parrotGradientPanel1 = new ParrotGradientPanel();
+            panel2 = new System.Windows.Forms.Panel();
+            lblDate = new Label();
+            lblClock = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             parrotSlidingPanel2 = new ParrotSlidingPanel();
             lbRole = new Label();
             lbName = new Label();
@@ -57,6 +64,10 @@ namespace UI
             iconTrangChu = new Label();
             panelMain = new System.Windows.Forms.Panel();
             panel1.SuspendLayout();
+            parrotGradientPanel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             parrotSlidingPanel2.SuspendLayout();
             parrotSlidingPanel1.SuspendLayout();
             SuspendLayout();
@@ -239,12 +250,87 @@ namespace UI
             // 
             // panel1
             // 
+            panel1.Controls.Add(parrotGradientPanel1);
             panel1.Controls.Add(parrotSlidingPanel2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1050, 84);
+            panel1.Size = new Size(1264, 84);
             panel1.TabIndex = 6;
+            // 
+            // parrotGradientPanel1
+            // 
+            parrotGradientPanel1.BottomLeft = Color.Black;
+            parrotGradientPanel1.BottomRight = Color.Fuchsia;
+            parrotGradientPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            parrotGradientPanel1.Controls.Add(panel2);
+            parrotGradientPanel1.Dock = DockStyle.Fill;
+            parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+            parrotGradientPanel1.Location = new Point(240, 0);
+            parrotGradientPanel1.Name = "parrotGradientPanel1";
+            parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+            parrotGradientPanel1.PrimerColor = Color.White;
+            parrotGradientPanel1.Size = new Size(1024, 84);
+            parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            parrotGradientPanel1.Style = ParrotGradientPanel.GradientStyle.Corners;
+            parrotGradientPanel1.TabIndex = 1;
+            parrotGradientPanel1.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            parrotGradientPanel1.TopLeft = Color.DeepSkyBlue;
+            parrotGradientPanel1.TopRight = Color.Fuchsia;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(lblDate);
+            panel2.Controls.Add(lblClock);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(790, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(234, 84);
+            panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
+            // 
+            // lblDate
+            // 
+            lblDate.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = SystemColors.ActiveCaptionText;
+            lblDate.Location = new Point(63, 50);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(173, 31);
+            lblDate.TabIndex = 6;
+            lblDate.Text = "Giờ";
+            // 
+            // lblClock
+            // 
+            lblClock.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblClock.ForeColor = SystemColors.ActiveCaptionText;
+            lblClock.Location = new Point(63, 14);
+            lblClock.Name = "lblClock";
+            lblClock.Size = new Size(173, 31);
+            lblClock.TabIndex = 4;
+            lblClock.Text = "Giờ";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.imgClock;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(15, -3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(54, 50);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.imgCalender;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(20, 42);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(41, 38);
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
             // 
             // parrotSlidingPanel2
             // 
@@ -289,11 +375,11 @@ namespace UI
             // 
             lbName.AutoSize = true;
             lbName.BackColor = Color.Transparent;
-            lbName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbName.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbName.ForeColor = Color.Black;
             lbName.Location = new Point(69, 19);
             lbName.Name = "lbName";
-            lbName.Size = new Size(54, 17);
+            lbName.Size = new Size(64, 20);
             lbName.TabIndex = 1;
             lbName.Text = "lbName";
             // 
@@ -309,7 +395,7 @@ namespace UI
             anhDaiDien.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             anhDaiDien.IsElipse = true;
             anhDaiDien.IsParallax = false;
-            anhDaiDien.Location = new Point(3, 12);
+            anhDaiDien.Location = new Point(5, 11);
             anhDaiDien.Name = "anhDaiDien";
             anhDaiDien.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             anhDaiDien.Size = new Size(60, 60);
@@ -503,7 +589,7 @@ namespace UI
             panelMain.Location = new Point(240, 84);
             panelMain.Margin = new Padding(3, 2, 3, 2);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(810, 580);
+            panelMain.Size = new Size(1024, 580);
             panelMain.TabIndex = 13;
             // 
             // Home
@@ -511,7 +597,7 @@ namespace UI
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1050, 664);
+            ClientSize = new Size(1264, 664);
             Controls.Add(panelMain);
             Controls.Add(parrotSlidingPanel1);
             Controls.Add(panel1);
@@ -520,6 +606,10 @@ namespace UI
             Text = "Home";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            parrotGradientPanel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             parrotSlidingPanel2.ResumeLayout(false);
             parrotSlidingPanel2.PerformLayout();
             parrotSlidingPanel1.ResumeLayout(false);
@@ -587,9 +677,10 @@ namespace UI
         {
             this.lbName.Text = canBo.HoTen;
             this.lbRole.Text = "Chức vụ: " + canBo.MaChucVuNavigation.TenChucVu;
+            anhDaiDien.Image = Properties.Resources.Manager_Defaut;
             if (canBo.Anh3x4 != null)
             {                
-                anhDaiDien.Image = Properties.Resources.ResourceManager.GetObject(canBo.Anh3x4) as Image;
+                anhDaiDien.Image = (Image) Properties.Resources.ResourceManager.GetObject(canBo.Anh3x4);
             }
             else if (canBo.MaChucVuNavigation.TenChucVu == "Quản lý")
             {
@@ -599,6 +690,20 @@ namespace UI
             {
                 anhDaiDien.Image = Properties.Resources.Employee_default;
             }
+        }
+
+        private void StartClock()
+        {
+            // Khởi tạo Timer
+            timerClock = new System.Windows.Forms.Timer();
+            timerClock.Interval = 1000; // cập nhật mỗi 1 giây
+            // Gán sự kiện Tick
+            timerClock.Tick += (s, e) =>
+            {
+                this.lblClock.Text = DateTime.Now.ToString("HH:mm:ss");
+                this.lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            };
+            timerClock.Start(); // Bắt đầu chạy
         }
 
         #endregion
@@ -621,5 +726,13 @@ namespace UI
         private ParrotPictureBox anhDaiDien;
         private Label lbName;
         private Label lbRole;
+        private ContextMenuStrip contextMenuStrip1;
+        private PictureBox pictureBox1;
+        private Label lblClock;
+        private System.Windows.Forms.Timer timerClock;
+        private System.Windows.Forms.Panel panel2;
+        private Label lblDate;
+        private PictureBox pictureBox2;
+        private ParrotGradientPanel parrotGradientPanel1;
     }
 }

@@ -16,5 +16,22 @@ namespace UI.HoSo
         {
             InitializeComponent();
         }
+
+        private void thốngKêToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thêmCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
+        {          
+            this.LoadControl(new HoSo.UCThemCongDan());
+        }
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+  
     }
 }

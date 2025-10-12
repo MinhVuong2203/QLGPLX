@@ -48,7 +48,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(checkBox1);
             Name = "UCTrangChuMain";
-            Size = new Size(570, 534);
+            Size = new Size(1144, 522);
             ResumeLayout(false);
             PerformLayout();
         }

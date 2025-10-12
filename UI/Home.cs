@@ -26,6 +26,7 @@ namespace UI
             InitializeComponent();
             loadMenu(canBo);
             LoadInfo(canBo);
+            StartClock();
         }
 
         private void materialFloatingActionButton1_Click(object sender, EventArgs e)
@@ -88,6 +89,16 @@ namespace UI
         }
 
         private void parrotSlidingPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
