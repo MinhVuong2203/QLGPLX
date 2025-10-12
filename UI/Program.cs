@@ -12,6 +12,8 @@ namespace UI
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Login());
+            //CanBo CanBo = new CanBo();
+            //Application.Run(new Home(CanBo));
         }
     }
 }

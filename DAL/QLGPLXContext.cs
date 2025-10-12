@@ -6,8 +6,18 @@ namespace DAL;
 
 public partial class QLGPLXContext : DbContext
 {
-    public QLGPLXContext()
+    private readonly string _connectionString;
+    public QLGPLXContext(string connectionString)
     {
+        _connectionString = connectionString;
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer(_connectionString);
+        }
     }
 
     public QLGPLXContext(DbContextOptions<QLGPLXContext> options)
@@ -39,18 +49,18 @@ public partial class QLGPLXContext : DbContext
 
     public virtual DbSet<ViPham> ViPhams { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=DESKTOP-39G03JV\\SQLEXPRESS;Initial Catalog=QLGPLX;User ID=sa;Password=123456789;Trust Server Certificate=True");
-
+   
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CanBo>(entity =>
         {
-            entity.HasKey(e => e.MaCanBo).HasName("PK__CanBo__4003E21544B1E269");
+            entity.HasKey(e => e.MaCanBo).HasName("PK__CanBo__4003E215BE49503A");
 
             entity.ToTable("CanBo");
 
+            entity.HasIndex(e => e.Username, "UQ__CanBo__536C85E44178076C").IsUnique();
+
+            entity.Property(e => e.Anh3x4).HasMaxLength(256);
             entity.Property(e => e.DienThoai)
                 .HasMaxLength(15)
                 .IsUnicode(false);
@@ -61,17 +71,23 @@ public partial class QLGPLXContext : DbContext
             entity.Property(e => e.NgayTao)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
+            entity.Property(e => e.Password)
+                .HasMaxLength(100)
+                .IsUnicode(false);
             entity.Property(e => e.TrangThai).HasDefaultValue(true);
+            entity.Property(e => e.Username)
+                .HasMaxLength(100)
+                .IsUnicode(false);
 
             entity.HasOne(d => d.MaChucVuNavigation).WithMany(p => p.CanBos)
                 .HasForeignKey(d => d.MaChucVu)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__CanBo__MaChucVu__1B9317B3");
+                .HasConstraintName("FK__CanBo__MaChucVu__2F9A1060");
         });
 
         modelBuilder.Entity<CanBoHoSo>(entity =>
         {
-            entity.HasKey(e => new { e.MaCanBo, e.HoSoId, e.ThoiGian }).HasName("PK__CanBo_Ho__0732DEB83567FA19");
+            entity.HasKey(e => new { e.MaCanBo, e.HoSoId, e.ThoiGian }).HasName("PK__CanBo_Ho__0732DEB8345FF36B");
 
             entity.ToTable("CanBo_HoSo");
 
@@ -84,12 +100,12 @@ public partial class QLGPLXContext : DbContext
             entity.HasOne(d => d.HoSo).WithMany(p => p.CanBoHoSos)
                 .HasForeignKey(d => d.HoSoId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__CanBo_HoS__HoSoI__214BF109");
+                .HasConstraintName("FK__CanBo_HoS__HoSoI__373B3228");
 
             entity.HasOne(d => d.MaCanBoNavigation).WithMany(p => p.CanBoHoSos)
                 .HasForeignKey(d => d.MaCanBo)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__CanBo_HoS__MaCan__2057CCD0");
+                .HasConstraintName("FK__CanBo_HoS__MaCan__36470DEF");
         });
 
         modelBuilder.Entity<ChucVu>(entity =>

@@ -1,4 +1,6 @@
-﻿namespace UI
+﻿
+
+namespace UI
 {
     partial class Login
     {
@@ -6,6 +8,10 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+
+        public bool IsShowpass = false;
+
+        
 
         /// <summary>
         /// Clean up any resources being used.
@@ -29,6 +35,8 @@
         private void InitializeComponent()
         {
             parrotGroupBox = new ReaLTaiizor.Controls.ParrotGroupBox();
+            pictureBox1 = new PictureBox();
+            skyButton1 = new ReaLTaiizor.Controls.SkyButton();
             btnLogin = new ReaLTaiizor.Controls.SkyButton();
             tbPassword = new ReaLTaiizor.Controls.SkyTextBox();
             label2 = new Label();
@@ -37,6 +45,7 @@
             skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
             skyLabel2 = new ReaLTaiizor.Controls.SkyLabel();
             parrotGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // parrotGroupBox
@@ -44,21 +53,75 @@
             parrotGroupBox.BackColor = Color.Transparent;
             parrotGroupBox.BorderColor = Color.DodgerBlue;
             parrotGroupBox.BorderWidth = 1;
+            parrotGroupBox.Controls.Add(pictureBox1);
+            parrotGroupBox.Controls.Add(skyButton1);
             parrotGroupBox.Controls.Add(btnLogin);
             parrotGroupBox.Controls.Add(tbPassword);
             parrotGroupBox.Controls.Add(label2);
             parrotGroupBox.Controls.Add(tbUsername);
             parrotGroupBox.Controls.Add(label1);
             parrotGroupBox.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            parrotGroupBox.Location = new Point(42, 119);
+            parrotGroupBox.Location = new Point(48, 159);
+            parrotGroupBox.Margin = new Padding(3, 4, 3, 4);
             parrotGroupBox.Name = "parrotGroupBox";
+            parrotGroupBox.Padding = new Padding(3, 4, 3, 4);
             parrotGroupBox.ShowText = true;
-            parrotGroupBox.Size = new Size(307, 251);
+            parrotGroupBox.Size = new Size(351, 335);
             parrotGroupBox.TabIndex = 0;
             parrotGroupBox.TabStop = false;
             parrotGroupBox.Text = "Đăng nhập hệ thống";
             parrotGroupBox.TextColor = Color.DodgerBlue;
             parrotGroupBox.Enter += parrotGroupBox_Enter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(233, 233, 233);
+            pictureBox1.Image = Properties.Resources.CloseEyes;
+            pictureBox1.Location = new Point(296, 192);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(30, 26);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // skyButton1
+            // 
+            skyButton1.BackColor = Color.Transparent;
+            skyButton1.DownBGColorA = Color.FromArgb(237, 175, 81);
+            skyButton1.DownBGColorB = Color.FromArgb(12, 12, 12);
+            skyButton1.DownBorderColorA = Color.FromArgb(181, 18, 27);
+            skyButton1.DownBorderColorB = Color.FromArgb(12, 12, 12);
+            skyButton1.DownBorderColorC = Color.FromArgb(150, 149, 149);
+            skyButton1.DownBorderColorD = Color.FromArgb(150, 149, 149);
+            skyButton1.DownForeColor = Color.FromArgb(200, 0, 0, 0);
+            skyButton1.DownShadowForeColor = Color.White;
+            skyButton1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            skyButton1.ForeColor = Color.Black;
+            skyButton1.HoverBGColorA = Color.FromArgb(181, 18, 27);
+            skyButton1.HoverBGColorB = Color.FromArgb(237, 175, 81);
+            skyButton1.HoverBorderColorA = Color.FromArgb(181, 18, 27);
+            skyButton1.HoverBorderColorB = Color.FromArgb(12, 12, 12);
+            skyButton1.HoverBorderColorC = Color.FromArgb(150, 149, 149);
+            skyButton1.HoverBorderColorD = Color.FromArgb(150, 149, 149);
+            skyButton1.HoverForeColor = Color.White;
+            skyButton1.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
+            skyButton1.Location = new Point(183, 271);
+            skyButton1.Margin = new Padding(3, 4, 3, 4);
+            skyButton1.Name = "skyButton1";
+            skyButton1.NormalBGColorA = Color.FromArgb(237, 175, 81);
+            skyButton1.NormalBGColorB = Color.FromArgb(226, 221, 154);
+            skyButton1.NormalBorderColorA = Color.FromArgb(181, 18, 27);
+            skyButton1.NormalBorderColorB = Color.FromArgb(12, 12, 12);
+            skyButton1.NormalBorderColorC = Color.FromArgb(150, 149, 149);
+            skyButton1.NormalBorderColorD = Color.FromArgb(150, 149, 149);
+            skyButton1.NormalForeColor = Color.Black;
+            skyButton1.NormalShadowForeColor = Color.White;
+            skyButton1.Size = new Size(119, 45);
+            skyButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            skyButton1.TabIndex = 6;
+            skyButton1.Text = "Thoát";
             // 
             // btnLogin
             // 
@@ -81,7 +144,8 @@
             btnLogin.HoverBorderColorD = Color.FromArgb(150, 149, 149);
             btnLogin.HoverForeColor = Color.White;
             btnLogin.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
-            btnLogin.Location = new Point(86, 193);
+            btnLogin.Location = new Point(46, 271);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.NormalBGColorA = Color.FromArgb(237, 175, 81);
             btnLogin.NormalBGColorB = Color.FromArgb(226, 221, 154);
@@ -91,10 +155,11 @@
             btnLogin.NormalBorderColorD = Color.FromArgb(150, 149, 149);
             btnLogin.NormalForeColor = Color.Black;
             btnLogin.NormalShadowForeColor = Color.White;
-            btnLogin.Size = new Size(124, 34);
+            btnLogin.Size = new Size(119, 45);
             btnLogin.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Đăng nhập";
+            btnLogin.Click += btnLogin_Click;
             // 
             // tbPassword
             // 
@@ -106,24 +171,25 @@
             tbPassword.BorderColorD = Color.Yellow;
             tbPassword.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tbPassword.ForeColor = Color.FromArgb(27, 94, 137);
-            tbPassword.Location = new Point(20, 140);
+            tbPassword.Location = new Point(23, 187);
+            tbPassword.Margin = new Padding(3, 4, 3, 4);
             tbPassword.MaxLength = 32767;
             tbPassword.MultiLine = false;
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(267, 32);
+            tbPassword.Size = new Size(305, 37);
             tbPassword.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             tbPassword.TabIndex = 4;
             tbPassword.TextAlignment = HorizontalAlignment.Left;
             tbPassword.UnknownBackColor = Color.FromArgb(43, 43, 43);
-            tbPassword.UseSystemPasswordChar = false;
+            tbPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(20, 111);
+            label2.Location = new Point(23, 148);
             label2.Name = "label2";
-            label2.Size = new Size(78, 21);
+            label2.Size = new Size(98, 28);
             label2.TabIndex = 3;
             label2.Text = "Mật khẩu:";
             // 
@@ -137,11 +203,12 @@
             tbUsername.BorderColorD = Color.Yellow;
             tbUsername.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tbUsername.ForeColor = Color.FromArgb(27, 94, 137);
-            tbUsername.Location = new Point(20, 68);
+            tbUsername.Location = new Point(23, 91);
+            tbUsername.Margin = new Padding(3, 4, 3, 4);
             tbUsername.MaxLength = 32767;
             tbUsername.MultiLine = false;
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(267, 32);
+            tbUsername.Size = new Size(305, 37);
             tbUsername.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             tbUsername.TabIndex = 2;
             tbUsername.TextAlignment = HorizontalAlignment.Left;
@@ -152,9 +219,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(20, 39);
+            label1.Location = new Point(23, 52);
             label1.Name = "label1";
-            label1.Size = new Size(114, 21);
+            label1.Size = new Size(144, 28);
             label1.TabIndex = 1;
             label1.Text = "Tên đăng nhập:";
             // 
@@ -164,9 +231,9 @@
             skyLabel1.BackColor = Color.Transparent;
             skyLabel1.Font = new Font("Snap ITC", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             skyLabel1.ForeColor = Color.Maroon;
-            skyLabel1.Location = new Point(12, 22);
+            skyLabel1.Location = new Point(14, 29);
             skyLabel1.Name = "skyLabel1";
-            skyLabel1.Size = new Size(362, 35);
+            skyLabel1.Size = new Size(452, 44);
             skyLabel1.TabIndex = 1;
             skyLabel1.Text = "HỆ THỐNG QUẢN LÝ";
             // 
@@ -176,27 +243,30 @@
             skyLabel2.BackColor = Color.Transparent;
             skyLabel2.Font = new Font("Snap ITC", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             skyLabel2.ForeColor = Color.Maroon;
-            skyLabel2.Location = new Point(167, 69);
+            skyLabel2.Location = new Point(191, 92);
             skyLabel2.Name = "skyLabel2";
-            skyLabel2.Size = new Size(492, 35);
+            skyLabel2.Size = new Size(610, 44);
             skyLabel2.TabIndex = 2;
             skyLabel2.Text = "GIẤY PHÉP LÁI XE HẠNG A";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bgGPLX1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(874, 401);
+            ClientSize = new Size(999, 531);
             Controls.Add(skyLabel2);
             Controls.Add(skyLabel1);
             Controls.Add(parrotGroupBox);
             DoubleBuffered = true;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
-            Text = "Login";
+            Text = "Hệ thống GPLX Hạng A";
+            Load += Login_Load;
             parrotGroupBox.ResumeLayout(false);
             parrotGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +281,8 @@
         private ReaLTaiizor.Controls.SkyButton btnLogin;
         private ReaLTaiizor.Controls.SkyLabel skyLabel1;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
+        private ReaLTaiizor.Controls.SkyButton skyButton1;
+        private ReaLTaiizor.Controls.ParrotButton BtnShowPass;
+        private PictureBox pictureBox1;
     }
 }

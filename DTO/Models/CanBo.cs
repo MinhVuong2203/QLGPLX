@@ -17,7 +17,13 @@ public partial class CanBo
 
     public DateTime? NgayTao { get; set; }
 
+    public string Username { get; set; } = null!;
+
+    public string? Password { get; set; }
+
     public bool TrangThai { get; set; }
+
+    public string? Anh3x4 { get; set; }
 
     public virtual ICollection<CanBoHoSo> CanBoHoSos { get; set; } = new List<CanBoHoSo>();
 

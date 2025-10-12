@@ -3,38 +3,56 @@
   "WorkspaceRootPath": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\dal\\qlgplxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|solutionrelative:dal\\qlgplxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\dal\\databasesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|solutionrelative:dal\\databasesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\bll\\userbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|solutionrelative:bll\\userbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\hoso\\uchosomain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\hoso\\uchosomain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\xulyvipham\\ucxulyviphammain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\xulyvipham\\ucxulyviphammain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D099F6CC-635F-49E2-98DD-BD2D9C3466AC}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\bll\\bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|solutionrelative:bll\\bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AE4A914-5C0A-4555-883E-A93D0159E2C2}|BLL\\BLL.csproj|solutionrelative:bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|Database{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|Database{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}|D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|d:\\dai hoc\\phantichthietkeyeucau\\btl\\qlgplx\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CA3D13C2-7288-406B-8189-305912BA0786}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,104 +73,161 @@
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
-              "RelativeDocumentMoniker": "UI\\Login.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs*",
-              "RelativeToolTip": "UI\\Login.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAIAwwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T15:11:49.585Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UI",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\UI.csproj",
-              "RelativeDocumentMoniker": "UI\\UI.csproj",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\UI.csproj",
-              "RelativeToolTip": "UI\\UI.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-08T15:05:06.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
-              "RelativeDocumentMoniker": "UI\\Login.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs [Design]*",
-              "RelativeToolTip": "UI\\Login.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T15:01:44.512Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "QLGPLXContext.cs",
               "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\QLGPLXContext.cs",
               "RelativeDocumentMoniker": "DAL\\QLGPLXContext.cs",
               "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\QLGPLXContext.cs",
               "RelativeToolTip": "DAL\\QLGPLXContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:38:38.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
-              "RelativeDocumentMoniker": "UI\\Program.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
-              "RelativeToolTip": "UI\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAEwAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T14:09:16.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BLL.csproj",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\BLL.csproj",
-              "RelativeDocumentMoniker": "BLL\\BLL.csproj",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\BLL.csproj",
-              "RelativeToolTip": "BLL\\BLL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-08T13:30:54.99Z",
+              "WhenOpened": "2025-10-12T04:19:54.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Database.sql ",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql",
-              "RelativeDocumentMoniker": "..\\GiayPhepLayXe\\Database.sql",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\GiayPhepLayXe\\Database.sql",
-              "RelativeToolTip": "..\\GiayPhepLayXe\\Database.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-10-08T13:30:59.895Z",
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Login.Designer.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.Designer.cs",
+              "RelativeToolTip": "UI\\Login.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:11:06.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\Class1.cs",
-              "RelativeDocumentMoniker": "BLL\\Class1.cs",
-              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\Class1.cs",
-              "RelativeToolTip": "BLL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "UCHoSoMain.Designer.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\HoSo\\UCHoSoMain.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\HoSo\\UCHoSoMain.Designer.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\HoSo\\UCHoSoMain.Designer.cs",
+              "RelativeToolTip": "UI\\HoSo\\UCHoSoMain.Designer.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T13:30:16.065Z",
+              "WhenOpened": "2025-10-11T06:00:48.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Home.cs",
+              "RelativeDocumentMoniker": "UI\\Home.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Home.cs",
+              "RelativeToolTip": "UI\\Home.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:19:37.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseSession.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\DatabaseSession.cs",
+              "RelativeDocumentMoniker": "DAL\\DatabaseSession.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\DatabaseSession.cs",
+              "RelativeToolTip": "DAL\\DatabaseSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T13:22:37.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserBLL.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\UserBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\UserBLL.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\BLL\\UserBLL.cs",
+              "RelativeToolTip": "BLL\\UserBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T13:23:27.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.Designer.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Home.Designer.cs",
+              "RelativeDocumentMoniker": "UI\\Home.Designer.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Home.Designer.cs",
+              "RelativeToolTip": "UI\\Home.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:19:28.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "UI\\Login.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs [Design]",
+              "RelativeToolTip": "UI\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:28:58.027Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "UI\\Login.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Login.cs",
+              "RelativeToolTip": "UI\\Login.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAhwDgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:28:59.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UCXuLyViPhamMain.cs [Design]",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\XuLyViPham\\UCXuLyViPhamMain.cs",
+              "RelativeDocumentMoniker": "UI\\XuLyViPham\\UCXuLyViPhamMain.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\XuLyViPham\\UCXuLyViPhamMain.cs [Design]",
+              "RelativeToolTip": "UI\\XuLyViPham\\UCXuLyViPhamMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T01:05:54.398Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DAL",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\DAL.csproj",
+              "RelativeDocumentMoniker": "DAL\\DAL.csproj",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\DAL\\DAL.csproj",
+              "RelativeToolTip": "DAL\\DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-12T02:47:30.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
+              "RelativeDocumentMoniker": "UI\\Program.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Program.cs",
+              "RelativeToolTip": "UI\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T15:18:57.376Z",
               "EditorCaption": ""
             }
           ]
@@ -164,6 +239,39 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "e878d97a-c624-4f48-9d15-6ceda43d90e0",
+        "Display": 1,
+        "X": 118,
+        "Y": 73,
+        "Width": 1174,
+        "Height": 733,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Home.cs",
+              "RelativeDocumentMoniker": "UI\\Home.cs",
+              "ToolTip": "D:\\DAI HOC\\PhanTichThietKeYeuCau\\BTL\\QLGPLX\\UI\\Home.cs [Design]",
+              "RelativeToolTip": "UI\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T03:10:38.455Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
