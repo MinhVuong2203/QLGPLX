@@ -1,4 +1,6 @@
-﻿namespace UI.HoSo
+﻿using BLL;
+
+namespace UI.HoSo
 {
     partial class UCThemCongDan
     {
@@ -29,73 +31,106 @@
         private void InitializeComponent()
         {
             groupBox = new GroupBox();
-            textBox5 = new TextBox();
+            btnChonAnh3x4 = new Button();
+            label12 = new Label();
+            txtEmail = new TextBox();
             label7 = new Label();
-            textBox4 = new TextBox();
+            txtSDT = new TextBox();
             label6 = new Label();
-            textBox3 = new TextBox();
+            txtDiaChi = new TextBox();
             label5 = new Label();
             radioNam = new ReaLTaiizor.Controls.MaterialRadioButton();
             radioNu = new ReaLTaiizor.Controls.MaterialRadioButton();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpNgaySinh = new DateTimePicker();
             label3 = new Label();
-            pictureBox1 = new PictureBox();
-            textBox2 = new TextBox();
+            pictureBoxAnhDaiDien = new PictureBox();
+            txtTen = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtCCCD = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
+            btnChonAnhGiayKham = new Button();
+            rtxTinhTrang = new RichTextBox();
+            pictureBoxAnhGiayKham = new PictureBox();
             label11 = new Label();
-            textBox7 = new TextBox();
+            txtSoGiayKham = new TextBox();
             label10 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtpNgayKham = new DateTimePicker();
             label9 = new Label();
-            textBox6 = new TextBox();
             label8 = new Label();
-            panel1 = new Panel();
+            btnSubmit = new ReaLTaiizor.Controls.SkyButton();
             panel3 = new Panel();
-            pictureBox2 = new PictureBox();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            btnReset = new ReaLTaiizor.Controls.SkyButton();
             groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAnhDaiDien).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAnhGiayKham).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox
             // 
-            groupBox.Controls.Add(textBox5);
+            groupBox.Controls.Add(btnChonAnh3x4);
+            groupBox.Controls.Add(label12);
+            groupBox.Controls.Add(txtEmail);
             groupBox.Controls.Add(label7);
-            groupBox.Controls.Add(textBox4);
+            groupBox.Controls.Add(txtSDT);
             groupBox.Controls.Add(label6);
-            groupBox.Controls.Add(textBox3);
+            groupBox.Controls.Add(txtDiaChi);
             groupBox.Controls.Add(label5);
             groupBox.Controls.Add(radioNam);
             groupBox.Controls.Add(radioNu);
             groupBox.Controls.Add(label4);
-            groupBox.Controls.Add(dateTimePicker1);
+            groupBox.Controls.Add(dtpNgaySinh);
             groupBox.Controls.Add(label3);
-            groupBox.Controls.Add(pictureBox1);
-            groupBox.Controls.Add(textBox2);
+            groupBox.Controls.Add(pictureBoxAnhDaiDien);
+            groupBox.Controls.Add(txtTen);
             groupBox.Controls.Add(label2);
-            groupBox.Controls.Add(textBox1);
+            groupBox.Controls.Add(txtCCCD);
             groupBox.Controls.Add(label1);
             groupBox.Dock = DockStyle.Left;
-            groupBox.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox.Location = new Point(0, 0);
             groupBox.Name = "groupBox";
-            groupBox.Size = new Size(764, 476);
+            groupBox.Size = new Size(764, 474);
             groupBox.TabIndex = 0;
             groupBox.TabStop = false;
             groupBox.Text = " THÔNG TIN CHUNG";
             // 
-            // textBox5
+            // btnChonAnh3x4
             // 
-            textBox5.Location = new Point(365, 279);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(371, 30);
-            textBox5.TabIndex = 20;
+            btnChonAnh3x4.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnChonAnh3x4.ForeColor = Color.DimGray;
+            btnChonAnh3x4.Location = new Point(141, 363);
+            btnChonAnh3x4.Name = "btnChonAnh3x4";
+            btnChonAnh3x4.Size = new Size(68, 28);
+            btnChonAnh3x4.TabIndex = 22;
+            btnChonAnh3x4.Text = "Chọn";
+            btnChonAnh3x4.UseVisualStyleBackColor = true;
+            btnChonAnh3x4.Click += btnChonAnh3x4_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label12.ForeColor = SystemColors.ActiveCaptionText;
+            label12.Location = new Point(71, 366);
+            label12.Name = "label12";
+            label12.Size = new Size(67, 21);
+            label12.TabIndex = 21;
+            label12.Text = "Ảnh 3x4";
+            // 
+            // txtEmail
+            // 
+            txtEmail.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
+            txtEmail.ForeColor = Color.FromArgb(64, 0, 64);
+            txtEmail.Location = new Point(365, 279);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(371, 30);
+            txtEmail.TabIndex = 20;
             // 
             // label7
             // 
@@ -107,13 +142,15 @@
             label7.TabIndex = 19;
             label7.Text = "Email:";
             // 
-            // textBox4
+            // txtSDT
             // 
-            textBox4.Location = new Point(549, 180);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(187, 30);
-            textBox4.TabIndex = 18;
-            textBox4.TextChanged += textBox4_TextChanged;
+            txtSDT.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
+            txtSDT.ForeColor = Color.FromArgb(64, 0, 64);
+            txtSDT.Location = new Point(549, 180);
+            txtSDT.Name = "txtSDT";
+            txtSDT.Size = new Size(187, 30);
+            txtSDT.TabIndex = 18;
+            txtSDT.TextChanged += textBox4_TextChanged;
             // 
             // label6
             // 
@@ -125,12 +162,14 @@
             label6.TabIndex = 17;
             label6.Text = "SĐT:";
             // 
-            // textBox3
+            // txtDiaChi
             // 
-            textBox3.Location = new Point(365, 227);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(371, 30);
-            textBox3.TabIndex = 16;
+            txtDiaChi.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
+            txtDiaChi.ForeColor = Color.FromArgb(64, 0, 64);
+            txtDiaChi.Location = new Point(365, 227);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(371, 30);
+            txtDiaChi.TabIndex = 16;
             // 
             // label5
             // 
@@ -186,12 +225,15 @@
             label4.TabIndex = 7;
             label4.Text = "Giới tính:";
             // 
-            // dateTimePicker1
+            // dtpNgaySinh
             // 
-            dateTimePicker1.Location = new Point(365, 84);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(371, 30);
-            dateTimePicker1.TabIndex = 6;
+            dtpNgaySinh.CalendarFont = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            dtpNgaySinh.CalendarForeColor = Color.FromArgb(64, 0, 64);
+            dtpNgaySinh.CustomFormat = "dd-MM-YYYY";
+            dtpNgaySinh.Location = new Point(365, 84);
+            dtpNgaySinh.Name = "dtpNgaySinh";
+            dtpNgaySinh.Size = new Size(371, 30);
+            dtpNgaySinh.TabIndex = 6;
             // 
             // label3
             // 
@@ -199,24 +241,27 @@
             label3.ForeColor = SystemColors.ActiveCaptionText;
             label3.Location = new Point(271, 90);
             label3.Name = "label3";
-            label3.Size = new Size(90, 23);
+            label3.Size = new Size(91, 23);
             label3.TabIndex = 5;
             label3.Text = "Ngày sinh:";
             // 
-            // pictureBox1
+            // pictureBoxAnhDaiDien
             // 
-            pictureBox1.Location = new Point(21, 39);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(240, 320);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
+            pictureBoxAnhDaiDien.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxAnhDaiDien.Location = new Point(21, 39);
+            pictureBoxAnhDaiDien.Name = "pictureBoxAnhDaiDien";
+            pictureBoxAnhDaiDien.Size = new Size(240, 320);
+            pictureBoxAnhDaiDien.TabIndex = 4;
+            pictureBoxAnhDaiDien.TabStop = false;
             // 
-            // textBox2
+            // txtTen
             // 
-            textBox2.Location = new Point(365, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(371, 30);
-            textBox2.TabIndex = 3;
+            txtTen.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
+            txtTen.ForeColor = Color.FromArgb(64, 0, 64);
+            txtTen.Location = new Point(365, 37);
+            txtTen.Name = "txtTen";
+            txtTen.Size = new Size(371, 30);
+            txtTen.TabIndex = 3;
             // 
             // label2
             // 
@@ -224,16 +269,18 @@
             label2.ForeColor = SystemColors.ActiveCaptionText;
             label2.Location = new Point(271, 42);
             label2.Name = "label2";
-            label2.Size = new Size(88, 23);
+            label2.Size = new Size(90, 23);
             label2.TabIndex = 2;
             label2.Text = "Họ và tên:";
             // 
-            // textBox1
+            // txtCCCD
             // 
-            textBox1.Location = new Point(365, 131);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(371, 30);
-            textBox1.TabIndex = 1;
+            txtCCCD.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
+            txtCCCD.ForeColor = Color.FromArgb(64, 0, 64);
+            txtCCCD.Location = new Point(365, 131);
+            txtCCCD.Name = "txtCCCD";
+            txtCCCD.Size = new Size(371, 30);
+            txtCCCD.TabIndex = 1;
             // 
             // label1
             // 
@@ -249,23 +296,55 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.White;
-            groupBox1.Controls.Add(pictureBox2);
+            groupBox1.Controls.Add(btnChonAnhGiayKham);
+            groupBox1.Controls.Add(rtxTinhTrang);
+            groupBox1.Controls.Add(pictureBoxAnhGiayKham);
             groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(textBox7);
+            groupBox1.Controls.Add(txtSoGiayKham);
             groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(dateTimePicker2);
+            groupBox1.Controls.Add(dtpNgayKham);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(textBox6);
             groupBox1.Controls.Add(label8);
             groupBox1.Dock = DockStyle.Right;
-            groupBox1.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(783, 0);
             groupBox1.Margin = new Padding(3, 3, 30, 3);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(517, 476);
+            groupBox1.Size = new Size(517, 474);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "SỨC KHỎE CÁ NHÂN";
+            // 
+            // btnChonAnhGiayKham
+            // 
+            btnChonAnhGiayKham.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnChonAnhGiayKham.ForeColor = Color.DimGray;
+            btnChonAnhGiayKham.Location = new Point(151, 277);
+            btnChonAnhGiayKham.Name = "btnChonAnhGiayKham";
+            btnChonAnhGiayKham.Size = new Size(92, 28);
+            btnChonAnhGiayKham.TabIndex = 23;
+            btnChonAnhGiayKham.Text = "Chọn ảnh";
+            btnChonAnhGiayKham.UseVisualStyleBackColor = true;
+            // 
+            // rtxTinhTrang
+            // 
+            rtxTinhTrang.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            rtxTinhTrang.ForeColor = Color.FromArgb(64, 0, 64);
+            rtxTinhTrang.Location = new Point(17, 68);
+            rtxTinhTrang.Name = "rtxTinhTrang";
+            rtxTinhTrang.Size = new Size(470, 93);
+            rtxTinhTrang.TabIndex = 27;
+            rtxTinhTrang.Text = "";
+            // 
+            // pictureBoxAnhGiayKham
+            // 
+            pictureBoxAnhGiayKham.BackColor = Color.White;
+            pictureBoxAnhGiayKham.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxAnhGiayKham.Location = new Point(34, 317);
+            pictureBoxAnhGiayKham.Name = "pictureBoxAnhGiayKham";
+            pictureBoxAnhGiayKham.Size = new Size(463, 126);
+            pictureBoxAnhGiayKham.TabIndex = 26;
+            pictureBoxAnhGiayKham.TabStop = false;
             // 
             // label11
             // 
@@ -273,16 +352,18 @@
             label11.ForeColor = SystemColors.ActiveCaptionText;
             label11.Location = new Point(17, 282);
             label11.Name = "label11";
-            label11.Size = new Size(241, 23);
+            label11.Size = new Size(130, 23);
             label11.TabIndex = 25;
-            label11.Text = "Ảnh giấy khám sức khỏe (3x4):";
+            label11.Text = "Ảnh giấy khám:";
             // 
-            // textBox7
+            // txtSoGiayKham
             // 
-            textBox7.Location = new Point(213, 227);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(274, 30);
-            textBox7.TabIndex = 21;
+            txtSoGiayKham.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSoGiayKham.ForeColor = Color.FromArgb(64, 0, 64);
+            txtSoGiayKham.Location = new Point(141, 227);
+            txtSoGiayKham.Name = "txtSoGiayKham";
+            txtSoGiayKham.Size = new Size(274, 30);
+            txtSoGiayKham.TabIndex = 21;
             // 
             // label10
             // 
@@ -290,16 +371,18 @@
             label10.ForeColor = SystemColors.ActiveCaptionText;
             label10.Location = new Point(17, 230);
             label10.Name = "label10";
-            label10.Size = new Size(190, 23);
+            label10.Size = new Size(118, 23);
             label10.TabIndex = 24;
-            label10.Text = "Số giấy Khám sức khỏe:";
+            label10.Text = "Số giấy khám:";
             // 
-            // dateTimePicker2
+            // dtpNgayKham
             // 
-            dateTimePicker2.Location = new Point(196, 179);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(291, 30);
-            dateTimePicker2.TabIndex = 21;
+            dtpNgayKham.CalendarFont = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            dtpNgayKham.CalendarForeColor = Color.FromArgb(64, 0, 64);
+            dtpNgayKham.Location = new Point(124, 180);
+            dtpNgayKham.Name = "dtpNgayKham";
+            dtpNgayKham.Size = new Size(291, 30);
+            dtpNgayKham.TabIndex = 21;
             // 
             // label9
             // 
@@ -307,16 +390,9 @@
             label9.ForeColor = SystemColors.ActiveCaptionText;
             label9.Location = new Point(17, 183);
             label9.Name = "label9";
-            label9.Size = new Size(173, 23);
+            label9.Size = new Size(103, 23);
             label9.TabIndex = 23;
-            label9.Text = "Ngày khám sức khỏe:";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(17, 83);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(371, 30);
-            textBox6.TabIndex = 22;
+            label9.Text = "Ngày khám:";
             // 
             // label8
             // 
@@ -324,18 +400,46 @@
             label8.ForeColor = SystemColors.ActiveCaptionText;
             label8.Location = new Point(17, 42);
             label8.Name = "label8";
-            label8.Size = new Size(165, 23);
+            label8.Size = new Size(93, 23);
             label8.TabIndex = 21;
-            label8.Text = "Tình trạng sức khỏe:";
+            label8.Text = "Tình trạng:";
             // 
-            // panel1
+            // btnSubmit
             // 
-            panel1.BackColor = SystemColors.ControlDark;
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 503);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1300, 199);
-            panel1.TabIndex = 2;
+            btnSubmit.BackColor = Color.Transparent;
+            btnSubmit.DownBGColorA = Color.FromArgb(237, 175, 81);
+            btnSubmit.DownBGColorB = Color.FromArgb(12, 12, 12);
+            btnSubmit.DownBorderColorA = Color.FromArgb(181, 18, 27);
+            btnSubmit.DownBorderColorB = Color.FromArgb(12, 12, 12);
+            btnSubmit.DownBorderColorC = Color.FromArgb(150, 149, 149);
+            btnSubmit.DownBorderColorD = Color.FromArgb(150, 149, 149);
+            btnSubmit.DownForeColor = Color.FromArgb(200, 0, 0, 0);
+            btnSubmit.DownShadowForeColor = Color.White;
+            btnSubmit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSubmit.ForeColor = Color.Black;
+            btnSubmit.HoverBGColorA = Color.FromArgb(181, 18, 27);
+            btnSubmit.HoverBGColorB = Color.FromArgb(237, 175, 81);
+            btnSubmit.HoverBorderColorA = Color.FromArgb(181, 18, 27);
+            btnSubmit.HoverBorderColorB = Color.FromArgb(12, 12, 12);
+            btnSubmit.HoverBorderColorC = Color.FromArgb(150, 149, 149);
+            btnSubmit.HoverBorderColorD = Color.FromArgb(150, 149, 149);
+            btnSubmit.HoverForeColor = Color.White;
+            btnSubmit.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
+            btnSubmit.Location = new Point(631, 3);
+            btnSubmit.Name = "btnSubmit";
+            btnSubmit.NormalBGColorA = Color.FromArgb(237, 175, 81);
+            btnSubmit.NormalBGColorB = Color.FromArgb(226, 221, 154);
+            btnSubmit.NormalBorderColorA = Color.FromArgb(181, 18, 27);
+            btnSubmit.NormalBorderColorB = Color.FromArgb(12, 12, 12);
+            btnSubmit.NormalBorderColorC = Color.FromArgb(150, 149, 149);
+            btnSubmit.NormalBorderColorD = Color.FromArgb(150, 149, 149);
+            btnSubmit.NormalForeColor = Color.Black;
+            btnSubmit.NormalShadowForeColor = Color.White;
+            btnSubmit.Size = new Size(622, 43);
+            btnSubmit.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnSubmit.TabIndex = 6;
+            btnSubmit.Text = "Thêm mới";
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // panel3
             // 
@@ -345,34 +449,73 @@
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1300, 476);
+            panel3.Size = new Size(1300, 474);
             panel3.TabIndex = 4;
             // 
-            // pictureBox2
+            // flowLayoutPanel2
             // 
-            pictureBox2.BackColor = Color.RosyBrown;
-            pictureBox2.Location = new Point(34, 329);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(463, 117);
-            pictureBox2.TabIndex = 26;
-            pictureBox2.TabStop = false;
+            flowLayoutPanel2.Controls.Add(btnReset);
+            flowLayoutPanel2.Controls.Add(btnSubmit);
+            flowLayoutPanel2.Dock = DockStyle.Bottom;
+            flowLayoutPanel2.Location = new Point(0, 480);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(1300, 222);
+            flowLayoutPanel2.TabIndex = 5;
+            // 
+            // btnReset
+            // 
+            btnReset.BackColor = Color.Transparent;
+            btnReset.DownBGColorA = Color.FromArgb(237, 175, 81);
+            btnReset.DownBGColorB = Color.FromArgb(12, 12, 12);
+            btnReset.DownBorderColorA = Color.FromArgb(181, 18, 27);
+            btnReset.DownBorderColorB = Color.FromArgb(12, 12, 12);
+            btnReset.DownBorderColorC = Color.FromArgb(150, 149, 149);
+            btnReset.DownBorderColorD = Color.FromArgb(150, 149, 149);
+            btnReset.DownForeColor = Color.FromArgb(200, 0, 0, 0);
+            btnReset.DownShadowForeColor = Color.White;
+            btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReset.ForeColor = Color.Black;
+            btnReset.HoverBGColorA = Color.FromArgb(181, 18, 27);
+            btnReset.HoverBGColorB = Color.FromArgb(237, 175, 81);
+            btnReset.HoverBorderColorA = Color.FromArgb(181, 18, 27);
+            btnReset.HoverBorderColorB = Color.FromArgb(12, 12, 12);
+            btnReset.HoverBorderColorC = Color.FromArgb(150, 149, 149);
+            btnReset.HoverBorderColorD = Color.FromArgb(150, 149, 149);
+            btnReset.HoverForeColor = Color.White;
+            btnReset.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
+            btnReset.Location = new Point(3, 3);
+            btnReset.Name = "btnReset";
+            btnReset.NormalBGColorA = Color.FromArgb(237, 175, 81);
+            btnReset.NormalBGColorB = Color.FromArgb(226, 221, 154);
+            btnReset.NormalBorderColorA = Color.FromArgb(181, 18, 27);
+            btnReset.NormalBorderColorB = Color.FromArgb(12, 12, 12);
+            btnReset.NormalBorderColorC = Color.FromArgb(150, 149, 149);
+            btnReset.NormalBorderColorD = Color.FromArgb(150, 149, 149);
+            btnReset.NormalForeColor = Color.Black;
+            btnReset.NormalShadowForeColor = Color.White;
+            btnReset.Size = new Size(622, 43);
+            btnReset.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnReset.TabIndex = 7;
+            btnReset.Text = "Đặt lại";
+            btnReset.Click += skyButton1_Click;
             // 
             // UCThemCongDan
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
+            Controls.Add(flowLayoutPanel2);
             Controls.Add(panel3);
             Name = "UCThemCongDan";
             Size = new Size(1300, 702);
             Load += UCThemCongDan_Load;
             groupBox.ResumeLayout(false);
             groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAnhDaiDien).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAnhGiayKham).EndInit();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            flowLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -380,14 +523,14 @@
 
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtCCCD;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtTen;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtDiaChi;
         private GroupBox groupBox;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpNgaySinh;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
         private ReaLTaiizor.Controls.CyberRadioButton cyberRadioButton1;
@@ -400,19 +543,26 @@
         private ReaLTaiizor.Controls.MaterialRadioButton radioNam;
         private ReaLTaiizor.Controls.MaterialRadioButton radioNu;
         private Label label5;
-        private TextBox textBox4;
+        private TextBox txtSDT;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox txtEmail;
         private Label label7;
-        private Panel panel1;
         private Panel panel3;
         private Label label11;
-        private TextBox textBox7;
+        private TextBox txtSoGiayKham;
         private Label label10;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpNgayKham;
         private Label label9;
-        private TextBox textBox6;
         private Label label8;
-        private PictureBox pictureBox2;
+        private PictureBox pictureBoxAnhGiayKham;
+        private RichTextBox rtxTinhTrang;
+        private PictureBox pictureBoxAnhDaiDien;
+        private Button btnChonAnh3x4;
+        private Label label12;
+        private Button btnChonAnhGiayKham;
+        private CongDanBLL congDanBLL = new CongDanBLL();
+        private ReaLTaiizor.Controls.SkyButton btnSubmit;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private ReaLTaiizor.Controls.SkyButton btnReset;
     }
 }
