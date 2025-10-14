@@ -33,6 +33,10 @@ namespace UI.HoSo
         private void InitializeComponent()
         {
             groupBox = new GroupBox();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
             txtSoNha = new TextBox();
             label16 = new Label();
             cbPhuongXa = new ComboBox();
@@ -67,6 +71,9 @@ namespace UI.HoSo
             label8 = new Label();
             btnSubmit = new ReaLTaiizor.Controls.SkyButton();
             panel3 = new Panel();
+            label21 = new Label();
+            button1 = new Button();
+            txtSearch = new TextBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             btnReset = new ReaLTaiizor.Controls.SkyButton();
             skyButton1 = new ReaLTaiizor.Controls.SkyButton();
@@ -84,6 +91,10 @@ namespace UI.HoSo
             // groupBox
             // 
             groupBox.BackColor = Color.PeachPuff;
+            groupBox.Controls.Add(label20);
+            groupBox.Controls.Add(label19);
+            groupBox.Controls.Add(label18);
+            groupBox.Controls.Add(label17);
             groupBox.Controls.Add(txtSoNha);
             groupBox.Controls.Add(label16);
             groupBox.Controls.Add(cbPhuongXa);
@@ -109,12 +120,52 @@ namespace UI.HoSo
             groupBox.Controls.Add(txtCCCD);
             groupBox.Controls.Add(label1);
             groupBox.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox.Location = new Point(7, 47);
+            groupBox.Location = new Point(7, 89);
             groupBox.Name = "groupBox";
             groupBox.Size = new Size(751, 531);
             groupBox.TabIndex = 0;
             groupBox.TabStop = false;
             groupBox.Text = " THÔNG TIN CHUNG";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.ForeColor = Color.Red;
+            label20.Location = new Point(262, 183);
+            label20.Name = "label20";
+            label20.Size = new Size(17, 23);
+            label20.TabIndex = 33;
+            label20.Text = "*";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.ForeColor = Color.Red;
+            label19.Location = new Point(262, 138);
+            label19.Name = "label19";
+            label19.Size = new Size(17, 23);
+            label19.TabIndex = 32;
+            label19.Text = "*";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.ForeColor = Color.Red;
+            label18.Location = new Point(262, 90);
+            label18.Name = "label18";
+            label18.Size = new Size(17, 23);
+            label18.TabIndex = 31;
+            label18.Text = "*";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.ForeColor = Color.Red;
+            label17.Location = new Point(262, 42);
+            label17.Name = "label17";
+            label17.Size = new Size(17, 23);
+            label17.TabIndex = 30;
+            label17.Text = "*";
             // 
             // txtSoNha
             // 
@@ -168,7 +219,7 @@ namespace UI.HoSo
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.ActiveCaptionText;
-            label14.Location = new Point(329, 223);
+            label14.Location = new Point(337, 223);
             label14.Name = "label14";
             label14.Size = new Size(94, 17);
             label14.TabIndex = 24;
@@ -178,7 +229,7 @@ namespace UI.HoSo
             // 
             label10.AutoSize = true;
             label10.ForeColor = SystemColors.ActiveCaptionText;
-            label10.Location = new Point(271, 220);
+            label10.Location = new Point(278, 220);
             label10.Name = "label10";
             label10.Size = new Size(62, 23);
             label10.TabIndex = 23;
@@ -220,7 +271,7 @@ namespace UI.HoSo
             // 
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(271, 378);
+            label7.Location = new Point(281, 378);
             label7.Name = "label7";
             label7.Size = new Size(55, 23);
             label7.TabIndex = 19;
@@ -294,7 +345,7 @@ namespace UI.HoSo
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(271, 183);
+            label4.Location = new Point(276, 183);
             label4.Name = "label4";
             label4.Size = new Size(79, 23);
             label4.TabIndex = 7;
@@ -315,7 +366,7 @@ namespace UI.HoSo
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(271, 90);
+            label3.Location = new Point(277, 90);
             label3.Name = "label3";
             label3.Size = new Size(91, 23);
             label3.TabIndex = 5;
@@ -344,7 +395,7 @@ namespace UI.HoSo
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(271, 42);
+            label2.Location = new Point(276, 42);
             label2.Name = "label2";
             label2.Size = new Size(90, 23);
             label2.TabIndex = 2;
@@ -363,7 +414,7 @@ namespace UI.HoSo
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(271, 134);
+            label1.Location = new Point(279, 134);
             label1.Name = "label1";
             label1.Size = new Size(59, 23);
             label1.TabIndex = 0;
@@ -381,7 +432,7 @@ namespace UI.HoSo
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(764, 47);
+            groupBox1.Location = new Point(765, 89);
             groupBox1.Margin = new Padding(3, 3, 30, 3);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(522, 531);
@@ -503,6 +554,9 @@ namespace UI.HoSo
             // panel3
             // 
             panel3.BackColor = Color.White;
+            panel3.Controls.Add(label21);
+            panel3.Controls.Add(button1);
+            panel3.Controls.Add(txtSearch);
             panel3.Controls.Add(groupBox);
             panel3.Controls.Add(groupBox1);
             panel3.Dock = DockStyle.Fill;
@@ -510,6 +564,39 @@ namespace UI.HoSo
             panel3.Name = "panel3";
             panel3.Size = new Size(1300, 702);
             panel3.TabIndex = 4;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.ForeColor = SystemColors.ActiveCaptionText;
+            label21.Location = new Point(910, 55);
+            label21.Name = "label21";
+            label21.Size = new Size(77, 21);
+            label21.TabIndex = 4;
+            label21.Text = "Tìm kiếm:";
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.search;
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.Location = new Point(1242, 48);
+            button1.Name = "button1";
+            button1.Size = new Size(46, 31);
+            button1.TabIndex = 3;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSearch.ForeColor = Color.FromArgb(64, 0, 64);
+            txtSearch.Location = new Point(995, 50);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(241, 29);
+            txtSearch.TabIndex = 2;
+            txtSearch.Text = "Nhập CCCD:";
+            txtSearch.GotFocus += TxtCCCD_GotFocus;
+            txtSearch.LostFocus += TxtCCCD_LostFocus;
             // 
             // flowLayoutPanel2
             // 
@@ -635,6 +722,7 @@ namespace UI.HoSo
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAnhGiayKham).EndInit();
             panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -691,7 +779,7 @@ namespace UI.HoSo
         private Button btnChonAnh3x4;
         private Label label12;
         private Button btnChonAnhGiayKham;
-        private CongDanBLL congDanBLL = new CongDanBLL();
+        private CongDanBLL congDanBLL;
         private ReaLTaiizor.Controls.SkyButton btnSubmit;
         private FlowLayoutPanel flowLayoutPanel2;
         private ReaLTaiizor.Controls.SkyButton btnReset;
@@ -708,5 +796,12 @@ namespace UI.HoSo
         private ComboBox cbTinh;
         private TextBox txtSoNha;
         private Label label16;
+        private Label label20;
+        private Label label19;
+        private Label label18;
+        private Label label17;
+        private Button button1;
+        private TextBox txtSearch;
+        private Label label21;
     }
 }

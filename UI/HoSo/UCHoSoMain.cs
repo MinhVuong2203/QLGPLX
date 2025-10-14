@@ -29,7 +29,8 @@ namespace UI.HoSo
 
         private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chức năng đang được phát triển", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            this.LoadControl(new HoSo.UCSuaCongDan());
         }
 
   

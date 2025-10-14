@@ -158,3 +158,4 @@ D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.genru
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\ref\UI.dll
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.HoSo.UCThemCongDan.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.HoSo.UCSuaCongDan.resources

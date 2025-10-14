@@ -13,6 +13,9 @@
     <Compile Update="HoSo\UCHoSoMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="HoSo\UCSuaCongDan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="HoSo\UCThemCongDan.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -58,6 +58,7 @@ namespace UI.HoSo
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            this.congDanBLL = new BLL.CongDanBLL();
             DialogResult rsd = MessageBox.Show(
                 "Xác nhận thêm công dân mới!"
                 , "Xác nhận"
@@ -163,5 +164,18 @@ namespace UI.HoSo
 
             cbPhuongXa.DataSource = new List<string>(phuongXas);
         }
+
+        private void TxtCCCD_GotFocus(object sender, EventArgs e)
+        {
+            txtSearch.BackColor = Color.WhiteSmoke;
+            txtSearch.Text = "";
+        }
+
+        private void TxtCCCD_LostFocus(object sender, EventArgs e)
+        {
+            txtSearch.BackColor = Color.White;
+        }
+
+
     }
 }
