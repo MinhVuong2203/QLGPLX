@@ -5,6 +5,7 @@ using System.Drawing;
 using ReaLTaiizor.Colors;
 using ReaLTaiizor.Util;
 using DAL;
+using System.Diagnostics;
 
 
 
@@ -391,7 +392,7 @@ namespace UI
             anhDaiDien.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
             anhDaiDien.FilterAlpha = 0;
             anhDaiDien.FilterEnabled = true;
-            anhDaiDien.Image = Properties.Resources.Employee_default;
+            anhDaiDien.Image = null;
             anhDaiDien.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             anhDaiDien.IsElipse = true;
             anhDaiDien.IsParallax = false;
@@ -677,19 +678,22 @@ namespace UI
         {
             this.lbName.Text = canBo.HoTen;
             this.lbRole.Text = "Chức vụ: " + canBo.MaChucVuNavigation.TenChucVu;
-            anhDaiDien.Image = Properties.Resources.Manager_Defaut;
+            Debug.WriteLine(canBo.Anh3x4);
+            // Load ảnh
             if (canBo.Anh3x4 != null)
-            {                
-                anhDaiDien.Image = (Image) Properties.Resources.ResourceManager.GetObject(canBo.Anh3x4);
-            }
-            else if (canBo.MaChucVuNavigation.TenChucVu == "Quản lý")
             {
-                anhDaiDien.Image = Properties.Resources.Manager_Defaut;
-            }
-            else
-            {
-                anhDaiDien.Image = Properties.Resources.Employee_default;
-            }
+                string solutionPath = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+                string imagePath = Path.Combine(solutionPath, "Resources", canBo.Anh3x4);
+                Debug.WriteLine(solutionPath);
+                Debug.WriteLine(imagePath);
+                if (File.Exists(imagePath))
+                {
+                    using (var stream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+                    {
+                        anhDaiDien.Image = Image.FromStream(stream);
+                    }
+                }
+            }          
         }
 
         private void StartClock()

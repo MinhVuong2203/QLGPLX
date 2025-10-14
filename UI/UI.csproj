@@ -9,10 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Resources\AnhCongDan\**" />
+    <EmbeddedResource Remove="Resources\AnhCongDan\**" />
+    <None Remove="Resources\AnhCongDan\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="ReaLTaiizor" Version="3.8.1.3" />
   </ItemGroup>
 

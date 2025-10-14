@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Helpers;
 
 namespace UI.HoSo
 {
@@ -16,6 +18,8 @@ namespace UI.HoSo
         public UCThemCongDan()
         {
             InitializeComponent();
+            LoadDiaChiFromJson();
+            LoadTinh();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,25 +39,27 @@ namespace UI.HoSo
 
         private void btnChonAnh3x4_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            if (string.IsNullOrWhiteSpace(this.txtTen.Text) || string.IsNullOrWhiteSpace(this.txtCCCD.Text))
             {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
-                openFileDialog.Title = "Chọn ảnh 3x4";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Lấy đường dẫn của tệp đã chọn
-                    string filePath = openFileDialog.FileName;
-                    // Hiển thị ảnh trong PictureBox
-                    this.pictureBoxAnhDaiDien.Image = Image.FromFile(filePath);
-                }
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cá nhân trước khi chọn ảnh!",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            string tenFile = $"Anh3x4_{txtCCCD.Text}";
+            string rs = ImageHelper.LuuAnh(pictureBoxAnhDaiDien, tenFile);
+            if (!string.IsNullOrEmpty(rs))
+            {
+                this.duongDanAnh3x4 = rs;
             }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             DialogResult rsd = MessageBox.Show(
-                "Bạn đã chắn chắc thêm công dân mới!"
+                "Xác nhận thêm công dân mới!"
                 , "Xác nhận"
                 , MessageBoxButtons.YesNo
                 , MessageBoxIcon.Question);
@@ -68,10 +74,13 @@ namespace UI.HoSo
                 else if (radioNu.Checked)
                     congDan.GioiTinh = "Nữ";
                 congDan.NgaySinh = DateOnly.FromDateTime(dtpNgaySinh.Value);
-                congDan.DiaChi = txtDiaChi.Text;
+                congDan.DiaChi = txtSoNha.Text + ", " + cbPhuongXa.SelectedItem?.ToString() + ", " + cbTinh.SelectedItem?.ToString();
                 congDan.SoDienThoai = txtSDT.Text;
                 congDan.Email = txtEmail.Text;
-                //congDan.AnhDaiDien = pictureBoxAnhDaiDien.Image != null ? (byte[])(new ImageConverter()).ConvertTo(pictureBoxAnhDaiDien.Image, typeof(byte[])) : null;
+                congDan.Anh3x4 = this.duongDanAnh3x4;
+                congDan.NgayKhamSucKhoe = DateOnly.FromDateTime(dtpNgayKham.Value);
+                congDan.GiayKhamSucKhoe = this.duongDanAnhGiayKham;
+
                 bool rs = this.congDanBLL.ThemCongDan(congDan);
                 if (rs)
                 {
@@ -93,19 +102,20 @@ namespace UI.HoSo
         {
             DialogResult rs = MessageBox.Show(
                 "Bạn có muốn đặt lại tất cả bản ghi!"
-                ,"Xác nhận"
-                ,MessageBoxButtons.YesNo
-                ,MessageBoxIcon.Question);
+                , "Xác nhận"
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
                 this.txtTen.Text = "";
                 this.txtCCCD.Text = "";
-                this.txtDiaChi.Text = "";
+                this.txtSoNha.Text = "";
+                this.cbTinh.SelectedIndex = -1;
+                this.cbPhuongXa.DataSource = null;
                 this.txtEmail.Text = "";
                 this.radioNam.Checked = false;
                 this.radioNu.Checked = false;
                 this.txtEmail.Text = "";
-                this.txtSoGiayKham.Text = "";
                 this.dtpNgaySinh.Value = DateTime.Now;
                 this.dtpNgayKham.Value = DateTime.Now;
                 this.rtxTinhTrang.Text = "";
@@ -113,6 +123,45 @@ namespace UI.HoSo
                 this.pictureBoxAnhDaiDien.Image = null;
                 this.pictureBoxAnhDaiDien.Image = null;
             }
+        }
+
+        private void btnChonAnhGiayKham_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.txtCCCD.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cá nhân trước khi chọn ảnh!",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+            string tenFile = $"AnhGiayKham_{txtCCCD.Text}";
+            string rs = ImageHelper.LuuAnh(pictureBoxAnhGiayKham, tenFile);
+            if (!string.IsNullOrEmpty(rs))
+            {
+                this.duongDanAnhGiayKham = rs;
+                Debug.WriteLine(this.duongDanAnhGiayKham);
+            }
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbTinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedTinh = cbTinh.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(selectedTinh)) return;
+
+            var phuongXas = diaChiList
+                .FirstOrDefault(x => x.tentinhmoi == selectedTinh)
+                ?.phuongxa
+                .Select(x => x.tenphuongxa)
+                .ToList() ?? new List<string>();
+
+            cbPhuongXa.DataSource = new List<string>(phuongXas);
         }
     }
 }
