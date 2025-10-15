@@ -7,3 +7,8 @@ size UserControl(1300, 800)
 git pull origin main --rebase
 git push origin main
 
+// Xem ràng buộc Unique
+  SELECT name 
+  FROM sys.key_constraints 
+  WHERE type = 'UQ' AND parent_object_id = OBJECT_ID('CongDan')
+

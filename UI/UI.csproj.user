@@ -13,10 +13,13 @@
     <Compile Update="HoSo\UCHoSoMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="HoSo\UCSuaCongDan.cs">
+    <Compile Update="HoSo\UCThemCongDan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="HoSo\UCThemCongDan.cs">
+    <Compile Update="HoSo\UCThemHoSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="HoSo\UCThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="KyThi\UCKyThiMain.cs">

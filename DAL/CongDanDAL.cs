@@ -29,7 +29,6 @@ namespace DAL
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
-
         private string GetFriendlyErrorMessage(DbUpdateException ex)
         {
             string innerMessage = ex.InnerException?.Message ?? "";
@@ -64,5 +63,47 @@ namespace DAL
             // Nếu không khớp với trường hợp nào, trả về message chi tiết
             return "Lỗi cơ sở dữ liệu: " + innerMessage;
         }
+
+        public bool CapNhatCongDan(CongDan congdan)
+        {
+            try
+            {
+                var existingCongDan = DatabaseSession.Context.CongDans.FirstOrDefault(t => t.Cccd == congdan.Cccd);
+                if (existingCongDan == null)
+                    throw new Exception("Công dân không tồn tại trong hệ thống.");
+                // Cập nhật các thuộc tính
+                existingCongDan.HoTen = congdan.HoTen;
+                existingCongDan.GioiTinh = congdan.GioiTinh;
+                existingCongDan.NgaySinh = congdan.NgaySinh;
+                existingCongDan.Cccd = congdan.Cccd;
+                existingCongDan.DiaChi = congdan.DiaChi;
+                existingCongDan.SoDienThoai = congdan.SoDienThoai;
+                existingCongDan.Email = congdan.Email;
+                existingCongDan.Anh3x4 = congdan.Anh3x4;
+                existingCongDan.TinhTrangSucKhoe = congdan.TinhTrangSucKhoe;
+                existingCongDan.NgayKhamSucKhoe = congdan.NgayKhamSucKhoe;
+                existingCongDan.GiayKhamSucKhoe = congdan.GiayKhamSucKhoe;
+                DatabaseSession.Context.SaveChanges();
+                return true;
+            }
+            catch (DbUpdateException ex)
+            {
+                string errorMessage = GetFriendlyErrorMessage(ex);
+                throw new Exception(errorMessage);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi: " + ex.Message);
+            }
+        }
+
+        public CongDan GetCongDanByCCCD(string cccd)
+        {
+            var congDan = DatabaseSession.Context.CongDans
+                .FirstOrDefault(cd => cd.Cccd == cccd);
+            return congDan;
+        }
+
+
     }
 }

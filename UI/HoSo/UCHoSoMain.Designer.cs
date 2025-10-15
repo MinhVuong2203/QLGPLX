@@ -31,8 +31,7 @@
             parrotFlatMenuStrip1 = new ReaLTaiizor.Controls.ParrotFlatMenuStrip();
             thôngTinCôngDânToolStripMenuItem = new ToolStripMenuItem();
             thêmCôngDânToolStripMenuItem = new ToolStripMenuItem();
-            sửaToolStripMenuItem = new ToolStripMenuItem();
-            tìmKiếmToolStripMenuItem = new ToolStripMenuItem();
+            thongkeToolStripMenuItem = new ToolStripMenuItem();
             hồSơCôngDânToolStripMenuItem = new ToolStripMenuItem();
             xétDuyệtHồSơToolStripMenuItem = new ToolStripMenuItem();
             traCứuHồSơToolStripMenuItem = new ToolStripMenuItem();
@@ -46,10 +45,12 @@
             // 
             // parrotFlatMenuStrip1
             // 
+            parrotFlatMenuStrip1.AutoSize = false;
             parrotFlatMenuStrip1.BackColor = Color.Khaki;
-            parrotFlatMenuStrip1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            parrotFlatMenuStrip1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             parrotFlatMenuStrip1.HoverBackColor = Color.Gold;
             parrotFlatMenuStrip1.HoverTextColor = Color.Black;
+            parrotFlatMenuStrip1.ImageScalingSize = new Size(20, 20);
             parrotFlatMenuStrip1.ItemBackColor = Color.Beige;
             parrotFlatMenuStrip1.Items.AddRange(new ToolStripItem[] { thôngTinCôngDânToolStripMenuItem, hồSơCôngDânToolStripMenuItem, lệPhíToolStripMenuItem });
             parrotFlatMenuStrip1.Location = new Point(0, 0);
@@ -57,70 +58,74 @@
             parrotFlatMenuStrip1.SelectedBackColor = Color.FromArgb(255, 128, 0);
             parrotFlatMenuStrip1.SelectedTextColor = Color.White;
             parrotFlatMenuStrip1.SeparatorColor = Color.White;
-            parrotFlatMenuStrip1.Size = new Size(1060, 29);
+            parrotFlatMenuStrip1.Size = new Size(1060, 48);
             parrotFlatMenuStrip1.TabIndex = 0;
             parrotFlatMenuStrip1.Text = "parrotFlatMenuStrip1";
             parrotFlatMenuStrip1.TextColor = Color.Black;
             // 
             // thôngTinCôngDânToolStripMenuItem
             // 
-            thôngTinCôngDânToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thêmCôngDânToolStripMenuItem, sửaToolStripMenuItem, tìmKiếmToolStripMenuItem });
+            thôngTinCôngDânToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thêmCôngDânToolStripMenuItem, thongkeToolStripMenuItem });
+            thôngTinCôngDânToolStripMenuItem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             thôngTinCôngDânToolStripMenuItem.ForeColor = Color.Black;
             thôngTinCôngDânToolStripMenuItem.Name = "thôngTinCôngDânToolStripMenuItem";
-            thôngTinCôngDânToolStripMenuItem.Size = new Size(164, 25);
-            thôngTinCôngDânToolStripMenuItem.Text = "Thông tin công dân";
+            thôngTinCôngDânToolStripMenuItem.Size = new Size(128, 44);
+            thôngTinCôngDânToolStripMenuItem.Text = "Công dân";
             // 
             // thêmCôngDânToolStripMenuItem
             // 
+            thêmCôngDânToolStripMenuItem.AutoSize = false;
+            thêmCôngDânToolStripMenuItem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             thêmCôngDânToolStripMenuItem.ForeColor = Color.Black;
-            thêmCôngDânToolStripMenuItem.Image = Properties.Resources.anh34;
+            thêmCôngDânToolStripMenuItem.Image = Properties.Resources.them;
             thêmCôngDânToolStripMenuItem.Name = "thêmCôngDânToolStripMenuItem";
-            thêmCôngDânToolStripMenuItem.Size = new Size(182, 26);
-            thêmCôngDânToolStripMenuItem.Text = "Thêm mới";
+            thêmCôngDânToolStripMenuItem.Size = new Size(295, 42);
+            thêmCôngDânToolStripMenuItem.Text = "Thêm/Sửa/Tra cứu";
             thêmCôngDânToolStripMenuItem.Click += thêmCôngDânToolStripMenuItem_Click;
             // 
-            // sửaToolStripMenuItem
+            // thongkeToolStripMenuItem
             // 
-            sửaToolStripMenuItem.ForeColor = Color.Black;
-            sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            sửaToolStripMenuItem.Size = new Size(182, 26);
-            sửaToolStripMenuItem.Text = "Sửa thông tin ";
-            sửaToolStripMenuItem.Click += sửaToolStripMenuItem_Click;
-            // 
-            // tìmKiếmToolStripMenuItem
-            // 
-            tìmKiếmToolStripMenuItem.ForeColor = Color.Black;
-            tìmKiếmToolStripMenuItem.Name = "tìmKiếmToolStripMenuItem";
-            tìmKiếmToolStripMenuItem.Size = new Size(182, 26);
-            tìmKiếmToolStripMenuItem.Text = "Tìm kiếm";
+            thongkeToolStripMenuItem.AutoSize = false;
+            thongkeToolStripMenuItem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            thongkeToolStripMenuItem.ForeColor = Color.Black;
+            thongkeToolStripMenuItem.Image = Properties.Resources.resport;
+            thongkeToolStripMenuItem.Name = "thongkeToolStripMenuItem";
+            thongkeToolStripMenuItem.Size = new Size(295, 42);
+            thongkeToolStripMenuItem.Text = "Thống kê";
+            thongkeToolStripMenuItem.Click += thongkeToolStripMenuItem_Click;
             // 
             // hồSơCôngDânToolStripMenuItem
             // 
+            hồSơCôngDânToolStripMenuItem.AutoSize = false;
             hồSơCôngDânToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xétDuyệtHồSơToolStripMenuItem, traCứuHồSơToolStripMenuItem, thốngKêToolStripMenuItem });
-            hồSơCôngDânToolStripMenuItem.ForeColor = Color.Black;
+            hồSơCôngDânToolStripMenuItem.ForeColor = Color.White;
             hồSơCôngDânToolStripMenuItem.Name = "hồSơCôngDânToolStripMenuItem";
-            hồSơCôngDânToolStripMenuItem.Size = new Size(137, 25);
-            hồSơCôngDânToolStripMenuItem.Text = "Hồ sơ công dân";
+            hồSơCôngDânToolStripMenuItem.Size = new Size(152, 44);
+            hồSơCôngDânToolStripMenuItem.Text = "Hồ sơ";
             // 
             // xétDuyệtHồSơToolStripMenuItem
             // 
-            xétDuyệtHồSơToolStripMenuItem.ForeColor = Color.White;
+            xétDuyệtHồSơToolStripMenuItem.AutoSize = false;
+            xétDuyệtHồSơToolStripMenuItem.ForeColor = Color.Black;
             xétDuyệtHồSơToolStripMenuItem.Name = "xétDuyệtHồSơToolStripMenuItem";
-            xétDuyệtHồSơToolStripMenuItem.Size = new Size(195, 26);
-            xétDuyệtHồSơToolStripMenuItem.Text = "Xét duyệt hồ sơ";
+            xétDuyệtHồSơToolStripMenuItem.Size = new Size(264, 42);
+            xétDuyệtHồSơToolStripMenuItem.Text = "Thêm mới";
+            xétDuyệtHồSơToolStripMenuItem.Click += xétDuyệtHồSơToolStripMenuItem_Click;
             // 
             // traCứuHồSơToolStripMenuItem
             // 
-            traCứuHồSơToolStripMenuItem.ForeColor = Color.White;
+            traCứuHồSơToolStripMenuItem.AutoSize = false;
+            traCứuHồSơToolStripMenuItem.ForeColor = Color.Black;
             traCứuHồSơToolStripMenuItem.Name = "traCứuHồSơToolStripMenuItem";
-            traCứuHồSơToolStripMenuItem.Size = new Size(195, 26);
-            traCứuHồSơToolStripMenuItem.Text = "Tra cứu hồ sơ";
+            traCứuHồSơToolStripMenuItem.Size = new Size(264, 42);
+            traCứuHồSơToolStripMenuItem.Text = "Xét duyệt";
             // 
             // thốngKêToolStripMenuItem
             // 
-            thốngKêToolStripMenuItem.ForeColor = Color.White;
+            thốngKêToolStripMenuItem.AutoSize = false;
+            thốngKêToolStripMenuItem.ForeColor = Color.Black;
             thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            thốngKêToolStripMenuItem.Size = new Size(195, 26);
+            thốngKêToolStripMenuItem.Size = new Size(264, 42);
             thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // lệPhíToolStripMenuItem
@@ -128,35 +133,35 @@
             lệPhíToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thủTụcToolStripMenuItem, thốngKêToolStripMenuItem1 });
             lệPhíToolStripMenuItem.ForeColor = Color.Black;
             lệPhíToolStripMenuItem.Name = "lệPhíToolStripMenuItem";
-            lệPhíToolStripMenuItem.Size = new Size(66, 25);
+            lệPhíToolStripMenuItem.Size = new Size(90, 44);
             lệPhíToolStripMenuItem.Text = "Lệ phí";
             // 
             // thủTụcToolStripMenuItem
             // 
             thủTụcToolStripMenuItem.ForeColor = Color.Black;
             thủTụcToolStripMenuItem.Name = "thủTụcToolStripMenuItem";
-            thủTụcToolStripMenuItem.Size = new Size(180, 26);
+            thủTụcToolStripMenuItem.Size = new Size(224, 36);
             thủTụcToolStripMenuItem.Text = "Thủ tục";
             // 
             // thốngKêToolStripMenuItem1
             // 
             thốngKêToolStripMenuItem1.ForeColor = Color.Black;
             thốngKêToolStripMenuItem1.Name = "thốngKêToolStripMenuItem1";
-            thốngKêToolStripMenuItem1.Size = new Size(180, 26);
+            thốngKêToolStripMenuItem1.Size = new Size(224, 36);
             thốngKêToolStripMenuItem1.Text = "Kiểm kê";
             thốngKêToolStripMenuItem1.Click += thốngKêToolStripMenuItem1_Click;
             // 
             // panelMain
             // 
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(0, 29);
+            panelMain.Location = new Point(0, 48);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1060, 538);
+            panelMain.Size = new Size(1060, 519);
             panelMain.TabIndex = 1;
             // 
             // UCHoSoMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panelMain);
             Controls.Add(parrotFlatMenuStrip1);
@@ -167,7 +172,6 @@
             parrotFlatMenuStrip1.ResumeLayout(false);
             parrotFlatMenuStrip1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         public void LoadControl(UserControl uc)
@@ -182,8 +186,7 @@
         private ReaLTaiizor.Controls.ParrotFlatMenuStrip parrotFlatMenuStrip1;
         private ToolStripMenuItem thôngTinCôngDânToolStripMenuItem;
         private ToolStripMenuItem thêmCôngDânToolStripMenuItem;
-        private ToolStripMenuItem sửaToolStripMenuItem;
-        private ToolStripMenuItem tìmKiếmToolStripMenuItem;
+        private ToolStripMenuItem thongkeToolStripMenuItem;
         private ToolStripMenuItem hồSơCôngDânToolStripMenuItem;
         private ToolStripMenuItem xétDuyệtHồSơToolStripMenuItem;
         private ToolStripMenuItem traCứuHồSơToolStripMenuItem;

@@ -86,6 +86,7 @@ namespace UI.HoSo
                 if (rs)
                 {
                     MessageBox.Show("Thêm công dân thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.setDefaltInfo();
                 }
                 else
                 {
@@ -122,7 +123,7 @@ namespace UI.HoSo
                 this.rtxTinhTrang.Text = "";
                 this.txtSDT.Text = "";
                 this.pictureBoxAnhDaiDien.Image = null;
-                this.pictureBoxAnhDaiDien.Image = null;
+                this.pictureBoxAnhGiayKham.Image = null;
             }
         }
 
@@ -176,6 +177,156 @@ namespace UI.HoSo
             txtSearch.BackColor = Color.White;
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            this.congDanBLL = new BLL.CongDanBLL();
+            this.setDefaltInfo();
+            string cccd = txtSearch.Text.Trim();
+            CongDan congDan = congDanBLL.getCongDanByCCCD(cccd);
+            if (congDan != null)
+            {                  
+                this.txtCCCD.Text = congDan.Cccd;
+                this.txtTen.Text = congDan.HoTen;
+                this.txtSDT.Text = congDan.SoDienThoai;
+                this.txtEmail.Text = congDan.Email;
+                if (congDan.GioiTinh == "Nam")
+                    this.radioNam.Checked = true;
+                else if (congDan.GioiTinh == "Nữ")
+                    this.radioNu.Checked = true;
+                this.dtpNgaySinh.Value = congDan.NgaySinh.ToDateTime(new TimeOnly(0, 0));
+                if (congDan.GiayKhamSucKhoe != null)
+                    this.dtpNgayKham.Value = congDan.NgayKhamSucKhoe?.ToDateTime(new TimeOnly(0, 0)) ?? DateTime.Now;
+                string diachi = congDan.DiaChi;
 
+                if (!string.IsNullOrWhiteSpace(diachi))
+                {
+                    var parts = diachi.Split(',')
+                                      .Select(p => p.Trim())
+                                      .ToList();
+
+                    // --- 1. Tách phần tỉnh (cuối)
+                    string tinh = parts.LastOrDefault();
+                    if (!string.IsNullOrEmpty(tinh))
+                    {
+                        int indexTinh = cbTinh.Items.IndexOf(tinh);
+                        if (indexTinh >= 0)
+                            cbTinh.SelectedIndex = indexTinh;
+                        else
+                            cbTinh.SelectedIndex = -1; // không tìm thấy
+                    }
+
+                    // --- 2. Tách phần phường (gần cuối)
+                    if (parts.Count >= 2)
+                    {
+                        string phuong = parts[parts.Count - 2];
+                        int indexPhuong = cbPhuongXa.Items.IndexOf(phuong);
+                        if (indexPhuong >= 0)
+                            cbPhuongXa.SelectedIndex = indexPhuong;
+                        else
+                            cbPhuongXa.SelectedIndex = -1;
+                    }
+
+                    // --- 3. Phần còn lại là số nhà + đường
+                    if (parts.Count > 2)
+                        txtSoNha.Text = string.Join(", ", parts.Take(parts.Count - 2));
+                    else
+                        txtSoNha.Text = diachi;
+                } 
+                else
+                {
+                    this.cbPhuongXa.SelectedIndex = -1;
+                    this.cbTinh.SelectedIndex = -1;
+                    this.txtSoNha.Text = "";
+                }
+                this.rtxTinhTrang.Text = congDan.TinhTrangSucKhoe;
+                this.duongDanAnh3x4 = congDan.Anh3x4;
+                this.duongDanAnhGiayKham = congDan.GiayKhamSucKhoe;
+                if (congDan.Anh3x4 != null)
+                {
+                    string solutionPath = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+                    string imagePath = Path.Combine(solutionPath, "Resources", congDan.Anh3x4);
+                    Debug.WriteLine(solutionPath);
+                    Debug.WriteLine(imagePath);
+                    if (File.Exists(imagePath))
+                    {
+                        using (var stream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+                        {
+                            this.pictureBoxAnhDaiDien.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                if (congDan.GiayKhamSucKhoe != null)
+                {
+                    string solutionPath = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+                    string imagePath = Path.Combine(solutionPath, "Resources", congDan.GiayKhamSucKhoe);
+                    Debug.WriteLine(solutionPath);
+                    Debug.WriteLine(imagePath);
+                    if (File.Exists(imagePath))
+                    {
+                        using (var stream = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
+                        {
+                            this.pictureBoxAnhGiayKham.Image = Image.FromStream(stream);
+                        }
+                    }
+                }
+                this.btnCapNhat.Enabled = true;
+                this.txtCCCD.Enabled = false;
+                this.btnSubmit.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy công dân với CCCD: " + cccd, "Kết quả tìm kiếm", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.btnCapNhat.Enabled = false;
+                this.txtCCCD.Enabled = false;
+                this.btnSubmit.Enabled = true;
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            this.congDanBLL = new BLL.CongDanBLL();
+            DialogResult rsd = MessageBox.Show(
+                "Xác nhận cập nhật thông tin công dân!"
+                , "Xác nhận"
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Question);
+            if (rsd == DialogResult.No) return;
+            try
+            {
+                CongDan congDan = new CongDan();
+                congDan.HoTen = txtTen.Text;
+                congDan.Cccd = txtCCCD.Text;
+                if (radioNam.Checked)
+                    congDan.GioiTinh = "Nam";
+                else if (radioNu.Checked)
+                    congDan.GioiTinh = "Nữ";
+                congDan.NgaySinh = DateOnly.FromDateTime(dtpNgaySinh.Value);
+                congDan.DiaChi = txtSoNha.Text + ", " + cbPhuongXa.SelectedItem?.ToString() + ", " + cbTinh.SelectedItem?.ToString();
+                congDan.SoDienThoai = txtSDT.Text;
+                congDan.Email = txtEmail.Text;
+                congDan.Anh3x4 = this.duongDanAnh3x4;
+                congDan.NgayKhamSucKhoe = DateOnly.FromDateTime(dtpNgayKham.Value);
+                congDan.GiayKhamSucKhoe = this.duongDanAnhGiayKham;
+
+                bool rs = this.congDanBLL.CapNhatCongDan(congDan);
+                if (rs)
+                {
+                    MessageBox.Show("Cập nhật công dân thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.btnSubmit.Enabled = true;
+                    this.txtCCCD.Enabled = true;
+                    this.btnCapNhat.Enabled = false;
+                    this.txtSearch.Text = "Nhập CCCD";
+                    this.setDefaltInfo();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thông tin công dân thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

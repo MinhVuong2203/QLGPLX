@@ -23,16 +23,18 @@ namespace UI.HoSo
         }
 
         private void thêmCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
-        {          
+        {
             this.LoadControl(new HoSo.UCThemCongDan());
         }
 
-        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thongkeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            this.LoadControl(new HoSo.UCSuaCongDan());
+            this.LoadControl(new HoSo.UCThongKe());
         }
 
-  
+        private void xétDuyệtHồSơToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LoadControl(new HoSo.UCThemHoSo());
+        }
     }
 }
