@@ -36,9 +36,6 @@
             xétDuyệtHồSơToolStripMenuItem = new ToolStripMenuItem();
             traCứuHồSơToolStripMenuItem = new ToolStripMenuItem();
             thốngKêToolStripMenuItem = new ToolStripMenuItem();
-            lệPhíToolStripMenuItem = new ToolStripMenuItem();
-            thủTụcToolStripMenuItem = new ToolStripMenuItem();
-            thốngKêToolStripMenuItem1 = new ToolStripMenuItem();
             panelMain = new Panel();
             parrotFlatMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -52,7 +49,7 @@
             parrotFlatMenuStrip1.HoverTextColor = Color.Black;
             parrotFlatMenuStrip1.ImageScalingSize = new Size(20, 20);
             parrotFlatMenuStrip1.ItemBackColor = Color.Beige;
-            parrotFlatMenuStrip1.Items.AddRange(new ToolStripItem[] { thôngTinCôngDânToolStripMenuItem, hồSơCôngDânToolStripMenuItem, lệPhíToolStripMenuItem });
+            parrotFlatMenuStrip1.Items.AddRange(new ToolStripItem[] { thôngTinCôngDânToolStripMenuItem, hồSơCôngDânToolStripMenuItem });
             parrotFlatMenuStrip1.Location = new Point(0, 0);
             parrotFlatMenuStrip1.Name = "parrotFlatMenuStrip1";
             parrotFlatMenuStrip1.SelectedBackColor = Color.FromArgb(255, 128, 0);
@@ -119,6 +116,7 @@
             traCứuHồSơToolStripMenuItem.Name = "traCứuHồSơToolStripMenuItem";
             traCứuHồSơToolStripMenuItem.Size = new Size(264, 42);
             traCứuHồSơToolStripMenuItem.Text = "Xét duyệt";
+            traCứuHồSơToolStripMenuItem.Click += traCứuHồSơToolStripMenuItem_Click;
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -127,29 +125,6 @@
             thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             thốngKêToolStripMenuItem.Size = new Size(264, 42);
             thốngKêToolStripMenuItem.Text = "Thống kê";
-            // 
-            // lệPhíToolStripMenuItem
-            // 
-            lệPhíToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { thủTụcToolStripMenuItem, thốngKêToolStripMenuItem1 });
-            lệPhíToolStripMenuItem.ForeColor = Color.Black;
-            lệPhíToolStripMenuItem.Name = "lệPhíToolStripMenuItem";
-            lệPhíToolStripMenuItem.Size = new Size(90, 44);
-            lệPhíToolStripMenuItem.Text = "Lệ phí";
-            // 
-            // thủTụcToolStripMenuItem
-            // 
-            thủTụcToolStripMenuItem.ForeColor = Color.Black;
-            thủTụcToolStripMenuItem.Name = "thủTụcToolStripMenuItem";
-            thủTụcToolStripMenuItem.Size = new Size(224, 36);
-            thủTụcToolStripMenuItem.Text = "Thủ tục";
-            // 
-            // thốngKêToolStripMenuItem1
-            // 
-            thốngKêToolStripMenuItem1.ForeColor = Color.Black;
-            thốngKêToolStripMenuItem1.Name = "thốngKêToolStripMenuItem1";
-            thốngKêToolStripMenuItem1.Size = new Size(224, 36);
-            thốngKêToolStripMenuItem1.Text = "Kiểm kê";
-            thốngKêToolStripMenuItem1.Click += thốngKêToolStripMenuItem1_Click;
             // 
             // panelMain
             // 
@@ -191,9 +166,6 @@
         private ToolStripMenuItem xétDuyệtHồSơToolStripMenuItem;
         private ToolStripMenuItem traCứuHồSơToolStripMenuItem;
         private ToolStripMenuItem thốngKêToolStripMenuItem;
-        private ToolStripMenuItem lệPhíToolStripMenuItem;
-        private ToolStripMenuItem thủTụcToolStripMenuItem;
-        private ToolStripMenuItem thốngKêToolStripMenuItem1;
         private Panel panelMain;
     }
 }

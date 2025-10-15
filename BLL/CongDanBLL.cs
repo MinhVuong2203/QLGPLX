@@ -53,7 +53,7 @@ namespace BLL
             var p = new SqlParameter("@MaHang", (object?)maHang ?? DBNull.Value);
 
             return await db.Set<CongDan>()
-                           .FromSqlRaw("EXEC sp_CongDan_ChuaCoHoSo @MaHang", p)
+                           .FromSqlRaw("EXEC sp_CongDan_PhuHopTheoHang @MaHang", p)
                            .AsNoTracking()
                            .ToListAsync();
         }

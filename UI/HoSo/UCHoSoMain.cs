@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace UI.HoSo
 {
     public partial class UCHoSoMain : UserControl
     {
-        public UCHoSoMain()
+        public CanBo CanBo { get; set; }
+        public UCHoSoMain(CanBo canBo)
         {
+            this.CanBo = canBo;
             InitializeComponent();
         }
 
@@ -34,7 +37,12 @@ namespace UI.HoSo
 
         private void xétDuyệtHồSơToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LoadControl(new HoSo.UCThemHoSo());
+            this.LoadControl(new HoSo.UCThemHoSo(this.CanBo));
+        }
+
+        private void traCứuHồSơToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LoadControl(new HoSo.UCDuyetHoSo(this.CanBo));
         }
     }
 }

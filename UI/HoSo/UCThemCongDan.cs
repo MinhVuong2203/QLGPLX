@@ -307,7 +307,7 @@ namespace UI.HoSo
                 congDan.Anh3x4 = this.duongDanAnh3x4;
                 congDan.NgayKhamSucKhoe = DateOnly.FromDateTime(dtpNgayKham.Value);
                 congDan.GiayKhamSucKhoe = this.duongDanAnhGiayKham;
-
+                congDan.TinhTrangSucKhoe = this.rtxTinhTrang.Text;
                 bool rs = this.congDanBLL.CapNhatCongDan(congDan);
                 if (rs)
                 {

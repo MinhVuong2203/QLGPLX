@@ -2,6 +2,7 @@
 using DAL;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace UI.HoSo
 {
@@ -118,9 +119,9 @@ namespace UI.HoSo
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(325, 138);
             label1.Name = "label1";
-            label1.Size = new Size(71, 30);
+            label1.Size = new Size(58, 30);
             label1.TabIndex = 31;
-            label1.Text = "Email:";
+            label1.Text = "SĐT:";
             // 
             // txtGioiTinh
             // 
@@ -290,6 +291,7 @@ namespace UI.HoSo
             cboCongDan.Name = "cboCongDan";
             cboCongDan.Size = new Size(526, 38);
             cboCongDan.TabIndex = 1;
+            cboCongDan.SelectedIndexChanged += cboCongDan_SelectedIndexChanged;
             // 
             // txtGhiChu
             // 
@@ -328,6 +330,7 @@ namespace UI.HoSo
             // dtpNgayNop
             // 
             dtpNgayNop.BackColor = Color.White;
+            dtpNgayNop.Enabled = false;
             dtpNgayNop.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpNgayNop.ForeColor = Color.FromArgb(52, 73, 94);
             dtpNgayNop.Format = DateTimePickerFormat.Short;
@@ -335,7 +338,7 @@ namespace UI.HoSo
             dtpNgayNop.Name = "dtpNgayNop";
             dtpNgayNop.Size = new Size(230, 37);
             dtpNgayNop.TabIndex = 5;
-            dtpNgayNop.Value = new DateTime(2025, 10, 14, 0, 0, 0, 0);
+            dtpNgayNop.Value = new DateTime(2025, 10, 15, 0, 0, 0, 0);
             // 
             // lblNgayNop
             // 
@@ -380,12 +383,13 @@ namespace UI.HoSo
             btnLuu.FlatStyle = FlatStyle.Flat;
             btnLuu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(596, 10);
+            btnLuu.Location = new Point(611, 10);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(120, 40);
             btnLuu.TabIndex = 0;
-            btnLuu.Text = "LƯUUU";
+            btnLuu.Text = "LƯU";
             btnLuu.UseVisualStyleBackColor = false;
+            btnLuu.Click += btnLuu_Click;
             // 
             // btnHuy
             // 
@@ -395,12 +399,13 @@ namespace UI.HoSo
             btnHuy.FlatStyle = FlatStyle.Flat;
             btnHuy.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnHuy.ForeColor = Color.White;
-            btnHuy.Location = new Point(836, 10);
+            btnHuy.Location = new Point(826, 10);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(120, 40);
             btnHuy.TabIndex = 1;
             btnHuy.Text = "HỦY";
             btnHuy.UseVisualStyleBackColor = false;
+            btnHuy.Click += btnHuy_Click;
             // 
             // UCThemHoSo
             // 
@@ -446,6 +451,23 @@ namespace UI.HoSo
             }
         }
 
+        public void resetForm()
+        {
+            txtGhiChu.Clear();
+            comboBox1.SelectedIndex = -1;
+            cboCongDan.DataSource = null;
+            cboCongDan.SelectedIndex = -1;
+            dtpNgayNop.Value = DateTime.Now;
+            pictureBoxAnhDaiDien.Image = null;
+            txtTen.Clear();
+            txtSDT.Clear();
+            txtGioiTinh.Clear();
+            txtEmail.Clear();
+            txtDiaChi.Clear();
+            dtpNgaySinh.Value = DateTime.Now;
+        }
+
+
         #endregion
         private ComboBox cboCongDan;
         private DateTimePicker dtpNgayNop;
@@ -475,5 +497,6 @@ namespace UI.HoSo
         private TextBox txtGioiTinh;
         private TextBox txtSDT;
         private Label label1;
+        public int idCongDan;
     }
 }

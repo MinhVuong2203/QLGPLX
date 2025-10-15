@@ -55,6 +55,7 @@ namespace UI
             lbName = new Label();
             anhDaiDien = new ParrotPictureBox();
             parrotSlidingPanel1 = new ParrotSlidingPanel();
+            cyberButton1 = new CyberButton();
             iconHeThong = new Label();
             iconViPham = new Label();
             iconHoSo = new Label();
@@ -102,12 +103,13 @@ namespace UI
             btnCapGPLX.Lighting = false;
             btnCapGPLX.LinearGradient_Background = false;
             btnCapGPLX.LinearGradientPen = false;
-            btnCapGPLX.Location = new Point(0, 243);
+            btnCapGPLX.Location = new Point(0, 279);
+            btnCapGPLX.Margin = new Padding(3, 4, 3, 4);
             btnCapGPLX.Name = "btnCapGPLX";
             btnCapGPLX.PenWidth = 15;
             btnCapGPLX.Rounding = true;
             btnCapGPLX.RoundingInt = 70;
-            btnCapGPLX.Size = new Size(240, 81);
+            btnCapGPLX.Size = new Size(274, 93);
             btnCapGPLX.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnCapGPLX.TabIndex = 11;
             btnCapGPLX.Tag = "Cyber";
@@ -146,12 +148,13 @@ namespace UI
             btnHoSo.Lighting = false;
             btnHoSo.LinearGradient_Background = false;
             btnHoSo.LinearGradientPen = false;
-            btnHoSo.Location = new Point(0, 81);
+            btnHoSo.Location = new Point(0, 93);
+            btnHoSo.Margin = new Padding(3, 4, 3, 4);
             btnHoSo.Name = "btnHoSo";
             btnHoSo.PenWidth = 15;
             btnHoSo.Rounding = true;
             btnHoSo.RoundingInt = 70;
-            btnHoSo.Size = new Size(240, 81);
+            btnHoSo.Size = new Size(274, 93);
             btnHoSo.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnHoSo.TabIndex = 10;
             btnHoSo.Tag = "Cyber";
@@ -191,11 +194,12 @@ namespace UI
             btnTrangChu.LinearGradient_Background = false;
             btnTrangChu.LinearGradientPen = false;
             btnTrangChu.Location = new Point(0, 0);
+            btnTrangChu.Margin = new Padding(3, 4, 3, 4);
             btnTrangChu.Name = "btnTrangChu";
             btnTrangChu.PenWidth = 15;
             btnTrangChu.Rounding = true;
             btnTrangChu.RoundingInt = 70;
-            btnTrangChu.Size = new Size(240, 81);
+            btnTrangChu.Size = new Size(274, 93);
             btnTrangChu.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnTrangChu.TabIndex = 9;
             btnTrangChu.Tag = "Cyber";
@@ -234,12 +238,13 @@ namespace UI
             btnKyThi.Lighting = false;
             btnKyThi.LinearGradient_Background = false;
             btnKyThi.LinearGradientPen = false;
-            btnKyThi.Location = new Point(0, 162);
+            btnKyThi.Location = new Point(0, 186);
+            btnKyThi.Margin = new Padding(3, 4, 3, 4);
             btnKyThi.Name = "btnKyThi";
             btnKyThi.PenWidth = 15;
             btnKyThi.Rounding = true;
             btnKyThi.RoundingInt = 70;
-            btnKyThi.Size = new Size(240, 81);
+            btnKyThi.Size = new Size(274, 93);
             btnKyThi.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnKyThi.TabIndex = 8;
             btnKyThi.Tag = "Cyber";
@@ -255,8 +260,9 @@ namespace UI
             panel1.Controls.Add(parrotSlidingPanel2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1264, 84);
+            panel1.Size = new Size(1445, 112);
             panel1.TabIndex = 6;
             // 
             // parrotGradientPanel1
@@ -267,11 +273,12 @@ namespace UI
             parrotGradientPanel1.Controls.Add(panel2);
             parrotGradientPanel1.Dock = DockStyle.Fill;
             parrotGradientPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            parrotGradientPanel1.Location = new Point(240, 0);
+            parrotGradientPanel1.Location = new Point(274, 0);
+            parrotGradientPanel1.Margin = new Padding(3, 4, 3, 4);
             parrotGradientPanel1.Name = "parrotGradientPanel1";
             parrotGradientPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             parrotGradientPanel1.PrimerColor = Color.White;
-            parrotGradientPanel1.Size = new Size(1024, 84);
+            parrotGradientPanel1.Size = new Size(1171, 112);
             parrotGradientPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             parrotGradientPanel1.Style = ParrotGradientPanel.GradientStyle.Corners;
             parrotGradientPanel1.TabIndex = 1;
@@ -287,9 +294,10 @@ namespace UI
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(pictureBox2);
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(790, 0);
+            panel2.Location = new Point(904, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(234, 84);
+            panel2.Size = new Size(267, 112);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -297,9 +305,9 @@ namespace UI
             // 
             lblDate.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDate.ForeColor = SystemColors.ActiveCaptionText;
-            lblDate.Location = new Point(63, 50);
+            lblDate.Location = new Point(72, 67);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(173, 31);
+            lblDate.Size = new Size(198, 41);
             lblDate.TabIndex = 6;
             lblDate.Text = "Giờ";
             // 
@@ -307,9 +315,9 @@ namespace UI
             // 
             lblClock.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblClock.ForeColor = SystemColors.ActiveCaptionText;
-            lblClock.Location = new Point(63, 14);
+            lblClock.Location = new Point(72, 19);
             lblClock.Name = "lblClock";
-            lblClock.Size = new Size(173, 31);
+            lblClock.Size = new Size(198, 41);
             lblClock.TabIndex = 4;
             lblClock.Text = "Giờ";
             // 
@@ -317,9 +325,10 @@ namespace UI
             // 
             pictureBox1.BackgroundImage = Properties.Resources.imgClock;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(15, -3);
+            pictureBox1.Location = new Point(17, -4);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(54, 50);
+            pictureBox1.Size = new Size(62, 67);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
@@ -327,9 +336,10 @@ namespace UI
             // 
             pictureBox2.BackgroundImage = Properties.Resources.imgCalender;
             pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox2.Location = new Point(20, 42);
+            pictureBox2.Location = new Point(23, 56);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(41, 38);
+            pictureBox2.Size = new Size(47, 51);
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
@@ -347,12 +357,13 @@ namespace UI
             parrotSlidingPanel2.HideControls = false;
             parrotSlidingPanel2.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             parrotSlidingPanel2.Location = new Point(0, 0);
+            parrotSlidingPanel2.Margin = new Padding(3, 4, 3, 4);
             parrotSlidingPanel2.Name = "parrotSlidingPanel2";
             parrotSlidingPanel2.PanelWidthCollapsed = 50;
             parrotSlidingPanel2.PanelWidthExpanded = 200;
             parrotSlidingPanel2.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             parrotSlidingPanel2.PrimerColor = Color.White;
-            parrotSlidingPanel2.Size = new Size(240, 84);
+            parrotSlidingPanel2.Size = new Size(274, 112);
             parrotSlidingPanel2.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             parrotSlidingPanel2.Style = ParrotGradientPanel.GradientStyle.Corners;
             parrotSlidingPanel2.TabIndex = 0;
@@ -366,9 +377,9 @@ namespace UI
             lbRole.BackColor = Color.Transparent;
             lbRole.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lbRole.ForeColor = Color.Black;
-            lbRole.Location = new Point(69, 46);
+            lbRole.Location = new Point(79, 61);
             lbRole.Name = "lbRole";
-            lbRole.Size = new Size(57, 17);
+            lbRole.Size = new Size(73, 23);
             lbRole.TabIndex = 2;
             lbRole.Text = "Chức vụ:";
             // 
@@ -378,9 +389,9 @@ namespace UI
             lbName.BackColor = Color.Transparent;
             lbName.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbName.ForeColor = Color.Black;
-            lbName.Location = new Point(69, 19);
+            lbName.Location = new Point(79, 25);
             lbName.Name = "lbName";
-            lbName.Size = new Size(64, 20);
+            lbName.Size = new Size(81, 25);
             lbName.TabIndex = 1;
             lbName.Text = "lbName";
             // 
@@ -396,10 +407,11 @@ namespace UI
             anhDaiDien.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
             anhDaiDien.IsElipse = true;
             anhDaiDien.IsParallax = false;
-            anhDaiDien.Location = new Point(5, 11);
+            anhDaiDien.Location = new Point(6, 15);
+            anhDaiDien.Margin = new Padding(3, 4, 3, 4);
             anhDaiDien.Name = "anhDaiDien";
             anhDaiDien.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            anhDaiDien.Size = new Size(60, 60);
+            anhDaiDien.Size = new Size(69, 80);
             anhDaiDien.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             anhDaiDien.TabIndex = 0;
             anhDaiDien.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
@@ -411,6 +423,7 @@ namespace UI
             parrotSlidingPanel1.CollapseControl = null;
             parrotSlidingPanel1.Collapsed = true;
             parrotSlidingPanel1.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+            parrotSlidingPanel1.Controls.Add(cyberButton1);
             parrotSlidingPanel1.Controls.Add(iconHeThong);
             parrotSlidingPanel1.Controls.Add(iconViPham);
             parrotSlidingPanel1.Controls.Add(iconHoSo);
@@ -426,13 +439,14 @@ namespace UI
             parrotSlidingPanel1.Dock = DockStyle.Left;
             parrotSlidingPanel1.HideControls = false;
             parrotSlidingPanel1.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            parrotSlidingPanel1.Location = new Point(0, 84);
+            parrotSlidingPanel1.Location = new Point(0, 112);
+            parrotSlidingPanel1.Margin = new Padding(3, 4, 3, 4);
             parrotSlidingPanel1.Name = "parrotSlidingPanel1";
             parrotSlidingPanel1.PanelWidthCollapsed = 50;
             parrotSlidingPanel1.PanelWidthExpanded = 200;
             parrotSlidingPanel1.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             parrotSlidingPanel1.PrimerColor = Color.White;
-            parrotSlidingPanel1.Size = new Size(240, 580);
+            parrotSlidingPanel1.Size = new Size(274, 773);
             parrotSlidingPanel1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             parrotSlidingPanel1.Style = ParrotGradientPanel.GradientStyle.Corners;
             parrotSlidingPanel1.TabIndex = 12;
@@ -440,49 +454,94 @@ namespace UI
             parrotSlidingPanel1.TopLeft = Color.Black;
             parrotSlidingPanel1.TopRight = Color.Black;
             // 
+            // cyberButton1
+            // 
+            cyberButton1.Alpha = 20;
+            cyberButton1.BackColor = Color.Transparent;
+            cyberButton1.Background = true;
+            cyberButton1.Background_WidthPen = 12F;
+            cyberButton1.BackgroundImageLayout = ImageLayout.Zoom;
+            cyberButton1.BackgroundPen = true;
+            cyberButton1.ColorBackground = Color.FromArgb(37, 52, 68);
+            cyberButton1.ColorBackground_1 = Color.FromArgb(37, 52, 68);
+            cyberButton1.ColorBackground_2 = Color.FromArgb(41, 63, 86);
+            cyberButton1.ColorBackground_Pen = Color.FromArgb(29, 200, 238);
+            cyberButton1.ColorLighting = Color.FromArgb(29, 200, 238);
+            cyberButton1.ColorPen_1 = Color.FromArgb(37, 52, 68);
+            cyberButton1.ColorPen_2 = Color.FromArgb(41, 63, 86);
+            cyberButton1.Cursor = Cursors.Hand;
+            cyberButton1.CyberButtonStyle = ReaLTaiizor.Enum.Cyber.StateStyle.Custom;
+            cyberButton1.Dock = DockStyle.Top;
+            cyberButton1.Effect_1 = true;
+            cyberButton1.Effect_1_ColorBackground = Color.FromArgb(29, 200, 238);
+            cyberButton1.Effect_1_Transparency = 25;
+            cyberButton1.Effect_2 = true;
+            cyberButton1.Effect_2_ColorBackground = Color.White;
+            cyberButton1.Effect_2_Transparency = 20;
+            cyberButton1.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cyberButton1.ForeColor = Color.FromArgb(245, 245, 245);
+            cyberButton1.Lighting = false;
+            cyberButton1.LinearGradient_Background = false;
+            cyberButton1.LinearGradientPen = false;
+            cyberButton1.Location = new Point(0, 558);
+            cyberButton1.Margin = new Padding(3, 4, 3, 4);
+            cyberButton1.Name = "cyberButton1";
+            cyberButton1.PenWidth = 15;
+            cyberButton1.Rounding = true;
+            cyberButton1.RoundingInt = 70;
+            cyberButton1.Size = new Size(274, 93);
+            cyberButton1.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            cyberButton1.TabIndex = 26;
+            cyberButton1.Tag = "Cyber";
+            cyberButton1.TextButton = "Đăng xuất";
+            cyberButton1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            cyberButton1.Timer_Effect_1 = 1;
+            cyberButton1.Timer_RGB = 100;
+            cyberButton1.Click += cyberButton1_Click;
+            // 
             // iconHeThong
             // 
             iconHeThong.BackColor = Color.Transparent;
             iconHeThong.Image = Properties.Resources.Home12;
-            iconHeThong.Location = new Point(28, 421);
+            iconHeThong.Location = new Point(32, 561);
             iconHeThong.Name = "iconHeThong";
-            iconHeThong.Size = new Size(50, 50);
+            iconHeThong.Size = new Size(57, 67);
             iconHeThong.TabIndex = 25;
             // 
             // iconViPham
             // 
             iconViPham.BackColor = Color.Transparent;
             iconViPham.Image = Properties.Resources.Home12;
-            iconViPham.Location = new Point(28, 340);
+            iconViPham.Location = new Point(32, 453);
             iconViPham.Name = "iconViPham";
-            iconViPham.Size = new Size(50, 50);
+            iconViPham.Size = new Size(57, 67);
             iconViPham.TabIndex = 24;
             // 
             // iconHoSo
             // 
             iconHoSo.BackColor = Color.Transparent;
             iconHoSo.Image = Properties.Resources.Home12;
-            iconHoSo.Location = new Point(28, 97);
+            iconHoSo.Location = new Point(32, 129);
             iconHoSo.Name = "iconHoSo";
-            iconHoSo.Size = new Size(50, 50);
+            iconHoSo.Size = new Size(57, 67);
             iconHoSo.TabIndex = 21;
             // 
             // iconCapGPLX
             // 
             iconCapGPLX.BackColor = Color.Transparent;
             iconCapGPLX.Image = Properties.Resources.Home12;
-            iconCapGPLX.Location = new Point(28, 259);
+            iconCapGPLX.Location = new Point(32, 345);
             iconCapGPLX.Name = "iconCapGPLX";
-            iconCapGPLX.Size = new Size(50, 50);
+            iconCapGPLX.Size = new Size(57, 67);
             iconCapGPLX.TabIndex = 23;
             // 
             // iconKyThi
             // 
             iconKyThi.BackColor = Color.Transparent;
             iconKyThi.Image = Properties.Resources.Home12;
-            iconKyThi.Location = new Point(28, 178);
+            iconKyThi.Location = new Point(32, 237);
             iconKyThi.Name = "iconKyThi";
-            iconKyThi.Size = new Size(50, 50);
+            iconKyThi.Size = new Size(57, 67);
             iconKyThi.TabIndex = 22;
             // 
             // btnHeThong
@@ -514,12 +573,13 @@ namespace UI
             btnHeThong.Lighting = false;
             btnHeThong.LinearGradient_Background = false;
             btnHeThong.LinearGradientPen = false;
-            btnHeThong.Location = new Point(0, 405);
+            btnHeThong.Location = new Point(0, 465);
+            btnHeThong.Margin = new Padding(3, 4, 3, 4);
             btnHeThong.Name = "btnHeThong";
             btnHeThong.PenWidth = 15;
             btnHeThong.Rounding = true;
             btnHeThong.RoundingInt = 70;
-            btnHeThong.Size = new Size(240, 81);
+            btnHeThong.Size = new Size(274, 93);
             btnHeThong.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnHeThong.TabIndex = 19;
             btnHeThong.Tag = "Cyber";
@@ -558,12 +618,13 @@ namespace UI
             btnViPham.Lighting = false;
             btnViPham.LinearGradient_Background = false;
             btnViPham.LinearGradientPen = false;
-            btnViPham.Location = new Point(0, 324);
+            btnViPham.Location = new Point(0, 372);
+            btnViPham.Margin = new Padding(3, 4, 3, 4);
             btnViPham.Name = "btnViPham";
             btnViPham.PenWidth = 15;
             btnViPham.Rounding = true;
             btnViPham.RoundingInt = 70;
-            btnViPham.Size = new Size(240, 81);
+            btnViPham.Size = new Size(274, 93);
             btnViPham.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnViPham.TabIndex = 17;
             btnViPham.Tag = "Cyber";
@@ -578,31 +639,31 @@ namespace UI
             iconTrangChu.BackColor = Color.Transparent;
             iconTrangChu.Cursor = Cursors.Hand;
             iconTrangChu.Image = Properties.Resources.Home12;
-            iconTrangChu.Location = new Point(28, 17);
+            iconTrangChu.Location = new Point(32, 23);
             iconTrangChu.Name = "iconTrangChu";
-            iconTrangChu.Size = new Size(50, 50);
+            iconTrangChu.Size = new Size(57, 67);
             iconTrangChu.TabIndex = 13;
             iconTrangChu.Click += MenuItem_Click;
             // 
             // panelMain
             // 
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(240, 84);
-            panelMain.Margin = new Padding(3, 2, 3, 2);
+            panelMain.Location = new Point(274, 112);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1024, 580);
+            panelMain.Size = new Size(1171, 773);
             panelMain.TabIndex = 13;
             // 
             // Home
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1264, 664);
+            ClientSize = new Size(1445, 885);
             Controls.Add(panelMain);
             Controls.Add(parrotSlidingPanel1);
             Controls.Add(panel1);
             ForeColor = SystemColors.ControlLight;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Home";
             Text = "Home";
             WindowState = FormWindowState.Maximized;
@@ -620,7 +681,7 @@ namespace UI
         public void loadMenu(CanBo canBo)
         {
             this.iconTrangChu.Parent = btnTrangChu;
-            this.btnTrangChu.RGB = true; 
+            this.btnTrangChu.RGB = true;
             this.selectedButton = btnTrangChu;
             this.iconHoSo.Parent = btnHoSo;
             this.iconKyThi.Parent = btnKyThi;
@@ -642,21 +703,21 @@ namespace UI
                 case "Cán bộ sát hạch":
                     btnHeThong.Enabled = false;
                     btnViPham.Enabled = false;
-                    btnCapGPLX.Enabled = false;                    
+                    btnCapGPLX.Enabled = false;
                     btnHoSo.Enabled = false;
                     break;
                 case "Cán bộ Cấp GPLX":
                     btnHeThong.Enabled = false;
-                    btnViPham.Enabled = false;                    
+                    btnViPham.Enabled = false;
                     btnKyThi.Enabled = false;
                     btnHoSo.Enabled = false;
                     break;
                 case "Cán bộ xử lý vi phạm":
-                    btnHeThong.Enabled = false;                    
+                    btnHeThong.Enabled = false;
                     btnCapGPLX.Enabled = false;
                     btnKyThi.Enabled = false;
                     btnHoSo.Enabled = false;
-                    break;               
+                    break;
                 default:
                     btnHeThong.Enabled = false;
                     btnViPham.Enabled = false;
@@ -693,7 +754,7 @@ namespace UI
                         anhDaiDien.Image = Image.FromStream(stream);
                     }
                 }
-            }          
+            }
         }
 
         private void StartClock()
@@ -709,6 +770,8 @@ namespace UI
             };
             timerClock.Start(); // Bắt đầu chạy
         }
+
+
 
         #endregion
         private ReaLTaiizor.Controls.CyberButton btnKyThi;
@@ -738,5 +801,6 @@ namespace UI
         private Label lblDate;
         private PictureBox pictureBox2;
         private ParrotGradientPanel parrotGradientPanel1;
+        private CyberButton cyberButton1;
     }
 }

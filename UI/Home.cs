@@ -14,7 +14,8 @@ namespace UI
 {
     public partial class Home : Form
     {
-        public UserControl ucHoSoMain = new HoSo.UCHoSoMain();
+        public CanBo canBo { get; set; }
+        public UserControl ucHoSoMain;
         public UserControl ucTrangChu = new TrangChu.UCTrangChuMain();
         public UserControl ucCapGPLX = new CapGPLX.UCCapGPLXMain();
         public UserControl ucKythi = new KyThi.UCKyThiMain();
@@ -23,6 +24,7 @@ namespace UI
 
         public Home(CanBo canBo)
         {
+            this.canBo = canBo;
             InitializeComponent();
             loadMenu(canBo);
             LoadInfo(canBo);
@@ -36,6 +38,8 @@ namespace UI
 
         private void MenuItem_Click(object sender, EventArgs e)
         {
+            ucHoSoMain = new HoSo.UCHoSoMain(this.canBo);
+
             Control clickedControl = sender as Control;
             CyberButton clickedButton = clickedControl as CyberButton;
             if (clickedButton == null && clickedControl.Parent is CyberButton)
@@ -101,6 +105,19 @@ namespace UI
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cyberButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                DatabaseSession.Close();
+                Application.Restart();
+            }
+           
         }
     }
 }

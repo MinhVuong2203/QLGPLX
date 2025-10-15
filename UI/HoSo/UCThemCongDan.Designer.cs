@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Newtonsoft.Json;
 using UI.Models;
 
@@ -88,6 +89,7 @@ namespace UI.HoSo
             flowLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
+            
             // 
             // groupBox
             // 
