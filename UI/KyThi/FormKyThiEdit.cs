@@ -65,6 +65,7 @@ namespace UI.KyThi
                     MessageBox.Show("Kỳ thi đang diễn ra hoặc đã kết thúc, không thể cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            this._isNew = false;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -83,14 +84,33 @@ namespace UI.KyThi
                 return;
             }
 
+            if (string.IsNullOrEmpty(maHang))
+            {
+                MessageBox.Show("Vui lòng chọn hạng thi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (ngayBatDau <= DateOnly.FromDateTime(DateTime.Now))
             {
                 MessageBox.Show("Ngày diễn ra phải là ngày trong tương lai.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             if (ngayBatDau > ngayKetThuc)
             {
                 MessageBox.Show("Bắt đầu phải trước hoặc bằng kết thúc");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(diaDiem))
+            {
+                MessageBox.Show("Vui lòng chọn địa điểm thi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (soLuongToiDa == 0)
+            {
+                MessageBox.Show("Số lượng hồ sơ không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -163,7 +183,7 @@ namespace UI.KyThi
             lblHeader.Location = new Point(0, 0);
             lblHeader.Name = "lblHeader";
             lblHeader.Padding = new Padding(12, 0, 0, 0);
-            lblHeader.Size = new Size(388, 48);
+            lblHeader.Size = new Size(465, 48);
             lblHeader.TabIndex = 1;
             lblHeader.Text = "Tạo / Cập nhật kỳ thi";
             lblHeader.TextAlign = ContentAlignment.MiddleLeft;
@@ -192,14 +212,14 @@ namespace UI.KyThi
             panelContent.Location = new Point(0, 48);
             panelContent.Name = "panelContent";
             panelContent.Padding = new Padding(20);
-            panelContent.Size = new Size(388, 434);
+            panelContent.Size = new Size(465, 485);
             panelContent.TabIndex = 0;
             // 
             // btnPlus
             // 
             btnPlus.BackgroundImage = Properties.Resources.plus;
             btnPlus.BackgroundImageLayout = ImageLayout.Zoom;
-            btnPlus.Location = new Point(240, 315);
+            btnPlus.Location = new Point(283, 358);
             btnPlus.Name = "btnPlus";
             btnPlus.Size = new Size(28, 28);
             btnPlus.TabIndex = 19;
@@ -210,7 +230,7 @@ namespace UI.KyThi
             // 
             btnMinus.BackgroundImage = Properties.Resources.minus;
             btnMinus.BackgroundImageLayout = ImageLayout.Zoom;
-            btnMinus.Location = new Point(109, 315);
+            btnMinus.Location = new Point(152, 358);
             btnMinus.Name = "btnMinus";
             btnMinus.Size = new Size(28, 28);
             btnMinus.TabIndex = 18;
@@ -221,18 +241,18 @@ namespace UI.KyThi
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(33, 289);
+            label5.Location = new Point(33, 325);
             label5.Name = "label5";
-            label5.Size = new Size(132, 23);
+            label5.Size = new Size(171, 30);
             label5.TabIndex = 14;
             label5.Text = "Số lượng tối đa:";
             // 
             // txtSoLuongToiDa
             // 
             txtSoLuongToiDa.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtSoLuongToiDa.Location = new Point(143, 315);
+            txtSoLuongToiDa.Location = new Point(186, 358);
             txtSoLuongToiDa.Name = "txtSoLuongToiDa";
-            txtSoLuongToiDa.Size = new Size(91, 30);
+            txtSoLuongToiDa.Size = new Size(91, 36);
             txtSoLuongToiDa.TabIndex = 15;
             txtSoLuongToiDa.TextAlign = HorizontalAlignment.Right;
             txtSoLuongToiDa.KeyPress += txtSoLuongToiDa_KeyPress;
@@ -242,18 +262,18 @@ namespace UI.KyThi
             cboMaHang.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboMaHang.FormattingEnabled = true;
             cboMaHang.Items.AddRange(new object[] { "A1", "A" });
-            cboMaHang.Location = new Point(206, 184);
+            cboMaHang.Location = new Point(265, 220);
             cboMaHang.Name = "cboMaHang";
-            cboMaHang.Size = new Size(141, 31);
+            cboMaHang.Size = new Size(177, 38);
             cboMaHang.TabIndex = 13;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(208, 156);
+            label4.Location = new Point(265, 187);
             label4.Name = "label4";
-            label4.Size = new Size(83, 23);
+            label4.Size = new Size(105, 30);
             label4.TabIndex = 12;
             label4.Text = "Mã hạng:";
             // 
@@ -261,27 +281,27 @@ namespace UI.KyThi
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(33, 225);
+            label3.Location = new Point(32, 261);
             label3.Name = "label3";
-            label3.Size = new Size(82, 23);
+            label3.Size = new Size(107, 30);
             label3.TabIndex = 10;
             label3.Text = "Địa điểm:";
             // 
             // txtDiaDiem
             // 
             txtDiaDiem.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDiaDiem.Location = new Point(33, 251);
+            txtDiaDiem.Location = new Point(32, 287);
             txtDiaDiem.Name = "txtDiaDiem";
-            txtDiaDiem.Size = new Size(326, 30);
+            txtDiaDiem.Size = new Size(410, 36);
             txtDiaDiem.TabIndex = 11;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(208, 85);
+            label2.Location = new Point(265, 113);
             label2.Name = "label2";
-            label2.Size = new Size(104, 23);
+            label2.Size = new Size(133, 30);
             label2.TabIndex = 8;
             label2.Text = "Giờ bắt đầu:";
             // 
@@ -291,10 +311,10 @@ namespace UI.KyThi
             dtpGioBatDau.CustomFormat = "HH:mm";
             dtpGioBatDau.Font = new Font("Segoe UI", 12.75F);
             dtpGioBatDau.Format = DateTimePickerFormat.Custom;
-            dtpGioBatDau.Location = new Point(208, 114);
+            dtpGioBatDau.Location = new Point(265, 148);
             dtpGioBatDau.Name = "dtpGioBatDau";
             dtpGioBatDau.ShowUpDown = true;
-            dtpGioBatDau.Size = new Size(151, 30);
+            dtpGioBatDau.Size = new Size(177, 36);
             dtpGioBatDau.TabIndex = 9;
             // 
             // dtpNgayKetThuc
@@ -303,19 +323,19 @@ namespace UI.KyThi
             dtpNgayKetThuc.CustomFormat = "dd-MM-yyyy";
             dtpNgayKetThuc.Font = new Font("Segoe UI", 12.75F);
             dtpNgayKetThuc.Format = DateTimePickerFormat.Custom;
-            dtpNgayKetThuc.Location = new Point(34, 185);
+            dtpNgayKetThuc.Location = new Point(34, 218);
             dtpNgayKetThuc.Name = "dtpNgayKetThuc";
             dtpNgayKetThuc.ShowUpDown = true;
-            dtpNgayKetThuc.Size = new Size(150, 30);
+            dtpNgayKetThuc.Size = new Size(185, 36);
             dtpNgayKetThuc.TabIndex = 7;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(33, 156);
+            label1.Location = new Point(32, 185);
             label1.Name = "label1";
-            label1.Size = new Size(123, 23);
+            label1.Size = new Size(158, 30);
             label1.TabIndex = 6;
             label1.Text = "Ngày kết thúc:";
             // 
@@ -323,27 +343,27 @@ namespace UI.KyThi
             // 
             lblTen.AutoSize = true;
             lblTen.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTen.Location = new Point(33, 20);
+            lblTen.Location = new Point(32, 30);
             lblTen.Name = "lblTen";
-            lblTen.Size = new Size(88, 23);
+            lblTen.Size = new Size(115, 30);
             lblTen.TabIndex = 0;
             lblTen.Text = "Tên kỳ thi:";
             // 
             // txtTenKyThi
             // 
             txtTenKyThi.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTenKyThi.Location = new Point(33, 46);
+            txtTenKyThi.Location = new Point(34, 74);
             txtTenKyThi.Name = "txtTenKyThi";
-            txtTenKyThi.Size = new Size(326, 30);
+            txtTenKyThi.Size = new Size(408, 36);
             txtTenKyThi.TabIndex = 1;
             // 
             // lblNgay
             // 
             lblNgay.AutoSize = true;
             lblNgay.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNgay.Location = new Point(33, 85);
+            lblNgay.Location = new Point(34, 113);
             lblNgay.Name = "lblNgay";
-            lblNgay.Size = new Size(119, 23);
+            lblNgay.Size = new Size(151, 30);
             lblNgay.TabIndex = 2;
             lblNgay.Text = "Ngày bắt đầu:";
             // 
@@ -353,10 +373,10 @@ namespace UI.KyThi
             dtpNgayBatDau.CustomFormat = "dd-MM-yyyy";
             dtpNgayBatDau.Font = new Font("Segoe UI", 12.75F);
             dtpNgayBatDau.Format = DateTimePickerFormat.Custom;
-            dtpNgayBatDau.Location = new Point(33, 114);
+            dtpNgayBatDau.Location = new Point(34, 146);
             dtpNgayBatDau.Name = "dtpNgayBatDau";
             dtpNgayBatDau.ShowUpDown = true;
-            dtpNgayBatDau.Size = new Size(151, 30);
+            dtpNgayBatDau.Size = new Size(186, 36);
             dtpNgayBatDau.TabIndex = 3;
             // 
             // panel1
@@ -365,9 +385,9 @@ namespace UI.KyThi
             panel1.Controls.Add(btnSave);
             panel1.Controls.Add(btnCancel);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(20, 359);
+            panel1.Location = new Point(20, 410);
             panel1.Name = "panel1";
-            panel1.Size = new Size(348, 55);
+            panel1.Size = new Size(425, 55);
             panel1.TabIndex = 16;
             // 
             // btnSave
@@ -377,7 +397,7 @@ namespace UI.KyThi
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Segoe UI", 12.75F);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(202, 10);
+            btnSave.Location = new Point(237, 7);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(110, 36);
             btnSave.TabIndex = 5;
@@ -393,7 +413,7 @@ namespace UI.KyThi
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Segoe UI", 12.75F);
             btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(53, 10);
+            btnCancel.Location = new Point(88, 7);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(110, 36);
             btnCancel.TabIndex = 4;
@@ -405,7 +425,7 @@ namespace UI.KyThi
             AcceptButton = btnSave;
             BackColor = Color.White;
             CancelButton = btnCancel;
-            ClientSize = new Size(388, 482);
+            ClientSize = new Size(465, 533);
             Controls.Add(panelContent);
             Controls.Add(lblHeader);
             FormBorderStyle = FormBorderStyle.FixedDialog;

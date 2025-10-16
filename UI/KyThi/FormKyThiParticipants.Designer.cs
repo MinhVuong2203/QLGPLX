@@ -28,96 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            panelTop = new Panel();
-            lblHeader = new Label();
-            dgvParticipants = new DataGridView();
-            btnClose = new Button();
-            panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvParticipants).BeginInit();
-            SuspendLayout();
-            // 
-            // panelTop
-            // 
-            panelTop.BackColor = Color.FromArgb(255, 243, 230);
+            this.ClientSize = new Size(980, 660);
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.BackColor = Color.White;
+            this.Text = "Quản lý thí sinh - Kỳ thi";
+
+            // top panel + header
+            panelTop = new Panel { Dock = DockStyle.Top, Height = 56, BackColor = Color.FromArgb(255, 243, 230) };
+            lblHeader = new Label
+            {
+                Text = "Danh sách thí sinh tham gia kỳ thi",
+                Font = new Font("Segoe UI", 13F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(34, 45, 65),
+                TextAlign = ContentAlignment.MiddleLeft,
+                Dock = DockStyle.Fill,
+                Padding = new Padding(12, 0, 0, 0)
+            };
             panelTop.Controls.Add(lblHeader);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(0, 0);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(900, 56);
-            panelTop.TabIndex = 0;
-            // 
-            // lblHeader
-            // 
-            lblHeader.Dock = DockStyle.Fill;
-            lblHeader.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            lblHeader.ForeColor = Color.FromArgb(34, 45, 65);
-            lblHeader.Location = new Point(0, 0);
-            lblHeader.Name = "lblHeader";
-            lblHeader.Padding = new Padding(12, 0, 0, 0);
-            lblHeader.Size = new Size(900, 56);
-            lblHeader.TabIndex = 0;
-            lblHeader.Text = "Danh sách thí sinh tham gia kỳ thi";
-            lblHeader.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // dgvParticipants
-            // 
-            dgvParticipants.AllowUserToAddRows = false;
-            dgvParticipants.AllowUserToDeleteRows = false;
-            dgvParticipants.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvParticipants.BackgroundColor = Color.White;
-            dgvParticipants.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 230, 210);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvParticipants.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvParticipants.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Controls.Add(panelTop);
+
+            // Participants grid (already in ky thi)
+            dgvParticipants = new DataGridView
+            {
+                Location = new Point(12, 72),
+                Size = new Size(952, 220),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                ReadOnly = true,
+                SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+                AllowUserToAddRows = false,
+                BackgroundColor = Color.White,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            };
+            dgvParticipants.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 230, 210);
             dgvParticipants.EnableHeadersVisualStyles = false;
-            dgvParticipants.Location = new Point(12, 72);
-            dgvParticipants.Name = "dgvParticipants";
-            dgvParticipants.ReadOnly = true;
-            dgvParticipants.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvParticipants.Size = new Size(876, 420);
-            dgvParticipants.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnClose.BackColor = Color.FromArgb(128, 203, 196);
+            this.Controls.Add(dgvParticipants);
+
+            // Pending label + grid
+            label1 = new Label
+            {
+                Text = "Công dân chờ xếp vào kỳ thi (chỉ hiển thị khi kỳ thi chưa kết thúc)",
+                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                ForeColor = Color.FromArgb(34, 45, 65),
+                Location = new Point(12, 310),
+                AutoSize = true
+            };
+            this.Controls.Add(label1);
+
+            dgvPending = new DataGridView
+            {
+                Location = new Point(12, 338),
+                Size = new Size(952, 260),
+                Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
+                ReadOnly = false, // need button column
+                SelectionMode = DataGridViewSelectionMode.FullRowSelect,
+                AllowUserToAddRows = false,
+                BackgroundColor = Color.White,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            };
+            dgvPending.EnableHeadersVisualStyles = false;
+            dgvPending.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 230, 210);
+            dgvPending.CellContentClick += DgvPending_CellContentClick;
+            this.Controls.Add(dgvPending);
+
+            // Close button
+            btnClose = new Button
+            {
+                Text = "Đóng",
+                Font = new Font("Segoe UI", 10F),
+                BackColor = Color.FromArgb(128, 203, 196),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Size = new Size(100, 36),
+                Location = new Point(864, 606),
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Right
+            };
             btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Segoe UI", 10F);
-            btnClose.ForeColor = Color.White;
-            btnClose.Location = new Point(788, 500);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(100, 36);
-            btnClose.TabIndex = 2;
-            btnClose.Text = "Đóng";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
-            // 
-            // FormKyThiParticipants
-            // 
-            BackColor = Color.White;
-            ClientSize = new Size(900, 560);
-            Controls.Add(panelTop);
-            Controls.Add(dgvParticipants);
-            Controls.Add(btnClose);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            Name = "FormKyThiParticipants";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Danh sách thí sinh";
-            panelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvParticipants).EndInit();
-            ResumeLayout(false);
+            btnClose.Click += (s, e) => this.Close();
+            this.Controls.Add(btnClose);
         }
 
         // Designer controls
 
         #endregion
+
+        private Label label1;
+        private DataGridView dgvPending;
+        private Button  btnClose;
     }
 }

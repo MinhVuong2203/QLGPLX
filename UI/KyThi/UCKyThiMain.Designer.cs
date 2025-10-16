@@ -28,155 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            dgv = new DataGridView();
-            pictureBox1 = new PictureBox();
-            comboBox1 = new ComboBox();
-            label13 = new Label();
-            btnThem = new Button();
-            btnSua = new Button();
-            button1 = new Button();
+            parrotFlatMenuStrip1 = new ReaLTaiizor.Controls.ParrotFlatMenuStrip();
+            thôngTinCôngDânToolStripMenuItem = new ToolStripMenuItem();
+            hồSơCôngDânToolStripMenuItem = new ToolStripMenuItem();
             panelMain = new Panel();
-            panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelMain.SuspendLayout();
-            panel1.SuspendLayout();
+            parrotFlatMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // dgv
+            // parrotFlatMenuStrip1
             // 
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgv.BackgroundColor = Color.White;
-            dgv.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 230, 210);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = Color.FromArgb(34, 45, 65);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgv.DefaultCellStyle = dataGridViewCellStyle2;
-            dgv.EnableHeadersVisualStyles = false;
-            dgv.Location = new Point(55, 112);
-            dgv.Name = "dgv";
-            dgv.RowHeadersVisible = false;
-            dgv.RowHeadersWidth = 51;
-            dgv.RowTemplate.Height = 32;
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.Size = new Size(1741, 797);
-            dgv.TabIndex = 12;
+            parrotFlatMenuStrip1.AutoSize = false;
+            parrotFlatMenuStrip1.BackColor = Color.Khaki;
+            parrotFlatMenuStrip1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            parrotFlatMenuStrip1.HoverBackColor = Color.Gold;
+            parrotFlatMenuStrip1.HoverTextColor = Color.Black;
+            parrotFlatMenuStrip1.ImageScalingSize = new Size(20, 20);
+            parrotFlatMenuStrip1.ItemBackColor = Color.Beige;
+            parrotFlatMenuStrip1.Items.AddRange(new ToolStripItem[] { thôngTinCôngDânToolStripMenuItem, hồSơCôngDânToolStripMenuItem });
+            parrotFlatMenuStrip1.Location = new Point(0, 0);
+            parrotFlatMenuStrip1.Name = "parrotFlatMenuStrip1";
+            parrotFlatMenuStrip1.SelectedBackColor = Color.FromArgb(255, 128, 0);
+            parrotFlatMenuStrip1.SelectedTextColor = Color.White;
+            parrotFlatMenuStrip1.SeparatorColor = Color.White;
+            parrotFlatMenuStrip1.Size = new Size(952, 48);
+            parrotFlatMenuStrip1.TabIndex = 1;
+            parrotFlatMenuStrip1.Text = "parrotFlatMenuStrip1";
+            parrotFlatMenuStrip1.TextColor = Color.Black;
             // 
-            // pictureBox1
+            // thôngTinCôngDânToolStripMenuItem
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.Locimg;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(31, 45);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(49, 39);
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
+            thôngTinCôngDânToolStripMenuItem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            thôngTinCôngDânToolStripMenuItem.ForeColor = Color.Black;
+            thôngTinCôngDânToolStripMenuItem.Name = "thôngTinCôngDânToolStripMenuItem";
+            thôngTinCôngDânToolStripMenuItem.Size = new Size(86, 44);
+            thôngTinCôngDânToolStripMenuItem.Text = "Kỳ thi";
+            thôngTinCôngDânToolStripMenuItem.Click += thôngTinCôngDânToolStripMenuItem_Click;
             // 
-            // comboBox1
+            // hồSơCôngDânToolStripMenuItem
             // 
-            comboBox1.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Đang diễn ra", "Sắp diễn ra", "Đã kết thúc" });
-            comboBox1.Location = new Point(82, 45);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(319, 38);
-            comboBox1.TabIndex = 10;
-            // 
-            // label13
-            // 
-            label13.BackColor = Color.FromArgb(255, 192, 128);
-            label13.Dock = DockStyle.Top;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ImageAlign = ContentAlignment.MiddleLeft;
-            label13.Location = new Point(0, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(1863, 29);
-            label13.TabIndex = 9;
-            label13.Text = "Duyệt hồ sơ";
-            label13.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // btnThem
-            // 
-            btnThem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnThem.Location = new Point(624, 31);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(153, 45);
-            btnThem.TabIndex = 13;
-            btnThem.Text = "Tạo mới";
-            btnThem.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            btnSua.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSua.Location = new Point(889, 31);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(153, 45);
-            btnSua.TabIndex = 14;
-            btnSua.Text = "Cập nhật";
-            btnSua.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(1173, 31);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 45);
-            button1.TabIndex = 15;
-            button1.Text = "Thí sinh";
-            button1.UseVisualStyleBackColor = true;
+            hồSơCôngDânToolStripMenuItem.AutoSize = false;
+            hồSơCôngDânToolStripMenuItem.ForeColor = Color.White;
+            hồSơCôngDânToolStripMenuItem.Name = "hồSơCôngDânToolStripMenuItem";
+            hồSơCôngDânToolStripMenuItem.Size = new Size(152, 44);
+            hồSơCôngDânToolStripMenuItem.Text = "Kết quả";
+            hồSơCôngDânToolStripMenuItem.Click += hồSơCôngDânToolStripMenuItem_Click;
             // 
             // panelMain
             // 
-            panelMain.Controls.Add(dgv);
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(0, 0);
+            panelMain.Location = new Point(0, 48);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1863, 1067);
-            panelMain.TabIndex = 16;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(btnSua);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(btnThem);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 958);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1863, 109);
-            panel1.TabIndex = 17;
+            panelMain.Size = new Size(952, 628);
+            panelMain.TabIndex = 2;
             // 
             // UCKyThiMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
-            Controls.Add(pictureBox1);
-            Controls.Add(comboBox1);
-            Controls.Add(label13);
             Controls.Add(panelMain);
-            Margin = new Padding(3, 4, 3, 4);
+            Controls.Add(parrotFlatMenuStrip1);
             Name = "UCKyThiMain";
-            Size = new Size(1863, 1067);
-            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelMain.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            Size = new Size(952, 676);
+            parrotFlatMenuStrip1.ResumeLayout(false);
+            parrotFlatMenuStrip1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -187,14 +101,9 @@
             uc.Dock = DockStyle.Fill;
             this.panelMain.Controls.Add(uc);
         }
-        private DataGridView dgv;
-        private PictureBox pictureBox1;
-        private ComboBox comboBox1;
-        private Label label13;
-        private Button btnThem;
-        private Button btnSua;
-        private Button button1;
+        private ReaLTaiizor.Controls.ParrotFlatMenuStrip parrotFlatMenuStrip1;
+        private ToolStripMenuItem thôngTinCôngDânToolStripMenuItem;
+        private ToolStripMenuItem hồSơCôngDânToolStripMenuItem;
         private Panel panelMain;
-        private Panel panel1;
     }
 }
