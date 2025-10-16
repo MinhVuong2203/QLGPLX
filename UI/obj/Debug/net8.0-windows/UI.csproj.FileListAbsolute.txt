@@ -162,3 +162,5 @@ D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.HoSo.
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.HoSo.UCThemHoSo.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.HoSo.UCDuyetHoSo.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.Helpers.FormViewImage.resources
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.FormKyThiEdit.resources
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.FormKyThiParticipants.resources

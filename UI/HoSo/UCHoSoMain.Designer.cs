@@ -35,7 +35,6 @@
             hồSơCôngDânToolStripMenuItem = new ToolStripMenuItem();
             xétDuyệtHồSơToolStripMenuItem = new ToolStripMenuItem();
             traCứuHồSơToolStripMenuItem = new ToolStripMenuItem();
-            thốngKêToolStripMenuItem = new ToolStripMenuItem();
             panelMain = new Panel();
             parrotFlatMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -94,8 +93,8 @@
             // hồSơCôngDânToolStripMenuItem
             // 
             hồSơCôngDânToolStripMenuItem.AutoSize = false;
-            hồSơCôngDânToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xétDuyệtHồSơToolStripMenuItem, traCứuHồSơToolStripMenuItem, thốngKêToolStripMenuItem });
-            hồSơCôngDânToolStripMenuItem.ForeColor = Color.White;
+            hồSơCôngDânToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { xétDuyệtHồSơToolStripMenuItem, traCứuHồSơToolStripMenuItem });
+            hồSơCôngDânToolStripMenuItem.ForeColor = Color.Black;
             hồSơCôngDânToolStripMenuItem.Name = "hồSơCôngDânToolStripMenuItem";
             hồSơCôngDânToolStripMenuItem.Size = new Size(152, 44);
             hồSơCôngDânToolStripMenuItem.Text = "Hồ sơ";
@@ -117,14 +116,6 @@
             traCứuHồSơToolStripMenuItem.Size = new Size(264, 42);
             traCứuHồSơToolStripMenuItem.Text = "Xét duyệt";
             traCứuHồSơToolStripMenuItem.Click += traCứuHồSơToolStripMenuItem_Click;
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            thốngKêToolStripMenuItem.AutoSize = false;
-            thốngKêToolStripMenuItem.ForeColor = Color.Black;
-            thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            thốngKêToolStripMenuItem.Size = new Size(264, 42);
-            thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // panelMain
             // 
@@ -165,7 +156,6 @@
         private ToolStripMenuItem hồSơCôngDânToolStripMenuItem;
         private ToolStripMenuItem xétDuyệtHồSơToolStripMenuItem;
         private ToolStripMenuItem traCứuHồSơToolStripMenuItem;
-        private ToolStripMenuItem thốngKêToolStripMenuItem;
         private Panel panelMain;
     }
 }

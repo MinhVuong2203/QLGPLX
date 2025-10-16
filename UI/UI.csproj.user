@@ -28,6 +28,12 @@
     <Compile Update="HoSo\UCThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="KyThi\FormKyThiEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KyThi\FormKyThiParticipants.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="KyThi\UCKyThiMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
