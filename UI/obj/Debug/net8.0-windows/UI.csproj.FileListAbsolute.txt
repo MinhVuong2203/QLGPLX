@@ -169,3 +169,5 @@ D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.UCKetQuaThi.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.CapGPLX.UCXetDuyetCapGPLX.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.CapGPLX.UCCapLaiGPLX.resources
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.XuLyViPham.UCCacLoaiViPham.resources
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.CapGPLX.UCGhiNhan.resources

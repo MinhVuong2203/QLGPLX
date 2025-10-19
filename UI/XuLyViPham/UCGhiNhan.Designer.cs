@@ -2,7 +2,7 @@
 
 namespace UI.CapGPLX
 {
-    partial class UCCapLaiGPLX
+    partial class UCGhiNhan
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,8 +32,6 @@ namespace UI.CapGPLX
         {
             label13 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             panelMatTruoc = new ReaLTaiizor.Controls.ParrotGradientPanel();
             lbDiaChiPhuongTinh = new Label();
             label22 = new Label();
@@ -60,25 +58,19 @@ namespace UI.CapGPLX
             label16 = new Label();
             label15 = new Label();
             pictureBoxAnh = new PictureBox();
-            panelMatSau = new ReaLTaiizor.Controls.ParrotGradientPanel();
-            pictureBox1 = new PictureBox();
-            lbNgay = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            lbMota = new Label();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            label25 = new Label();
-            label23 = new Label();
-            btnDuyet = new Button();
+            btnXuLy = new Button();
             txtSoGPLX = new TextBox();
             button1 = new Button();
+            label1 = new Label();
+            lbSoDiemHienCo = new Label();
+            lbSoDiemTru = new Label();
             label21 = new Label();
-            rtbLyDo = new RichTextBox();
+            lbSoDiemConLai = new Label();
+            label25 = new Label();
+            lbLoiViPham = new Label();
+            cboLoiViPham = new ComboBox();
             panelMatTruoc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAnh).BeginInit();
-            panelMatSau.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label13
@@ -92,7 +84,7 @@ namespace UI.CapGPLX
             label13.Name = "label13";
             label13.Size = new Size(1630, 29);
             label13.TabIndex = 10;
-            label13.Text = "Cấp lại GPLX cho báo thủ";
+            label13.Text = "Xử lý vi phạm của các báo thủ";
             label13.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -100,33 +92,11 @@ namespace UI.CapGPLX
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(45, 57);
+            label2.Location = new Point(42, 173);
             label2.Name = "label2";
             label2.Size = new Size(104, 31);
             label2.TabIndex = 13;
             label2.Text = "Số GPLX:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(90, 251);
-            label3.Name = "label3";
-            label3.Size = new Size(121, 31);
-            label3.TabIndex = 15;
-            label3.Text = "Mặt trước:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(817, 247);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 31);
-            label4.TabIndex = 16;
-            label4.Text = "Mặt sau:";
             // 
             // panelMatTruoc
             // 
@@ -160,7 +130,7 @@ namespace UI.CapGPLX
             panelMatTruoc.Controls.Add(pictureBoxAnh);
             panelMatTruoc.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panelMatTruoc.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            panelMatTruoc.Location = new Point(90, 300);
+            panelMatTruoc.Location = new Point(734, 197);
             panelMatTruoc.Name = "panelMatTruoc";
             panelMatTruoc.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
             panelMatTruoc.PrimerColor = Color.White;
@@ -307,7 +277,6 @@ namespace UI.CapGPLX
             lbNgayThangNam.TabIndex = 10;
             lbNgayThangNam.Text = "An Giang, ngày/date__tháng/month__năm/year__";
             lbNgayThangNam.TextAlign = ContentAlignment.MiddleRight;
-         
             // 
             // label12
             // 
@@ -475,207 +444,149 @@ namespace UI.CapGPLX
             pictureBoxAnh.TabIndex = 0;
             pictureBoxAnh.TabStop = false;
             // 
-            // panelMatSau
+            // btnXuLy
             // 
-            panelMatSau.BottomLeft = Color.FromArgb(226, 221, 154);
-            panelMatSau.BottomRight = Color.FromArgb(237, 175, 81);
-            panelMatSau.CompositingQualityType = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-            panelMatSau.Controls.Add(pictureBox1);
-            panelMatSau.Controls.Add(lbNgay);
-            panelMatSau.Controls.Add(label26);
-            panelMatSau.Controls.Add(label27);
-            panelMatSau.Controls.Add(lbMota);
-            panelMatSau.Controls.Add(panel1);
-            panelMatSau.Controls.Add(panel2);
-            panelMatSau.Controls.Add(label25);
-            panelMatSau.Controls.Add(label23);
-            panelMatSau.InterpolationType = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
-            panelMatSau.Location = new Point(826, 300);
-            panelMatSau.Name = "panelMatSau";
-            panelMatSau.PixelOffsetType = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-            panelMatSau.PrimerColor = Color.White;
-            panelMatSau.Size = new Size(688, 432);
-            panelMatSau.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            panelMatSau.Style = ReaLTaiizor.Controls.ParrotGradientPanel.GradientStyle.Corners;
-            panelMatSau.TabIndex = 18;
-            panelMatSau.TextRenderingType = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            panelMatSau.TopLeft = Color.Yellow;
-            panelMatSau.TopRight = Color.FromArgb(192, 64, 0);
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = Properties.Resources.qr1;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(6, 354);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(70, 70);
-            pictureBox1.TabIndex = 29;
-            pictureBox1.TabStop = false;
-            // 
-            // lbNgay
-            // 
-            lbNgay.BackColor = Color.Transparent;
-            lbNgay.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbNgay.ForeColor = SystemColors.ActiveCaptionText;
-            lbNgay.Location = new Point(555, 65);
-            lbNgay.Name = "lbNgay";
-            lbNgay.Size = new Size(129, 25);
-            lbNgay.TabIndex = 24;
-            lbNgay.Text = "Ngày";
-            lbNgay.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.BackColor = Color.Transparent;
-            label26.Font = new Font("Sylfaen", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label26.ForeColor = SystemColors.ActiveCaptionText;
-            label26.Location = new Point(563, 28);
-            label26.Name = "label26";
-            label26.Size = new Size(119, 22);
-            label26.TabIndex = 28;
-            label26.Text = "Beginning date";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.BackColor = Color.Transparent;
-            label27.Font = new Font("Sylfaen", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label27.ForeColor = Color.Red;
-            label27.Location = new Point(550, 5);
-            label27.Name = "label27";
-            label27.Size = new Size(140, 22);
-            label27.TabIndex = 10;
-            label27.Text = "Ngày trúng tuyển";
-            // 
-            // lbMota
-            // 
-            lbMota.AutoSize = true;
-            lbMota.BackColor = Color.Transparent;
-            lbMota.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbMota.ForeColor = SystemColors.ActiveCaptionText;
-            lbMota.Location = new Point(6, 68);
-            lbMota.Name = "lbMota";
-            lbMota.Size = new Size(65, 28);
-            lbMota.TabIndex = 26;
-            lbMota.Text = "Mô tả";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ActiveCaptionText;
-            panel1.Location = new Point(546, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1, 432);
-            panel1.TabIndex = 26;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ActiveCaptionText;
-            panel2.Location = new Point(0, 56);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(688, 1);
-            panel2.TabIndex = 27;
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.BackColor = Color.Transparent;
-            label25.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label25.ForeColor = SystemColors.ActiveCaptionText;
-            label25.Location = new Point(111, 29);
-            label25.Name = "label25";
-            label25.Size = new Size(322, 25);
-            label25.TabIndex = 25;
-            label25.Text = "CLASSIFICATION OF MOTOR VEHICLES";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.BackColor = Color.Transparent;
-            label23.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label23.ForeColor = Color.Red;
-            label23.Location = new Point(18, 3);
-            label23.Name = "label23";
-            label23.Size = new Size(464, 25);
-            label23.TabIndex = 24;
-            label23.Text = "CÁC LOẠI XE CƠ GIỚI ĐƯỜNG BỘ ĐƯỢC ĐIỀU KHIỂN";
-            // 
-            // btnDuyet
-            // 
-            btnDuyet.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDuyet.ForeColor = SystemColors.ActiveCaptionText;
-            btnDuyet.Location = new Point(1327, 750);
-            btnDuyet.Name = "btnDuyet";
-            btnDuyet.Size = new Size(187, 46);
-            btnDuyet.TabIndex = 28;
-            btnDuyet.Text = "Duyệt";
-            btnDuyet.UseVisualStyleBackColor = true;
-            btnDuyet.Click += btnDuyet_Click;
+            btnXuLy.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnXuLy.ForeColor = SystemColors.ActiveCaptionText;
+            btnXuLy.Location = new Point(1293, 735);
+            btnXuLy.Name = "btnXuLy";
+            btnXuLy.Size = new Size(187, 46);
+            btnXuLy.TabIndex = 28;
+            btnXuLy.Text = "Xử lý";
+            btnXuLy.UseVisualStyleBackColor = true;
             // 
             // txtSoGPLX
             // 
             txtSoGPLX.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSoGPLX.ForeColor = SystemColors.InactiveCaptionText;
-            txtSoGPLX.Location = new Point(157, 54);
+            txtSoGPLX.Location = new Point(185, 167);
             txtSoGPLX.Name = "txtSoGPLX";
-            txtSoGPLX.Size = new Size(417, 37);
+            txtSoGPLX.Size = new Size(369, 37);
             txtSoGPLX.TabIndex = 29;
-         
             // 
             // button1
             // 
             button1.BackgroundImage = Properties.Resources.search;
             button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Location = new Point(580, 52);
+            button1.Location = new Point(560, 162);
             button1.Name = "button1";
             button1.Size = new Size(48, 41);
             button1.TabIndex = 30;
             button1.UseVisualStyleBackColor = true;
             button1.Click += TimGPLX;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
+            label1.Location = new Point(42, 250);
+            label1.Name = "label1";
+            label1.Size = new Size(182, 31);
+            label1.TabIndex = 31;
+            label1.Text = "Số điểm hiện có:";
+            // 
+            // lbSoDiemHienCo
+            // 
+            lbSoDiemHienCo.AutoSize = true;
+            lbSoDiemHienCo.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbSoDiemHienCo.ForeColor = Color.Lime;
+            lbSoDiemHienCo.Location = new Point(230, 250);
+            lbSoDiemHienCo.Name = "lbSoDiemHienCo";
+            lbSoDiemHienCo.Size = new Size(44, 31);
+            lbSoDiemHienCo.TabIndex = 32;
+            lbSoDiemHienCo.Text = "___";
+            lbSoDiemHienCo.TextChanged += lbSoDiemHienCo_Leave;
+            // 
+            // lbSoDiemTru
+            // 
+            lbSoDiemTru.AutoSize = true;
+            lbSoDiemTru.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbSoDiemTru.ForeColor = Color.Red;
+            lbSoDiemTru.Location = new Point(230, 296);
+            lbSoDiemTru.Name = "lbSoDiemTru";
+            lbSoDiemTru.Size = new Size(44, 31);
+            lbSoDiemTru.TabIndex = 34;
+            lbSoDiemTru.Text = "___";
+            lbSoDiemTru.TextChanged += lbSoDiemHienCo_Leave;
+            // 
             // label21
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = SystemColors.ActiveCaptionText;
-            label21.Location = new Point(666, 55);
+            label21.Location = new Point(42, 296);
             label21.Name = "label21";
-            label21.Size = new Size(73, 31);
-            label21.TabIndex = 31;
-            label21.Text = "Lý do:";
+            label21.Size = new Size(138, 31);
+            label21.TabIndex = 33;
+            label21.Text = "Số điểm trừ:";
             // 
-            // rtbLyDo
+            // lbSoDiemConLai
             // 
-            rtbLyDo.Location = new Point(769, 62);
-            rtbLyDo.Name = "rtbLyDo";
-            rtbLyDo.Size = new Size(818, 158);
-            rtbLyDo.TabIndex = 32;
-            rtbLyDo.Text = "";
+            lbSoDiemConLai.AutoSize = true;
+            lbSoDiemConLai.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbSoDiemConLai.ForeColor = SystemColors.ActiveCaptionText;
+            lbSoDiemConLai.Location = new Point(230, 349);
+            lbSoDiemConLai.Name = "lbSoDiemConLai";
+            lbSoDiemConLai.Size = new Size(44, 31);
+            lbSoDiemConLai.TabIndex = 36;
+            lbSoDiemConLai.Text = "___";
             // 
-            // UCCapLaiGPLX
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label25.ForeColor = SystemColors.ActiveCaptionText;
+            label25.Location = new Point(42, 349);
+            label25.Name = "label25";
+            label25.Size = new Size(175, 31);
+            label25.TabIndex = 35;
+            label25.Text = "Số điểm còn lại:";
+            // 
+            // lbLoiViPham
+            // 
+            lbLoiViPham.AutoSize = true;
+            lbLoiViPham.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbLoiViPham.ForeColor = SystemColors.ActiveCaptionText;
+            lbLoiViPham.Location = new Point(146, 80);
+            lbLoiViPham.Name = "lbLoiViPham";
+            lbLoiViPham.Size = new Size(137, 31);
+            lbLoiViPham.TabIndex = 37;
+            lbLoiViPham.Text = "Lỗi vi phạm:";
+            // 
+            // cboLoiViPham
+            // 
+            cboLoiViPham.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cboLoiViPham.FormattingEnabled = true;
+            cboLoiViPham.Location = new Point(289, 77);
+            cboLoiViPham.Name = "cboLoiViPham";
+            cboLoiViPham.Size = new Size(1133, 38);
+            cboLoiViPham.TabIndex = 38;
+            cboLoiViPham.SelectedIndexChanged += cboLoiViPham_SelectedIndexChanged;
+            // 
+            // UCGhiNhan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(rtbLyDo);
+            Controls.Add(cboLoiViPham);
+            Controls.Add(lbLoiViPham);
+            Controls.Add(lbSoDiemConLai);
+            Controls.Add(label25);
+            Controls.Add(lbSoDiemTru);
             Controls.Add(label21);
+            Controls.Add(lbSoDiemHienCo);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(txtSoGPLX);
-            Controls.Add(btnDuyet);
-            Controls.Add(panelMatSau);
+            Controls.Add(btnXuLy);
             Controls.Add(panelMatTruoc);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label13);
-            Name = "UCCapLaiGPLX";
+            Name = "UCGhiNhan";
             Size = new Size(1630, 800);
             panelMatTruoc.ResumeLayout(false);
             panelMatTruoc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAnh).EndInit();
-            panelMatSau.ResumeLayout(false);
-            panelMatSau.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -688,22 +599,27 @@ namespace UI.CapGPLX
             lbSo.Text = "_______";
             lbNgayThangNam.Text = "An Giang, ngày/date__tháng/month__năm/year__";
             pictureBoxAnh.Image = null;
-            lbMota.Text = "Mô tả";
-            lbNgay.Text = "Ngày";
-            rtbLyDo.Text = "";
         }
         #endregion
+        private void LoadViPham()
+        {
+            List<LoaiViPham> list = _viPhamDAL.GetAllViPham();
+            string[] Loai_Ten = new string[list.Count];
+            for (int i=0; i<list.Count; i++)
+            {
+                Loai_Ten[i] = list[i].LoaiViPhamId.ToString() + " - " + list[i].TenViPham.ToString();
+            }
+            this.cboLoiViPham.DataSource = Loai_Ten;
+            this.cboLoiViPham.SelectedItem = -1;
+        }
 
-       
+        private ViPhamDAL _viPhamDAL = new ViPhamDAL();
         private Label label13;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
         private ReaLTaiizor.Controls.ParrotGradientPanel panelMatTruoc;
         private Label label5;
         private PictureBox pictureBoxAnh;
-        private ReaLTaiizor.Controls.ParrotGradientPanel panelMatSau;
         private Label label10;
         private Label label9;
         private Label label7;
@@ -726,22 +642,18 @@ namespace UI.CapGPLX
         private Label LbHang;
         private Label lbDiaChi;
         private Label label15;
-        private Label label25;
-        private Label label23;
-        private Panel panel2;
-        private Panel panel1;
-        private Label label26;
-        private Label label27;
-        private Label lbMota;
-        private Label lbNgay;
-        private PictureBox pictureBox1;
-        private Button btnDuyet;
+        private Button btnXuLy;
         private GiayPhepDAl _giayPhepDAL = new GiayPhepDAl();
         private Label lbDiaChiPhuongTinh;
         private ComboBox cboMaHang;
         private TextBox txtSoGPLX;
         private Button button1;
+        private Label lbSoDiemHienCo;
+        private Label lbSoDiemTru;
         private Label label21;
-        private RichTextBox rtbLyDo;
+        private Label lbSoDiemConLai;
+        private Label label25;
+        private Label lbLoiViPham;
+        private ComboBox cboLoiViPham;
     }
 }

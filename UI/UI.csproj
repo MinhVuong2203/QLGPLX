@@ -37,6 +37,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="XuLyViPham\UCGhiNhan.cs" />
   </ItemGroup>
 
   <ItemGroup>

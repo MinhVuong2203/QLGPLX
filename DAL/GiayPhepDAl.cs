@@ -41,13 +41,15 @@ namespace DAL
                 .FirstOrDefault(g => g.MaCongDan == maCongDan && g.TrangThai == TrangThai);             
         }
 
-        public GiayPhep GetBySoGiayPhep(string sogp)
+        public GiayPhep GetBySoGiayPhep(string sogp, string trangthai)
         {
             return DatabaseSession.Context.GiayPheps
                 .Include(g => g.MaCongDanNavigation)
                 .Include(g => g.MaHangNavigation)
-                .FirstOrDefault(g => g.SoGiayPhep == sogp);
+                .FirstOrDefault(g => g.SoGiayPhep == sogp && g.TrangThai == trangthai);
         }
+
+       
 
         
     }

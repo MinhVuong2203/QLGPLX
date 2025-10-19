@@ -13,13 +13,14 @@ using System.Windows.Forms;
 
 namespace UI.CapGPLX
 {
-    public partial class UCCapLaiGPLX : UserControl
+    public partial class UCGhiNhan : UserControl
     {
         private int gpid = 0;
         private CongDanBLL _congDanBLL;
-        public UCCapLaiGPLX()
+        public UCGhiNhan()
         {
             InitializeComponent();
+            LoadViPham();
         }
 
 
@@ -35,7 +36,7 @@ namespace UI.CapGPLX
             GiayPhep gp = _giayPhepDAL.GetBySoGiayPhep(soGPLX, "Còn hiệu lực");
             if (gp != null)
             {
-                DateOnly date = DateOnly.FromDateTime(DateTime.Now); 
+                DateOnly date = DateOnly.FromDateTime(DateTime.Now);
                 string[] parts1 = gp.MaCongDanNavigation.DiaChi.Split(",");
 
                 this.LbTen.Text = gp.MaCongDanNavigation.HoTen;
@@ -44,11 +45,10 @@ namespace UI.CapGPLX
                 this.lbDiaChi.Text = "";
                 for (int i = 0; i < parts1.Length - 2; i++)
                     this.lbDiaChi.Text += parts1[i] + ", ";
-                this.lbMota.Text = gp.MaHangNavigation.MoTa;
-                this.lbNgay.Text = gp.NgayCap.ToString();
                 this.LbHang.Text = gp.MaHang;
                 this.lbNgayThangNam.Text = "An Giang, " + "ngày/date " + date.Day.ToString() + " tháng/month " + date.Month.ToString() + " năm/year " + date.Year.ToString();
                 this.lbSo.Text = gp.SoGiayPhep;
+                this.lbSoDiemHienCo.Text = gp.SoDiem.ToString();
 
                 if (gp.MaCongDanNavigation.Anh3x4 != null)
                 {
@@ -63,8 +63,9 @@ namespace UI.CapGPLX
                             this.pictureBoxAnh.Image = Image.FromStream(stream);
                         }
                     }
-                }              
-            } else
+                }
+            }
+            else
             {
                 MessageBox.Show("Số giấy phép không hợp lệ hoặc chưa chính thức!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -72,46 +73,37 @@ namespace UI.CapGPLX
 
         }
 
-        private void btnDuyet_Click(object sender, EventArgs e)
+        private void cboLoiViPham_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DialogResult rs = MessageBox.Show("Có chắc chắn cấp lại GPLX này!", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (rs == DialogResult.OK)
+            string Loai_Ten = this.cboLoiViPham.SelectedItem as string;
+            if (!string.IsNullOrEmpty(Loai_Ten))
             {
-                GiayPhep oldGp = _giayPhepDAL.GetBySoGiayPhep(this.txtSoGPLX.Text, "Còn hiệu lực");
-                oldGp.TrangThai = "Bị thu hồi"; // cập nhật bản cũ
-                GiayPhep newGp = new GiayPhep
-                {
-                    MaCongDan = oldGp.MaCongDan,
-                    MaHang = oldGp.MaHang,
-                    SoGiayPhep = "R" + oldGp.MaHang  
-                        + DateOnly.FromDateTime(DateTime.Now).Year
-                        + DateOnly.FromDateTime(DateTime.Now).Month
-                        + DateOnly.FromDateTime(DateTime.Now).Day
-                        + oldGp.MaCongDan,
-                    NgayCap = DateOnly.FromDateTime(DateTime.Now),
-                    NgayHetHan = oldGp.NgayHetHan,
-                    SoDiem = oldGp.SoDiem,
-                    TrangThai = "Còn hiệu lực",
-                    GhiChu = "Cấp lại\nLý do: " + rtbLyDo.Text + "\nSố cũ: " + oldGp.SoGiayPhep
-                };
-
-                try
-                {
-                    DatabaseSession.Context.GiayPheps.Add(newGp);
-                    DatabaseSession.Context.SaveChanges();
-                    MessageBox.Show("Giấy phép đã được cấp lại chính thức!\n" +
-                        "Số GPLX mới: " + newGp.SoGiayPhep, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearDisplay();
-                    this.txtSoGPLX.Text = newGp.SoGiayPhep;
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Đã quá số lần cấp lại GPLX!");
-                }
+                int id = int.Parse(Loai_Ten.Split("-")[0].Trim());
+                LoaiViPham vp = _viPhamDAL.GetById(id);
+                Debug.WriteLine(vp.DiemTru);
+                if (vp != null)
+                    this.lbSoDiemTru.Text = vp.DiemTru.ToString();
+                else
+                    this.lbSoDiemTru.Text = "___";
             }
         }
 
-  
+        private void lbSoDiemHienCo_Leave(object sender, EventArgs e)
+        {
+            if (lbSoDiemHienCo.Text == "___" || string.IsNullOrEmpty(lbSoDiemHienCo.Text))
+            {
+                lbSoDiemConLai.Text = "___";
+                return;
+            }
+            if (lbSoDiemTru.Text == "___" || string.IsNullOrEmpty(lbSoDiemTru.Text))
+            {
+                lbSoDiemConLai.Text = lbSoDiemConLai.Text.Trim();
+                return;
+            }
+            int sdhc = int.Parse((lbSoDiemHienCo.Text));
+            int sdt = int.Parse((lbSoDiemTru.Text));
+            int sdcl = sdhc - sdt;
+            lbSoDiemConLai.Text = (sdcl) < 0 ? "0" : sdcl.ToString();
+        }
     }
 }

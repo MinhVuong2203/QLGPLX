@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.CapGPLX;
 
 namespace UI.XuLyViPham
 {
@@ -15,6 +16,16 @@ namespace UI.XuLyViPham
         public UCXuLyViPhamMain()
         {
             InitializeComponent();
+        }
+
+        private void cácLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadControl(new UCCacLoaiViPham());
+        }
+
+        private void thôngTinCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadControl(new UCGhiNhan());
         }
     }
 }

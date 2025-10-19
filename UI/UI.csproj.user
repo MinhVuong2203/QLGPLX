@@ -55,6 +55,12 @@
     <Compile Update="TrangChu\UCTrangChuMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="XuLyViPham\UCCacLoaiViPham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="XuLyViPham\UCGhiNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="XuLyViPham\UCXuLyViPhamMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
