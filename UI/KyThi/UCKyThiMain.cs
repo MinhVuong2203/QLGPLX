@@ -24,7 +24,7 @@ namespace UI.KyThi
 
         private void hồSơCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadControl(new UCKetQua());
+            LoadControl(new UCKetQuaThi());
         }
     }
 }

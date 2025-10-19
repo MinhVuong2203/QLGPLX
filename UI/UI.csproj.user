@@ -37,6 +37,9 @@
     <Compile Update="KyThi\UCKetQua.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="KyThi\UCKetQuaThi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="KyThi\UCKyThi.cs">
       <SubType>UserControl</SubType>
     </Compile>

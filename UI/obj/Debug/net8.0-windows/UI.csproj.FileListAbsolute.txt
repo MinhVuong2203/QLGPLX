@@ -166,3 +166,4 @@ D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.FormKyThiParticipants.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.UCKyThi.resources
 D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.UCKetQua.resources
+D:\DAI HOC\PhanTichThietKeYeuCau\BTL\QLGPLX\UI\obj\Debug\net8.0-windows\UI.KyThi.UCKetQuaThi.resources

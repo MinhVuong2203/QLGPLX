@@ -35,5 +35,19 @@ namespace BLL
         public void RemoveParticipant(int kyThiId, int hoSoId) => _dal.RemoveParticipant(kyThiId, hoSoId);
         public bool RetryParticipant(int kyThiId, int hoSoId) => _dal.RetryParticipant(kyThiId, hoSoId);
 
+        public string getMaHangByKyThi(int kythiId)
+        {
+            return _dal.getMaHangByKyThi(kythiId);
+        }
+        public List<KyThi> GetOngoingKyThi() => _dal.GetOngoingKyThi();
+
+        public List<KetQuaThi> GetDistinctParticipantsForKyThi(int kyThiId) => _dal.GetDistinctParticipantsForKyThi(kyThiId);
+
+        public KetQuaThi GetLatestKetQuaThi(int kyThiId, int hoSoId) => _dal.GetLatestKetQuaThi(kyThiId, hoSoId);
+
+        public void SaveOrUpdateResult(int kyThiId, int hoSoId, int lanThi, decimal? diemLy, decimal? diemThuc)
+            => _dal.SaveOrUpdateResult(kyThiId, hoSoId, lanThi, diemLy, diemThuc);
+
+      
     }
 }

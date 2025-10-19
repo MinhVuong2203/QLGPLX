@@ -134,7 +134,107 @@ namespace DAL
             DatabaseSession.Context.SaveChanges();
             return true;
         }
-        
+
+        public string getMaHangByKyThi(int kythiId)
+        {
+            return DatabaseSession.Context.KyThis
+                .Where(k => k.KyThiId == kythiId)
+                .Select(k => k.MaHang)
+                .FirstOrDefault();
+        }
+
+
+        /* ---------- New methods for result input and helpers ---------- */
+
+        // lấy danh sách kỳ thi "Đang diễn ra"
+        public List<KyThi> GetOngoingKyThi()
+        {
+            return DatabaseSession.Context.KyThis
+                .Where(k => k.TrangThai == "Đang diễn ra")
+                .OrderByDescending(k => k.KyThiId)
+                .ToList();
+        }
+
+        // Lấy ra Kết quả thi mới nhất của thí sinh trong kỳ thi
+        public KetQuaThi GetLatestKetQuaThi(int kyThiId, int hoSoId)
+        {
+            return DatabaseSession.Context.KetQuaThis
+                .Include(k => k.HoSo)
+                    .ThenInclude(h => h.MaCongDanNavigation)
+                .Include(k => k.KetQuaChiTiets)
+                .Where(k => k.KyThiId == kyThiId && k.HoSoId == hoSoId)
+                .OrderByDescending(k => k.LanThi)
+                .FirstOrDefault();
+        }
+
+        // lấy tất cả thí sinh tham gia kỳ thi, chỉ lấy bản ghi KetQuaThi có LanThi cao nhất cho mỗi HoSo
+        public List<KetQuaThi> GetDistinctParticipantsForKyThi(int kyThiId)
+        {
+            // get latest LanThi record per HoSo for this KyThi (if multiple lan, show latest)
+            var q = DatabaseSession.Context.KetQuaThis
+                .Include(k => k.HoSo)
+                    .ThenInclude(h => h.MaCongDanNavigation)
+                .Where(k => k.KyThiId == kyThiId)
+                .GroupBy(k => k.HoSoId)
+                .Select(g => g.OrderByDescending(x => x.LanThi).FirstOrDefault());
+
+            return q.ToList();
+        }
+
+        // Save or update result for a given KyThi/HoSo/LanThi.
+        // diemLy and diemThuc are nullable - only provided fields will be saved.
+        // This method also updates KetQuaChiTiet rows (LoaiMon = "Lý thuyết" / "Thực hành") and KetQuaTongHop.
+        public void SaveOrUpdateResult(int kyThiId, int hoSoId, int lanThi, decimal? diemLy, decimal? diemThuc)
+        {
+            // Kiểm tra KetQuaThi đã tồn tại chưa
+            var ketQuaId = DatabaseSession.Context.KetQuaThis
+                .Where(k => k.KyThiId == kyThiId && k.HoSoId == hoSoId && k.LanThi == lanThi)
+                .Select(k => k.KetQuaId)
+                .FirstOrDefault();
+
+            if (ketQuaId == 0)
+            {
+                // Tạo mới KetQuaThi
+                DatabaseSession.Context.Database.ExecuteSqlRaw(
+                    @"INSERT INTO KetQuaThi (HoSoID, KyThiID, LanThi, NgayKetLuan, KetQuaTongHop) 
+              VALUES ({0}, {1}, {2}, GETDATE(), N'Không đạt')",
+                    hoSoId, kyThiId, lanThi);
+
+                ketQuaId = DatabaseSession.Context.KetQuaThis
+                    .Where(k => k.KyThiId == kyThiId && k.HoSoId == hoSoId && k.LanThi == lanThi)
+                    .Select(k => k.KetQuaId)
+                    .First();
+            }
+
+            // Lưu điểm Lý thuyết bằng raw SQL - THÊM KetQua = '' để tránh NULL
+            if (diemLy.HasValue)
+            {
+                DatabaseSession.Context.Database.ExecuteSqlRaw(
+                    @"IF EXISTS (SELECT 1 FROM KetQuaChiTiet WHERE KetQuaID = {0} AND LoaiMon = N'Lý thuyết')
+                UPDATE KetQuaChiTiet SET Diem = {1}, ThoiGianBatDau = GETDATE() 
+                WHERE KetQuaID = {0} AND LoaiMon = N'Lý thuyết'
+              ELSE
+                INSERT INTO KetQuaChiTiet (KetQuaID, LoaiMon, Diem, KetQua, ThoiGianBatDau) 
+                VALUES ({0}, N'Lý thuyết', {1}, N'Không đạt', GETDATE())",
+                    ketQuaId, diemLy.Value);
+            }
+
+            // Lưu điểm Thực hành bằng raw SQL - THÊM KetQua = '' để tránh NULL
+            if (diemThuc.HasValue)
+            {
+                DatabaseSession.Context.Database.ExecuteSqlRaw(
+                    @"IF EXISTS (SELECT 1 FROM KetQuaChiTiet WHERE KetQuaID = {0} AND LoaiMon = N'Thực hành')
+                UPDATE KetQuaChiTiet SET Diem = {1}, ThoiGianBatDau = GETDATE() 
+                WHERE KetQuaID = {0} AND LoaiMon = N'Thực hành'
+              ELSE
+                INSERT INTO KetQuaChiTiet (KetQuaID, LoaiMon, Diem, KetQua, ThoiGianBatDau) 
+                VALUES ({0}, N'Thực hành', {1}, N'Không đạt', GETDATE())",
+                    ketQuaId, diemThuc.Value);
+            }
+
+            // Trigger sẽ tự động cập nhật KetQua từ '' thành 'Đạt' hoặc 'Không đạt'
+        }
+
     }
 
 }
