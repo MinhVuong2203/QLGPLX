@@ -4,6 +4,9 @@
     <Compile Update="CapGPLX\UCCapGPLXMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="CapGPLX\UCXetDuyetCapGPLX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Helpers\FormViewImage.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -19,7 +19,12 @@
             }
             base.Dispose(disposing);
         }
-
+        public void LoadControl(UserControl uc)
+        {
+            this.panelMain.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            this.panelMain.Controls.Add(uc);
+        }
         #region Component Designer generated code
 
         /// <summary> 
@@ -28,33 +33,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            checkBox1 = new CheckBox();
+            parrotFlatMenuStrip1 = new ReaLTaiizor.Controls.ParrotFlatMenuStrip();
+            hồSơCôngDânToolStripMenuItem = new ToolStripMenuItem();
+            cấpLạiToolStripMenuItem = new ToolStripMenuItem();
+            panelMain = new Panel();
+            parrotFlatMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // checkBox1
+            // parrotFlatMenuStrip1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.ForeColor = Color.Red;
-            checkBox1.Location = new Point(278, 155);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(144, 19);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Đây là trang Cấp GPLX";
-            checkBox1.UseVisualStyleBackColor = true;
+            parrotFlatMenuStrip1.AutoSize = false;
+            parrotFlatMenuStrip1.BackColor = Color.Khaki;
+            parrotFlatMenuStrip1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            parrotFlatMenuStrip1.HoverBackColor = Color.Gold;
+            parrotFlatMenuStrip1.HoverTextColor = Color.Black;
+            parrotFlatMenuStrip1.ImageScalingSize = new Size(20, 20);
+            parrotFlatMenuStrip1.ItemBackColor = Color.Beige;
+            parrotFlatMenuStrip1.Items.AddRange(new ToolStripItem[] { hồSơCôngDânToolStripMenuItem, cấpLạiToolStripMenuItem });
+            parrotFlatMenuStrip1.Location = new Point(0, 0);
+            parrotFlatMenuStrip1.Name = "parrotFlatMenuStrip1";
+            parrotFlatMenuStrip1.SelectedBackColor = Color.FromArgb(255, 128, 0);
+            parrotFlatMenuStrip1.SelectedTextColor = Color.White;
+            parrotFlatMenuStrip1.SeparatorColor = Color.White;
+            parrotFlatMenuStrip1.Size = new Size(1630, 48);
+            parrotFlatMenuStrip1.TabIndex = 2;
+            parrotFlatMenuStrip1.Text = "parrotFlatMenuStrip1";
+            parrotFlatMenuStrip1.TextColor = Color.Black;
+            // 
+            // hồSơCôngDânToolStripMenuItem
+            // 
+            hồSơCôngDânToolStripMenuItem.AutoSize = false;
+            hồSơCôngDânToolStripMenuItem.ForeColor = Color.Black;
+            hồSơCôngDânToolStripMenuItem.Name = "hồSơCôngDânToolStripMenuItem";
+            hồSơCôngDânToolStripMenuItem.Size = new Size(152, 44);
+            hồSơCôngDânToolStripMenuItem.Text = "Cấp mới";
+            hồSơCôngDânToolStripMenuItem.Click += hồSơCôngDânToolStripMenuItem_Click;
+            // 
+            // cấpLạiToolStripMenuItem
+            // 
+            cấpLạiToolStripMenuItem.ForeColor = Color.White;
+            cấpLạiToolStripMenuItem.Name = "cấpLạiToolStripMenuItem";
+            cấpLạiToolStripMenuItem.Size = new Size(98, 44);
+            cấpLạiToolStripMenuItem.Text = "Cấp lại";
+            cấpLạiToolStripMenuItem.Click += cấpLạiToolStripMenuItem_Click;
+            // 
+            // panelMain
+            // 
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 48);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1630, 852);
+            panelMain.TabIndex = 3;
             // 
             // UCCapGPLXMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(checkBox1);
+            Controls.Add(panelMain);
+            Controls.Add(parrotFlatMenuStrip1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "UCCapGPLXMain";
-            Size = new Size(711, 485);
+            Size = new Size(1630, 900);
+            parrotFlatMenuStrip1.ResumeLayout(false);
+            parrotFlatMenuStrip1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private CheckBox checkBox1;
+        private ReaLTaiizor.Controls.ParrotFlatMenuStrip parrotFlatMenuStrip1;
+        private ToolStripMenuItem hồSơCôngDânToolStripMenuItem;
+        private ToolStripMenuItem cấpLạiToolStripMenuItem;
+        private Panel panelMain;
     }
 }

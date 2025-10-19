@@ -30,13 +30,15 @@ namespace UI.KyThi
         private void LoadParticipants()
         {
             var list = _bll.GetParticipants(_kyThiId);
+            // include KetQuaTongHop in the datasource so we can decide per-row action
             dgvParticipants.DataSource = list.Select(k => new
             {
                 k.HoSo.HoSoId,
                 MaCongDan = k.HoSo.MaCongDan,
                 HoTen = k.HoSo.MaCongDanNavigation?.HoTen,
                 k.LanThi,
-                Ngày = k.NgayKetLuan
+                Ngày = k.NgayKetLuan,
+                KetQuaTongHop = k.KetQuaTongHop
             }).ToList();
 
             // style grid
@@ -45,43 +47,25 @@ namespace UI.KyThi
             dgvParticipants.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(250, 230, 210);
             dgvParticipants.EnableHeadersVisualStyles = false;
 
-            // remove existing action columns
-            if (dgvParticipants.Columns.Cast<DataGridViewColumn>().Any(c => c.Name == "btnDelete"))
-                dgvParticipants.Columns.Remove("btnDelete");
-            if (dgvParticipants.Columns.Cast<DataGridViewColumn>().Any(c => c.Name == "btnRetry"))
-                dgvParticipants.Columns.Remove("btnRetry");
-
-            // Add action column depending on KyThi.TrangThai
-            var ky = _bll.GetById(_kyThiId);
-            if (ky != null && ky.TrangThai != null)
+            // Ensure single action column exists (per-row text will decide Xóa/Thi lại/empty)
+            var actionColName = "btnAction";
+            if (!dgvParticipants.Columns.Cast<DataGridViewColumn>().Any(c => c.Name == actionColName))
             {
-                if (ky.TrangThai.Trim() == "Sắp diễn ra")
+                var btnCol = new DataGridViewButtonColumn
                 {
-                    var btnDelete = new DataGridViewButtonColumn
-                    {
-                        Name = "btnDelete",
-                        HeaderText = "Hành động",
-                        Text = "Xóa",
-                        UseColumnTextForButtonValue = true,
-                        Width = 90
-                    };
-                    dgvParticipants.Columns.Add(btnDelete);
-                }
-                else if (ky.TrangThai.Trim() == "Đang diễn ra")
-                {
-                    var btnRetry = new DataGridViewButtonColumn
-                    {
-                        Name = "btnRetry",
-                        HeaderText = "Hành động",
-                        Text = "Thi lại",
-                        UseColumnTextForButtonValue = true,
-                        Width = 90
-                    };
-                    dgvParticipants.Columns.Add(btnRetry);
-                }
+                    Name = actionColName,
+                    HeaderText = "Hành động",
+                    UseColumnTextForButtonValue = false,
+                    Width = 100
+                };
+                dgvParticipants.Columns.Add(btnCol);
             }
 
-            // ensure handler (avoid multiple subscriptions)
+            // wire DataBindingComplete to set per-row button text/state
+            dgvParticipants.DataBindingComplete -= DgvParticipants_DataBindingComplete;
+            dgvParticipants.DataBindingComplete += DgvParticipants_DataBindingComplete;
+
+            // wire cell click handler (ensure single subscription)
             dgvParticipants.CellContentClick -= DgvParticipants_CellContentClick;
             dgvParticipants.CellContentClick += DgvParticipants_CellContentClick;
         }
@@ -165,13 +149,69 @@ namespace UI.KyThi
                 }
             }
         }
+        private void DgvParticipants_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            if (_kyThiId <= 0) return;
+            var ky = _bll.GetById(_kyThiId);
+            if (ky == null) return;
 
+            bool isSap = string.Equals(ky.TrangThai?.Trim(), "Sắp diễn ra", StringComparison.OrdinalIgnoreCase);
+            bool isDang = string.Equals(ky.TrangThai?.Trim(), "Đang diễn ra", StringComparison.OrdinalIgnoreCase);
+
+            foreach (DataGridViewRow row in dgvParticipants.Rows)
+            {
+                var actionCell = row.Cells["btnAction"] as DataGridViewCell;
+                if (actionCell == null) continue;
+
+                string ketQua = (row.Cells["KetQuaTongHop"]?.Value ?? "").ToString().Trim();
+
+                if (isSap)
+                {
+                    actionCell.Value = "Xóa";
+                    actionCell.Style.ForeColor = Color.Black;
+                    actionCell.Style.BackColor = Color.LightSalmon;
+                    actionCell.ReadOnly = false;
+                }
+                else if (isDang)
+                {
+                    if (string.Equals(ketQua, "Không đạt", StringComparison.OrdinalIgnoreCase))
+                    {
+                        actionCell.Value = "Thi lại";
+                        actionCell.Style.ForeColor = Color.Black;
+                        actionCell.Style.BackColor = Color.LightGreen;
+                        actionCell.ReadOnly = false;
+                    }
+                    else
+                    {
+                        // hide/disable action for this row
+                        actionCell.Value = "";
+                        actionCell.Style.ForeColor = Color.Gray;
+                        actionCell.Style.BackColor = dgvParticipants.DefaultCellStyle.BackColor;
+                        actionCell.ReadOnly = true;
+                    }
+                }
+                else
+                {
+                    // exam finished or other status: hide button
+                    actionCell.Value = "";
+                    actionCell.Style.ForeColor = Color.Gray;
+                    actionCell.Style.BackColor = dgvParticipants.DefaultCellStyle.BackColor;
+                    actionCell.ReadOnly = true;
+                }
+            }
+        }
         private void DgvParticipants_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
             var col = dgvParticipants.Columns[e.ColumnIndex];
+            if (col == null) return;
+            if (col.Name != "btnAction") return;
 
-            // get HoSoId from the row data
+            var cell = dgvParticipants.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            var action = (cell.Value ?? "").ToString();
+            if (string.IsNullOrEmpty(action)) return; // nothing to do
+
+            // get HoSoId from row
             var hoSoIdObj = dgvParticipants.Rows[e.RowIndex].Cells["HoSoId"].Value;
             if (hoSoIdObj == null) return;
             if (!int.TryParse(hoSoIdObj.ToString(), out int hoSoId)) return;
@@ -181,9 +221,8 @@ namespace UI.KyThi
 
             try
             {
-                if (col.Name == "btnDelete")
+                if (action == "Xóa")
                 {
-                    // Remove participant and push back to pending
                     var confirm = MessageBox.Show("Xác nhận xóa thí sinh khỏi kỳ thi?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (confirm == DialogResult.Yes)
                     {
@@ -193,9 +232,23 @@ namespace UI.KyThi
                         LoadPending();
                     }
                 }
-                else if (col.Name == "btnRetry")
+                else if (action == "Thi lại")
                 {
-                    // Try to add a retry attempt
+                    // Only allow retry for ongoing exams and when current overall result is "Không đạt"
+                    if (!string.Equals(ky.TrangThai?.Trim(), "Đang diễn ra", StringComparison.OrdinalIgnoreCase))
+                    {
+                        MessageBox.Show("Chỉ được phép thi lại khi kỳ thi đang diễn ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // verify latest overall result is "Không đạt"
+                    var ketQuaTongHop = dgvParticipants.Rows[e.RowIndex].Cells["KetQuaTongHop"].Value?.ToString() ?? "";
+                    if (!string.Equals(ketQuaTongHop, "Không đạt", StringComparison.OrdinalIgnoreCase))
+                    {
+                        MessageBox.Show("Thí sinh không ở trạng thái 'Không đạt' nên không thể thi lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
                     var success = _bll.RetryParticipant(_kyThiId, hoSoId);
                     if (success)
                     {
@@ -214,9 +267,6 @@ namespace UI.KyThi
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        // ... other methods remain unchanged ...
     }
 }

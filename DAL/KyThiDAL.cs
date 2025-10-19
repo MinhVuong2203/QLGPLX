@@ -86,11 +86,12 @@ namespace DAL
                 HoSoId = hoSoId,
                 KyThiId = kyThiId,
                 LanThi = 1,
-                KetQuaTongHop = "Không đạt",
+                KetQuaTongHop = "Chưa thi",
                 NgayKetLuan = DateTime.Now
             };
             DatabaseSession.Context.KetQuaThis.Add(newEntry);
             DatabaseSession.Context.SaveChanges();
+            DatabaseSession.Context.ChangeTracker.Clear();
         }
 
         // Remove participant entries for a kyThi-hoSo pair (used when "Xóa" from a Sắp diễn ra kỳ thi)
@@ -126,12 +127,13 @@ namespace DAL
                 HoSoId = hoSoId,
                 KyThiId = kyThiId,
                 LanThi = currentMax + 1,
-                KetQuaTongHop = "Không đạt",
+                KetQuaTongHop = "Chưa thi",
                 NgayKetLuan = DateTime.Now
             };
 
             DatabaseSession.Context.KetQuaThis.Add(newEntry);
             DatabaseSession.Context.SaveChanges();
+            DatabaseSession.Context.ChangeTracker.Clear();
             return true;
         }
 
@@ -233,6 +235,7 @@ namespace DAL
             }
 
             // Trigger sẽ tự động cập nhật KetQua từ '' thành 'Đạt' hoặc 'Không đạt'
+            DatabaseSession.Context.ChangeTracker.Clear();
         }
 
     }

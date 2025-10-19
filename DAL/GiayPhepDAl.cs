@@ -1,0 +1,54 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL
+{
+    public class GiayPhepDAl
+    {
+        // Lấy danh sách giấy phép theo trạng thái
+        public List<GiayPhep> GetByTrangThaiAndMahang(string maHang, string trangThai)
+        {
+            return DatabaseSession.Context.GiayPheps
+                .Include(g => g.MaCongDanNavigation)
+                .Include(g => g.MaHangNavigation)
+                .Where(g => g.TrangThai == trangThai && g.MaHang == maHang)
+                .OrderByDescending(g => g.GiayPhepId)
+                .ToList();
+        }
+
+        // Lấy giấy phép theo ID
+        public GiayPhep GetById(int id)
+        {
+            return DatabaseSession.Context.GiayPheps
+                .Include(g => g.MaCongDanNavigation)
+                .Include(g => g.MaHangNavigation)
+                .FirstOrDefault(g => g.GiayPhepId == id);
+        }
+      
+  
+
+        // Lấy giấy phép theo mã công và trạng thái dân Sắp xếp theo ngày cấp
+        public GiayPhep GetByMaCongDan(int maCongDan, string TrangThai)
+        {
+            return DatabaseSession.Context.GiayPheps
+                .Include(g => g.MaCongDanNavigation)
+                .Include(g => g.MaHangNavigation)
+                .OrderByDescending(g => g.NgayCap)
+                .FirstOrDefault(g => g.MaCongDan == maCongDan && g.TrangThai == TrangThai);             
+        }
+
+        public GiayPhep GetBySoGiayPhep(string sogp)
+        {
+            return DatabaseSession.Context.GiayPheps
+                .Include(g => g.MaCongDanNavigation)
+                .Include(g => g.MaHangNavigation)
+                .FirstOrDefault(g => g.SoGiayPhep == sogp);
+        }
+
+        
+    }
+}

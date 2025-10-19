@@ -16,5 +16,15 @@ namespace UI.CapGPLX
         {
             InitializeComponent();
         }
+
+        private void hồSơCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LoadControl(new UCXetDuyetCapGPLX());
+        }
+
+        private void cấpLạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LoadControl(new UCCapLaiGPLX());
+        }
     }
 }
