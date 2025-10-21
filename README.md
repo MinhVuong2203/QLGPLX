@@ -12,3 +12,15 @@ git push origin main
   FROM sys.key_constraints 
   WHERE type = 'UQ' AND parent_object_id = OBJECT_ID('CongDan')
 
+  // hiển thị ảnh nếu có
+  if (!string.IsNullOrEmpty(congDan.Anh3x4))
+  {
+      string solutionPath = Directory.GetParent(Application.StartupPath).Parent.Parent.Parent.FullName;
+      string imagePath = Path.Combine(solutionPath, "Resources", congDan.Anh3x4);
+
+      if (File.Exists(imagePath))
+      {
+          using var stream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+          pictureBoxAnhDaiDien.Image = Image.FromStream(stream);
+      }
+  }
