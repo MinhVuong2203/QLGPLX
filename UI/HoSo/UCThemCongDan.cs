@@ -118,8 +118,8 @@ namespace UI.HoSo
                 this.radioNam.Checked = false;
                 this.radioNu.Checked = false;
                 this.txtEmail.Text = "";
-                this.dtpNgaySinh.Value = DateTime.Now;
-                this.dtpNgayKham.Value = DateTime.Now;
+                this.dtpNgaySinh.Value = new DateTime(2000, 1, 1);
+                this.dtpNgayKham.Value = new DateTime(2025, 1, 1);
                 this.rtxTinhTrang.Text = "";
                 this.txtSDT.Text = "";
                 this.pictureBoxAnhDaiDien.Image = null;

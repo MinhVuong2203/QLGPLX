@@ -66,6 +66,7 @@ namespace UI.XuLyViPham
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(57, 57);
             label1.Name = "label1";
             label1.Size = new Size(115, 31);

@@ -103,6 +103,7 @@
             // 
             xétDuyệtHồSơToolStripMenuItem.AutoSize = false;
             xétDuyệtHồSơToolStripMenuItem.ForeColor = Color.Black;
+            xétDuyệtHồSơToolStripMenuItem.Image = Properties.Resources.them1;
             xétDuyệtHồSơToolStripMenuItem.Name = "xétDuyệtHồSơToolStripMenuItem";
             xétDuyệtHồSơToolStripMenuItem.Size = new Size(264, 42);
             xétDuyệtHồSơToolStripMenuItem.Text = "Thêm mới";
@@ -112,6 +113,7 @@
             // 
             traCứuHồSơToolStripMenuItem.AutoSize = false;
             traCứuHồSơToolStripMenuItem.ForeColor = Color.Black;
+            traCứuHồSơToolStripMenuItem.Image = Properties.Resources.review;
             traCứuHồSơToolStripMenuItem.Name = "traCứuHồSơToolStripMenuItem";
             traCứuHồSơToolStripMenuItem.Size = new Size(264, 42);
             traCứuHồSơToolStripMenuItem.Text = "Xét duyệt";

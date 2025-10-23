@@ -27,5 +27,10 @@ namespace UI.XuLyViPham
         {
             LoadControl(new UCGhiNhan());
         }
+
+        private void hồSơCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadControl(new UCPhucHoi());
+        }
     }
 }

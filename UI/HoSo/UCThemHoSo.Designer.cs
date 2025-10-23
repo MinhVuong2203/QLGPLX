@@ -93,11 +93,11 @@ namespace UI.HoSo
             groupBox.Controls.Add(txtTen);
             groupBox.Controls.Add(label2);
             groupBox.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox.Location = new Point(794, 65);
+            groupBox.Location = new Point(826, 65);
             groupBox.Margin = new Padding(3, 4, 3, 4);
             groupBox.Name = "groupBox";
             groupBox.Padding = new Padding(3, 4, 3, 4);
-            groupBox.Size = new Size(800, 538);
+            groupBox.Size = new Size(757, 539);
             groupBox.TabIndex = 4;
             groupBox.TabStop = false;
             groupBox.Text = " Thông tin chi tiết";
@@ -107,17 +107,17 @@ namespace UI.HoSo
             txtSDT.Enabled = false;
             txtSDT.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtSDT.ForeColor = Color.FromArgb(64, 0, 64);
-            txtSDT.Location = new Point(445, 137);
+            txtSDT.Location = new Point(406, 137);
             txtSDT.Margin = new Padding(3, 4, 3, 4);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(240, 36);
+            txtSDT.Size = new Size(239, 36);
             txtSDT.TabIndex = 32;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(325, 138);
+            label1.Location = new Point(286, 139);
             label1.Name = "label1";
             label1.Size = new Size(58, 30);
             label1.TabIndex = 31;
@@ -128,10 +128,10 @@ namespace UI.HoSo
             txtGioiTinh.Enabled = false;
             txtGioiTinh.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtGioiTinh.ForeColor = Color.FromArgb(64, 0, 64);
-            txtGioiTinh.Location = new Point(445, 266);
+            txtGioiTinh.Location = new Point(406, 267);
             txtGioiTinh.Margin = new Padding(3, 4, 3, 4);
             txtGioiTinh.Name = "txtGioiTinh";
-            txtGioiTinh.Size = new Size(240, 36);
+            txtGioiTinh.Size = new Size(239, 36);
             txtGioiTinh.TabIndex = 30;
             // 
             // txtEmail
@@ -139,7 +139,7 @@ namespace UI.HoSo
             txtEmail.Enabled = false;
             txtEmail.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtEmail.ForeColor = Color.FromArgb(64, 0, 64);
-            txtEmail.Location = new Point(438, 341);
+            txtEmail.Location = new Point(399, 341);
             txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(247, 36);
@@ -149,7 +149,7 @@ namespace UI.HoSo
             // 
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(325, 341);
+            label7.Location = new Point(286, 341);
             label7.Name = "label7";
             label7.Size = new Size(71, 30);
             label7.TabIndex = 19;
@@ -159,7 +159,7 @@ namespace UI.HoSo
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(325, 269);
+            label4.Location = new Point(286, 269);
             label4.Name = "label4";
             label4.Size = new Size(104, 30);
             label4.TabIndex = 7;
@@ -170,10 +170,10 @@ namespace UI.HoSo
             txtDiaChi.Enabled = false;
             txtDiaChi.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtDiaChi.ForeColor = Color.FromArgb(64, 0, 64);
-            txtDiaChi.Location = new Point(124, 407);
+            txtDiaChi.Location = new Point(123, 407);
             txtDiaChi.Margin = new Padding(3, 4, 3, 4);
             txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(656, 36);
+            txtDiaChi.Size = new Size(618, 36);
             txtDiaChi.TabIndex = 29;
             // 
             // label16
@@ -193,17 +193,17 @@ namespace UI.HoSo
             dtpNgaySinh.CustomFormat = "dd-MM-yyyy";
             dtpNgaySinh.Enabled = false;
             dtpNgaySinh.Format = DateTimePickerFormat.Custom;
-            dtpNgaySinh.Location = new Point(445, 201);
+            dtpNgaySinh.Location = new Point(406, 201);
             dtpNgaySinh.Margin = new Padding(3, 4, 3, 4);
             dtpNgaySinh.Name = "dtpNgaySinh";
-            dtpNgaySinh.Size = new Size(240, 36);
+            dtpNgaySinh.Size = new Size(239, 36);
             dtpNgaySinh.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(322, 206);
+            label3.Location = new Point(283, 205);
             label3.Name = "label3";
             label3.Size = new Size(117, 30);
             label3.TabIndex = 5;
@@ -215,7 +215,7 @@ namespace UI.HoSo
             pictureBoxAnhDaiDien.Location = new Point(31, 55);
             pictureBoxAnhDaiDien.Margin = new Padding(3, 4, 3, 4);
             pictureBoxAnhDaiDien.Name = "pictureBoxAnhDaiDien";
-            pictureBoxAnhDaiDien.Size = new Size(240, 320);
+            pictureBoxAnhDaiDien.Size = new Size(240, 319);
             pictureBoxAnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAnhDaiDien.TabIndex = 4;
             pictureBoxAnhDaiDien.TabStop = false;
@@ -225,7 +225,7 @@ namespace UI.HoSo
             txtTen.Enabled = false;
             txtTen.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtTen.ForeColor = Color.FromArgb(64, 0, 64);
-            txtTen.Location = new Point(445, 76);
+            txtTen.Location = new Point(406, 76);
             txtTen.Margin = new Padding(3, 4, 3, 4);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(335, 36);
@@ -235,7 +235,7 @@ namespace UI.HoSo
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(325, 79);
+            label2.Location = new Point(286, 79);
             label2.Name = "label2";
             label2.Size = new Size(114, 30);
             label2.TabIndex = 2;
@@ -253,9 +253,9 @@ namespace UI.HoSo
             groupBox1.Controls.Add(dtpNgayNop);
             groupBox1.Controls.Add(lblNgayNop);
             groupBox1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(43, 65);
+            groupBox1.Location = new Point(56, 65);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(721, 538);
+            groupBox1.Size = new Size(710, 539);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin hồ sơ";
@@ -287,7 +287,7 @@ namespace UI.HoSo
             cboCongDan.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCongDan.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cboCongDan.ForeColor = Color.FromArgb(52, 73, 94);
-            cboCongDan.Location = new Point(162, 126);
+            cboCongDan.Location = new Point(162, 125);
             cboCongDan.Name = "cboCongDan";
             cboCongDan.Size = new Size(526, 38);
             cboCongDan.TabIndex = 1;
@@ -299,7 +299,7 @@ namespace UI.HoSo
             txtGhiChu.BorderStyle = BorderStyle.FixedSingle;
             txtGhiChu.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtGhiChu.ForeColor = Color.FromArgb(52, 73, 94);
-            txtGhiChu.Location = new Point(140, 280);
+            txtGhiChu.Location = new Point(139, 280);
             txtGhiChu.Name = "txtGhiChu";
             txtGhiChu.Size = new Size(538, 229);
             txtGhiChu.TabIndex = 9;
@@ -310,7 +310,7 @@ namespace UI.HoSo
             lblHang.AutoSize = true;
             lblHang.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold);
             lblHang.ForeColor = Color.FromArgb(52, 73, 94);
-            lblHang.Location = new Point(328, 38);
+            lblHang.Location = new Point(328, 37);
             lblHang.Name = "lblHang";
             lblHang.Size = new Size(189, 31);
             lblHang.TabIndex = 2;
@@ -334,7 +334,7 @@ namespace UI.HoSo
             dtpNgayNop.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpNgayNop.ForeColor = Color.FromArgb(52, 73, 94);
             dtpNgayNop.Format = DateTimePickerFormat.Short;
-            dtpNgayNop.Location = new Point(162, 202);
+            dtpNgayNop.Location = new Point(162, 203);
             dtpNgayNop.Name = "dtpNgayNop";
             dtpNgayNop.Size = new Size(230, 37);
             dtpNgayNop.TabIndex = 5;
@@ -345,7 +345,7 @@ namespace UI.HoSo
             lblNgayNop.AutoSize = true;
             lblNgayNop.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Bold);
             lblNgayNop.ForeColor = Color.FromArgb(52, 73, 94);
-            lblNgayNop.Location = new Point(32, 202);
+            lblNgayNop.Location = new Point(32, 203);
             lblNgayNop.Name = "lblNgayNop";
             lblNgayNop.Size = new Size(124, 31);
             lblNgayNop.TabIndex = 4;
@@ -359,7 +359,7 @@ namespace UI.HoSo
             label13.ImageAlign = ContentAlignment.MiddleLeft;
             label13.Location = new Point(0, 0);
             label13.Name = "label13";
-            label13.Size = new Size(1630, 30);
+            label13.Size = new Size(1630, 29);
             label13.TabIndex = 2;
             label13.Text = "Thêm mới hồ sơ";
             label13.TextAlign = ContentAlignment.MiddleLeft;
@@ -383,7 +383,7 @@ namespace UI.HoSo
             btnLuu.FlatStyle = FlatStyle.Flat;
             btnLuu.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(611, 10);
+            btnLuu.Location = new Point(611, 11);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(120, 40);
             btnLuu.TabIndex = 0;
@@ -399,7 +399,7 @@ namespace UI.HoSo
             btnHuy.FlatStyle = FlatStyle.Flat;
             btnHuy.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             btnHuy.ForeColor = Color.White;
-            btnHuy.Location = new Point(826, 10);
+            btnHuy.Location = new Point(826, 11);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(120, 40);
             btnHuy.TabIndex = 1;

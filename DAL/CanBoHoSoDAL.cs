@@ -13,8 +13,8 @@ namespace DAL
                 ThoiGian = DateTime.Now,
                 TrangThaiDuyet = trangThaiDuyet
             };
-            DatabaseSession.Context.CanBoHoSos.Add(cbhs);
-            DatabaseSession.Context.SaveChanges();
+            //DatabaseSession.Context.CanBoHoSos.Add(cbhs);
+            //DatabaseSession.Context.SaveChanges();
         }
     }
 }

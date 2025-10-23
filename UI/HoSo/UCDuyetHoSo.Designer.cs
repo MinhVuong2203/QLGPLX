@@ -69,7 +69,7 @@
             label13.ImageAlign = ContentAlignment.MiddleLeft;
             label13.Location = new Point(0, 0);
             label13.Name = "label13";
-            label13.Size = new Size(1630, 30);
+            label13.Size = new Size(1630, 29);
             label13.TabIndex = 2;
             label13.Text = "Duyệt hồ sơ";
             label13.TextAlign = ContentAlignment.MiddleLeft;
@@ -100,9 +100,9 @@
             groupBox.Controls.Add(txtSDT);
             groupBox.Controls.Add(label1);
             groupBox.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox.Location = new Point(950, 49);
+            groupBox.Location = new Point(912, 49);
             groupBox.Name = "groupBox";
-            groupBox.Size = new Size(667, 727);
+            groupBox.Size = new Size(704, 727);
             groupBox.TabIndex = 3;
             groupBox.TabStop = false;
             groupBox.Text = "Thông tin chi tiết";
@@ -112,7 +112,7 @@
             txtNgayKham.Enabled = false;
             txtNgayKham.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtNgayKham.ForeColor = Color.Black;
-            txtNgayKham.Location = new Point(172, 564);
+            txtNgayKham.Location = new Point(171, 564);
             txtNgayKham.Margin = new Padding(3, 4, 3, 4);
             txtNgayKham.Name = "txtNgayKham";
             txtNgayKham.Size = new Size(195, 36);
@@ -123,7 +123,7 @@
             txtNgaySinh.Enabled = false;
             txtNgaySinh.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtNgaySinh.ForeColor = Color.Black;
-            txtNgaySinh.Location = new Point(316, 107);
+            txtNgaySinh.Location = new Point(315, 107);
             txtNgaySinh.Margin = new Padding(3, 4, 3, 4);
             txtNgaySinh.Name = "txtNgaySinh";
             txtNgaySinh.Size = new Size(145, 36);
@@ -171,7 +171,7 @@
             txtGioiTinh.Location = new Point(563, 107);
             txtGioiTinh.Margin = new Padding(3, 4, 3, 4);
             txtGioiTinh.Name = "txtGioiTinh";
-            txtGioiTinh.Size = new Size(98, 36);
+            txtGioiTinh.Size = new Size(135, 36);
             txtGioiTinh.TabIndex = 21;
             // 
             // label11
@@ -189,7 +189,7 @@
             rtxTinhTrang.Enabled = false;
             rtxTinhTrang.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rtxTinhTrang.ForeColor = Color.FromArgb(64, 0, 64);
-            rtxTinhTrang.Location = new Point(27, 428);
+            rtxTinhTrang.Location = new Point(40, 428);
             rtxTinhTrang.Margin = new Padding(3, 4, 3, 4);
             rtxTinhTrang.Name = "rtxTinhTrang";
             rtxTinhTrang.Size = new Size(634, 111);
@@ -233,10 +233,10 @@
             txtTen.Enabled = false;
             txtTen.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtTen.ForeColor = Color.Black;
-            txtTen.Location = new Point(316, 46);
+            txtTen.Location = new Point(315, 45);
             txtTen.Margin = new Padding(3, 4, 3, 4);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(346, 36);
+            txtTen.Size = new Size(383, 36);
             txtTen.TabIndex = 3;
             // 
             // pictureBoxAnhDaiDien
@@ -245,7 +245,7 @@
             pictureBoxAnhDaiDien.Location = new Point(27, 44);
             pictureBoxAnhDaiDien.Margin = new Padding(3, 4, 3, 4);
             pictureBoxAnhDaiDien.Name = "pictureBoxAnhDaiDien";
-            pictureBoxAnhDaiDien.Size = new Size(150, 200);
+            pictureBoxAnhDaiDien.Size = new Size(151, 199);
             pictureBoxAnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAnhDaiDien.TabIndex = 4;
             pictureBoxAnhDaiDien.TabStop = false;
@@ -275,10 +275,10 @@
             txtEmail.Enabled = false;
             txtEmail.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtEmail.ForeColor = Color.Black;
-            txtEmail.Location = new Point(274, 274);
+            txtEmail.Location = new Point(274, 275);
             txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(387, 36);
+            txtEmail.Size = new Size(424, 36);
             txtEmail.TabIndex = 20;
             // 
             // label6
@@ -306,10 +306,10 @@
             txtCCCD.Enabled = false;
             txtCCCD.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtCCCD.ForeColor = Color.Black;
-            txtCCCD.Location = new Point(274, 218);
+            txtCCCD.Location = new Point(274, 219);
             txtCCCD.Margin = new Padding(3, 4, 3, 4);
             txtCCCD.Name = "txtCCCD";
-            txtCCCD.Size = new Size(387, 36);
+            txtCCCD.Size = new Size(424, 36);
             txtCCCD.TabIndex = 1;
             // 
             // label4
@@ -347,7 +347,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(190, 222);
+            label1.Location = new Point(190, 221);
             label1.Name = "label1";
             label1.Size = new Size(77, 31);
             label1.TabIndex = 0;
@@ -359,7 +359,7 @@
             dgvHoSo.Location = new Point(8, 93);
             dgvHoSo.Name = "dgvHoSo";
             dgvHoSo.RowHeadersWidth = 51;
-            dgvHoSo.Size = new Size(925, 683);
+            dgvHoSo.Size = new Size(870, 683);
             dgvHoSo.TabIndex = 4;
             // 
             // label10
@@ -367,7 +367,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(153, 46);
+            label10.Location = new Point(94, 47);
             label10.Name = "label10";
             label10.Size = new Size(187, 31);
             label10.TabIndex = 5;
@@ -378,7 +378,7 @@
             cbTrangThai.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbTrangThai.FormattingEnabled = true;
             cbTrangThai.Items.AddRange(new object[] { "", "Đang xử lý", "Đủ điều kiện", "Không đủ điều kiện" });
-            cbTrangThai.Location = new Point(346, 43);
+            cbTrangThai.Location = new Point(287, 44);
             cbTrangThai.Name = "cbTrangThai";
             cbTrangThai.Size = new Size(333, 38);
             cbTrangThai.TabIndex = 6;

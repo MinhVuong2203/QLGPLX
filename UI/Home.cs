@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Microsoft.VisualBasic;
 using ReaLTaiizor.Controls;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace UI
         public UserControl ucKythi = new KyThi.UCKyThiMain();
         public UserControl ucXuLyViPham = new XuLyViPham.UCXuLyViPhamMain();
         public UserControl ucHeThong = new HeThong.UCHeThongMain();
-
+        public int sl = 3;
         public Home(CanBo canBo)
         {
             this.canBo = canBo;
@@ -77,8 +78,29 @@ namespace UI
                     this.LoadControl(ucXuLyViPham);
                     break;
                 case "btnHeThong":
-                    this.LoadControl(ucHeThong);
-                    break;
+                    if (sl == 0)
+                    {
+                        MessageBox.Show("Đã quá số lần");
+                        break;
+                    }
+                    string input = Interaction.InputBox(
+                        "Nhập mật khẩu:",     // Nội dung
+                        "Xác thực Admin",           // Tiêu đề
+                        "",          // Giá trị mặc định
+                        -1, -1                     // Vị trí (-1,-1) = giữa màn hình
+                    );
+                    if (string.IsNullOrEmpty(input)) break;
+                    if (PasswordHelper.HashPassword(input).Equals(canBo.Password))
+                    {
+                        this.LoadControl(ucHeThong);
+                        sl = 3;
+                    }
+                    else {
+                        sl--;
+                        MessageBox.Show("Mật khẩu không đúng! Còn " + sl + " lần thử");
+                        break;
+                    }
+                        break;
                 default:
                     break;
             }

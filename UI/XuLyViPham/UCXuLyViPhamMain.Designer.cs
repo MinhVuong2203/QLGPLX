@@ -64,7 +64,7 @@
             // thôngTinCôngDânToolStripMenuItem
             // 
             thôngTinCôngDânToolStripMenuItem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            thôngTinCôngDânToolStripMenuItem.ForeColor = Color.White;
+            thôngTinCôngDânToolStripMenuItem.ForeColor = Color.Black;
             thôngTinCôngDânToolStripMenuItem.Name = "thôngTinCôngDânToolStripMenuItem";
             thôngTinCôngDânToolStripMenuItem.Size = new Size(120, 44);
             thôngTinCôngDânToolStripMenuItem.Text = "Ghi nhận";
@@ -76,14 +76,15 @@
             hồSơCôngDânToolStripMenuItem.ForeColor = Color.Black;
             hồSơCôngDânToolStripMenuItem.Name = "hồSơCôngDânToolStripMenuItem";
             hồSơCôngDânToolStripMenuItem.Size = new Size(152, 44);
-            hồSơCôngDânToolStripMenuItem.Text = "Tra cứu";
+            hồSơCôngDânToolStripMenuItem.Text = "Phục hồi";
+            hồSơCôngDânToolStripMenuItem.Click += hồSơCôngDânToolStripMenuItem_Click;
             // 
             // cácLoạiToolStripMenuItem
             // 
-            cácLoạiToolStripMenuItem.ForeColor = Color.Black;
+            cácLoạiToolStripMenuItem.ForeColor = Color.White;
             cácLoạiToolStripMenuItem.Name = "cácLoạiToolStripMenuItem";
-            cácLoạiToolStripMenuItem.Size = new Size(109, 44);
-            cácLoạiToolStripMenuItem.Text = "Các loại";
+            cácLoạiToolStripMenuItem.Size = new Size(160, 44);
+            cácLoạiToolStripMenuItem.Text = "Loại vi phạm";
             cácLoạiToolStripMenuItem.Click += cácLoạiToolStripMenuItem_Click;
             // 
             // panelMain

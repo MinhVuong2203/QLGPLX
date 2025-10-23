@@ -65,9 +65,10 @@
             // 
             cboKyThi.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cboKyThi.FormattingEnabled = true;
-            cboKyThi.Location = new Point(466, 48);
+            cboKyThi.Location = new Point(408, 36);
+            cboKyThi.Margin = new Padding(3, 2, 3, 2);
             cboKyThi.Name = "cboKyThi";
-            cboKyThi.Size = new Size(877, 38);
+            cboKyThi.Size = new Size(768, 33);
             cboKyThi.TabIndex = 0;
             cboKyThi.SelectedIndexChanged += cboKyThi_SelectedIndexChanged;
             // 
@@ -76,9 +77,9 @@
             lbKiThi.AutoSize = true;
             lbKiThi.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbKiThi.ForeColor = SystemColors.ActiveCaptionText;
-            lbKiThi.Location = new Point(323, 51);
+            lbKiThi.Location = new Point(283, 38);
             lbKiThi.Name = "lbKiThi";
-            lbKiThi.Size = new Size(137, 31);
+            lbKiThi.Size = new Size(109, 25);
             lbKiThi.TabIndex = 1;
             lbKiThi.Text = "Chọn kỳ thi:";
             // 
@@ -100,18 +101,22 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(panel1);
             groupBox1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(229, 108);
+            groupBox1.Location = new Point(200, 81);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1186, 677);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(1038, 508);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Kết quả chi tiết";
             // 
             // button1
             // 
-            button1.Location = new Point(997, 607);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
+            button1.Location = new Point(872, 455);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(152, 45);
+            button1.Size = new Size(133, 34);
             button1.TabIndex = 23;
             button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = true;
@@ -121,9 +126,10 @@
             // 
             cboLanThi.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cboLanThi.FormattingEnabled = true;
-            cboLanThi.Location = new Point(207, 104);
+            cboLanThi.Location = new Point(181, 78);
+            cboLanThi.Margin = new Padding(3, 2, 3, 2);
             cboLanThi.Name = "cboLanThi";
-            cboLanThi.Size = new Size(249, 38);
+            cboLanThi.Size = new Size(218, 33);
             cboLanThi.TabIndex = 22;
             cboLanThi.SelectedIndexChanged += CboLanThi_SelectedIndexChanged;
             // 
@@ -131,9 +137,9 @@
             // 
             label8.AutoSize = true;
             label8.ForeColor = SystemColors.ActiveCaptionText;
-            label8.Location = new Point(46, 107);
+            label8.Location = new Point(40, 80);
             label8.Name = "label8";
-            label8.Size = new Size(144, 31);
+            label8.Size = new Size(116, 25);
             label8.TabIndex = 21;
             label8.Text = "Chọn lần thi:";
             // 
@@ -146,9 +152,10 @@
             panel2.Controls.Add(label9);
             panel2.Controls.Add(txtDiemThucHanh);
             panel2.Controls.Add(label5);
-            panel2.Location = new Point(77, 385);
+            panel2.Location = new Point(67, 289);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(638, 198);
+            panel2.Size = new Size(558, 148);
             panel2.TabIndex = 20;
             // 
             // dtpThoiGianThucHanh
@@ -157,19 +164,20 @@
             dtpThoiGianThucHanh.CustomFormat = "HH:mm dd-MM-yyyy";
             dtpThoiGianThucHanh.Font = new Font("Segoe UI", 12.75F);
             dtpThoiGianThucHanh.Format = DateTimePickerFormat.Custom;
-            dtpThoiGianThucHanh.Location = new Point(265, 86);
+            dtpThoiGianThucHanh.Location = new Point(232, 64);
+            dtpThoiGianThucHanh.Margin = new Padding(3, 2, 3, 2);
             dtpThoiGianThucHanh.Name = "dtpThoiGianThucHanh";
             dtpThoiGianThucHanh.ShowUpDown = true;
-            dtpThoiGianThucHanh.Size = new Size(341, 36);
+            dtpThoiGianThucHanh.Size = new Size(299, 30);
             dtpThoiGianThucHanh.TabIndex = 12;
             // 
             // lbKetQuaThucHanh
             // 
             lbKetQuaThucHanh.AutoSize = true;
             lbKetQuaThucHanh.ForeColor = SystemColors.ActiveCaptionText;
-            lbKetQuaThucHanh.Location = new Point(146, 140);
+            lbKetQuaThucHanh.Location = new Point(128, 105);
             lbKetQuaThucHanh.Name = "lbKetQuaThucHanh";
-            lbKetQuaThucHanh.Size = new Size(64, 31);
+            lbKetQuaThucHanh.Size = new Size(47, 25);
             lbKetQuaThucHanh.TabIndex = 17;
             lbKetQuaThucHanh.Text = "_____";
             lbKetQuaThucHanh.TextChanged += lbKetQuaLyThuyet_TextChanged;
@@ -178,9 +186,9 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(13, 28);
+            label3.Location = new Point(11, 21);
             label3.Name = "label3";
-            label3.Size = new Size(217, 31);
+            label3.Size = new Size(173, 25);
             label3.TabIndex = 6;
             label3.Text = "Điểm thi thực hành:";
             // 
@@ -188,17 +196,18 @@
             // 
             label9.AutoSize = true;
             label9.ForeColor = SystemColors.ActiveCaptionText;
-            label9.Location = new Point(47, 141);
+            label9.Location = new Point(41, 106);
             label9.Name = "label9";
-            label9.Size = new Size(99, 31);
+            label9.Size = new Size(80, 25);
             label9.TabIndex = 16;
             label9.Text = "Kết quả:";
             // 
             // txtDiemThucHanh
             // 
-            txtDiemThucHanh.Location = new Point(232, 25);
+            txtDiemThucHanh.Location = new Point(203, 19);
+            txtDiemThucHanh.Margin = new Padding(3, 2, 3, 2);
             txtDiemThucHanh.Name = "txtDiemThucHanh";
-            txtDiemThucHanh.Size = new Size(374, 37);
+            txtDiemThucHanh.Size = new Size(328, 31);
             txtDiemThucHanh.TabIndex = 8;
             txtDiemThucHanh.Leave += txtDiemThucHanh_Leave;
             // 
@@ -206,9 +215,9 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(13, 86);
+            label5.Location = new Point(11, 64);
             label5.Name = "label5";
-            label5.Size = new Size(246, 31);
+            label5.Size = new Size(198, 25);
             label5.TabIndex = 11;
             label5.Text = "Thời gian thi lý thuyết:";
             // 
@@ -216,9 +225,9 @@
             // 
             lbKetQuaTongHop.AutoSize = true;
             lbKetQuaTongHop.ForeColor = SystemColors.ActiveCaptionText;
-            lbKetQuaTongHop.Location = new Point(253, 615);
+            lbKetQuaTongHop.Location = new Point(221, 461);
             lbKetQuaTongHop.Name = "lbKetQuaTongHop";
-            lbKetQuaTongHop.Size = new Size(68, 31);
+            lbKetQuaTongHop.Size = new Size(48, 25);
             lbKetQuaTongHop.TabIndex = 18;
             lbKetQuaTongHop.Text = ".........";
             // 
@@ -226,17 +235,18 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(46, 615);
+            label6.Location = new Point(40, 461);
             label6.Name = "label6";
-            label6.Size = new Size(201, 31);
+            label6.Size = new Size(162, 25);
             label6.TabIndex = 13;
             label6.Text = "Kết quả tổng hợp:";
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(794, 67);
+            pictureBox1.Location = new Point(695, 50);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(300, 400);
+            pictureBox1.Size = new Size(262, 300);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
@@ -244,9 +254,10 @@
             // 
             cboThiSinh.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cboThiSinh.FormattingEnabled = true;
-            cboThiSinh.Location = new Point(207, 47);
+            cboThiSinh.Location = new Point(181, 35);
+            cboThiSinh.Margin = new Padding(3, 2, 3, 2);
             cboThiSinh.Name = "cboThiSinh";
-            cboThiSinh.Size = new Size(508, 38);
+            cboThiSinh.Size = new Size(445, 33);
             cboThiSinh.TabIndex = 3;
             cboThiSinh.SelectedIndexChanged += CboThiSinh_SelectedIndexChanged;
             // 
@@ -254,9 +265,9 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(46, 50);
+            label1.Location = new Point(40, 38);
             label1.Name = "label1";
-            label1.Size = new Size(155, 31);
+            label1.Size = new Size(125, 25);
             label1.TabIndex = 0;
             label1.Text = "Chọn thí sinh:";
             // 
@@ -269,18 +280,19 @@
             panel1.Controls.Add(lbKetQuaLyThuyet);
             panel1.Controls.Add(txtDiemLyThuyet);
             panel1.Controls.Add(label7);
-            panel1.Location = new Point(77, 168);
+            panel1.Location = new Point(67, 126);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(638, 198);
+            panel1.Size = new Size(558, 148);
             panel1.TabIndex = 19;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(21, 30);
+            label2.Location = new Point(18, 22);
             label2.Name = "label2";
-            label2.Size = new Size(204, 31);
+            label2.Size = new Size(165, 25);
             label2.TabIndex = 4;
             label2.Text = "Điểm thi lý thuyết:";
             // 
@@ -290,19 +302,20 @@
             dtpThoiGianLyThuyet.CustomFormat = "HH:mm dd-MM-yyyy";
             dtpThoiGianLyThuyet.Font = new Font("Segoe UI", 12.75F);
             dtpThoiGianLyThuyet.Format = DateTimePickerFormat.Custom;
-            dtpThoiGianLyThuyet.Location = new Point(273, 85);
+            dtpThoiGianLyThuyet.Location = new Point(239, 64);
+            dtpThoiGianLyThuyet.Margin = new Padding(3, 2, 3, 2);
             dtpThoiGianLyThuyet.Name = "dtpThoiGianLyThuyet";
             dtpThoiGianLyThuyet.ShowUpDown = true;
-            dtpThoiGianLyThuyet.Size = new Size(341, 36);
+            dtpThoiGianLyThuyet.Size = new Size(299, 30);
             dtpThoiGianLyThuyet.TabIndex = 10;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(21, 85);
+            label4.Location = new Point(18, 64);
             label4.Name = "label4";
-            label4.Size = new Size(246, 31);
+            label4.Size = new Size(198, 25);
             label4.TabIndex = 9;
             label4.Text = "Thời gian thi lý thuyết:";
             // 
@@ -310,18 +323,19 @@
             // 
             lbKetQuaLyThuyet.AutoSize = true;
             lbKetQuaLyThuyet.ForeColor = SystemColors.ActiveCaptionText;
-            lbKetQuaLyThuyet.Location = new Point(154, 135);
+            lbKetQuaLyThuyet.Location = new Point(135, 101);
             lbKetQuaLyThuyet.Name = "lbKetQuaLyThuyet";
-            lbKetQuaLyThuyet.Size = new Size(64, 31);
+            lbKetQuaLyThuyet.Size = new Size(47, 25);
             lbKetQuaLyThuyet.TabIndex = 15;
             lbKetQuaLyThuyet.Text = "_____";
             lbKetQuaLyThuyet.TextChanged += lbKetQuaLyThuyet_TextChanged;
             // 
             // txtDiemLyThuyet
             // 
-            txtDiemLyThuyet.Location = new Point(240, 27);
+            txtDiemLyThuyet.Location = new Point(210, 20);
+            txtDiemLyThuyet.Margin = new Padding(3, 2, 3, 2);
             txtDiemLyThuyet.Name = "txtDiemLyThuyet";
-            txtDiemLyThuyet.Size = new Size(374, 37);
+            txtDiemLyThuyet.Size = new Size(328, 31);
             txtDiemLyThuyet.TabIndex = 7;
             txtDiemLyThuyet.Leave += txtDiemLyThuyet_Leave;
             // 
@@ -329,9 +343,9 @@
             // 
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(55, 136);
+            label7.Location = new Point(48, 102);
             label7.Name = "label7";
-            label7.Size = new Size(99, 31);
+            label7.Size = new Size(80, 25);
             label7.TabIndex = 14;
             label7.Text = "Kết quả:";
             // 
@@ -344,21 +358,22 @@
             label13.ImageAlign = ContentAlignment.MiddleLeft;
             label13.Location = new Point(0, 0);
             label13.Name = "label13";
-            label13.Size = new Size(1630, 29);
+            label13.Size = new Size(1426, 22);
             label13.TabIndex = 11;
             label13.Text = "Quản lý kết quả";
             label13.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // UCKetQuaThi
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label13);
             Controls.Add(groupBox1);
             Controls.Add(lbKiThi);
             Controls.Add(cboKyThi);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UCKetQuaThi";
-            Size = new Size(1630, 800);
+            Size = new Size(1426, 600);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel2.ResumeLayout(false);

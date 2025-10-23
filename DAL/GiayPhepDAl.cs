@@ -49,8 +49,34 @@ namespace DAL
                 .FirstOrDefault(g => g.SoGiayPhep == sogp && g.TrangThai == trangthai);
         }
 
-       
+        public bool UpdateDiem(GiayPhep gp, int soDiem)
+        {
+            try
+            {
+                
+                if (gp == null)
+                    throw new Exception("Không tìm thấy giấy phép cần cập nhật.");
 
-        
+                gp.SoDiem = soDiem;
+
+
+                DatabaseSession.Context.GiayPheps.Update(gp);
+                DatabaseSession.Context.SaveChanges(); // 🔥 Quan trọng: lưu xuống DB
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                // Gợi ý: in thông tin chi tiết để debug
+                Console.WriteLine($"Lỗi UpdateDiem: {e.Message}");
+                if (e.InnerException != null)
+                    Console.WriteLine($"Chi tiết: {e.InnerException.Message}");
+
+                return false;
+            }
+        }
+
+
+
     }
 }

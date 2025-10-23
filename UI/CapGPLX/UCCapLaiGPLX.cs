@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAL;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,40 +79,53 @@ namespace UI.CapGPLX
             if (rs == DialogResult.OK)
             {
                 GiayPhep oldGp = _giayPhepDAL.GetBySoGiayPhep(this.txtSoGPLX.Text, "Còn hiệu lực");
-                oldGp.TrangThai = "Bị thu hồi"; // cập nhật bản cũ
-                GiayPhep newGp = new GiayPhep
-                {
-                    MaCongDan = oldGp.MaCongDan,
-                    MaHang = oldGp.MaHang,
-                    SoGiayPhep = "R" + oldGp.MaHang  
-                        + DateOnly.FromDateTime(DateTime.Now).Year
-                        + DateOnly.FromDateTime(DateTime.Now).Month
-                        + DateOnly.FromDateTime(DateTime.Now).Day
-                        + oldGp.MaCongDan,
-                    NgayCap = DateOnly.FromDateTime(DateTime.Now),
-                    NgayHetHan = oldGp.NgayHetHan,
-                    SoDiem = oldGp.SoDiem,
-                    TrangThai = "Còn hiệu lực",
-                    GhiChu = "Cấp lại\nLý do: " + rtbLyDo.Text + "\nSố cũ: " + oldGp.SoGiayPhep
-                };
+
+                string newSoGiayPhep = "R" + oldGp.MaHang
+                    + DateOnly.FromDateTime(DateTime.Now).Year
+                    + DateOnly.FromDateTime(DateTime.Now).Month
+                    + DateOnly.FromDateTime(DateTime.Now).Day
+                    + oldGp.MaCongDan;
+
+                string ghiChu = "Cấp lại\nLý do: " + rtbLyDo.Text + "\nSố cũ: " + oldGp.SoGiayPhep;
 
                 try
                 {
-                    DatabaseSession.Context.GiayPheps.Add(newGp);
-                    DatabaseSession.Context.SaveChanges();
-                    MessageBox.Show("Giấy phép đã được cấp lại chính thức!\n" +
-                        "Số GPLX mới: " + newGp.SoGiayPhep, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ClearDisplay();
-                    this.txtSoGPLX.Text = newGp.SoGiayPhep;
-                }
+                    // Cập nhật trạng thái bản cũ
+                    string sqlUpdate = @"UPDATE GiayPhep 
+                                SET TrangThai = N'Bị thu hồi' 
+                                WHERE SoGiayPhep = {0} AND TrangThai = N'Còn hiệu lực'";
+                    DatabaseSession.Context.Database.ExecuteSqlRaw(sqlUpdate, oldGp.SoGiayPhep);
 
+                    // Thêm giấy phép mới
+                    string sqlInsert = @"INSERT INTO GiayPhep (MaCongDan, MaHang, SoGiayPhep, NgayCap, NgayHetHan, SoDiem, TrangThai, GhiChu)
+                                VALUES ({0}, {1}, {2}, {3}, {4}, {5}, N'Còn hiệu lực', {6})";
+
+                    DatabaseSession.Context.Database.ExecuteSqlRaw(sqlInsert,
+                        oldGp.MaCongDan,
+                        oldGp.MaHang,
+                        newSoGiayPhep,
+                        DateOnly.FromDateTime(DateTime.Now),
+                        oldGp.NgayHetHan,
+                        oldGp.SoDiem,
+                        ghiChu);
+
+                    MessageBox.Show("Giấy phép đã được cấp lại chính thức!\n" +
+                        "Số GPLX mới: " + newSoGiayPhep, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearDisplay();
+                    this.txtSoGPLX.Text = newSoGiayPhep;
+                }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Đã quá số lần cấp lại GPLX!");
+                    MessageBox.Show(
+                        "Đã quá số lần cấp GPLX trong ngày ",
+                        "Lỗi",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
             }
         }
 
-  
+
     }
 }

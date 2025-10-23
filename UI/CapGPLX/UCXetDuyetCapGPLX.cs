@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -77,19 +78,30 @@ namespace UI.CapGPLX
             DialogResult rs = MessageBox.Show("Có chắc chắn cấp GPLX này!", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (rs == DialogResult.OK)
             {
-                GiayPhep gp = _giayPhepDAL.GetById(gpid);
-                gp.TrangThai = "Còn hiệu lực";
                 try
                 {
-                    DatabaseSession.Context.GiayPheps.Update(gp);
-                    DatabaseSession.Context.SaveChanges();
+                    // Kiểm tra giấy phép có tồn tại không
+                    var exists = DatabaseSession.Context.GiayPheps.Any(g => g.GiayPhepId == gpid);
+                    if (!exists)
+                    {
+                        MessageBox.Show("Không tìm thấy giấy phép!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Cập nhật bằng Raw SQL
+                    DatabaseSession.Context.Database.ExecuteSqlRaw(
+                        @"UPDATE GiayPhep 
+                        SET TrangThai = {0} 
+                        WHERE GiayPhepId = {1}",
+                        "Còn hiệu lực", gpid
+                    );
+
                     MessageBox.Show("Giấy phép đã được cấp chính thức!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearDisplay();
                 }
-
-                catch(Exception ex)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Có lỗi xả ra!");
+                    MessageBox.Show("Lỗi khi cập nhật: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

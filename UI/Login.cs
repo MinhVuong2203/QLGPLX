@@ -63,7 +63,7 @@ namespace UI
             {
                 MessageBox.Show("Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }    
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -81,6 +81,11 @@ namespace UI
                 tbPassword.UseSystemPasswordChar = false;
                 this.IsShowpass = true;
             }
+        }
+
+        private void skyButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

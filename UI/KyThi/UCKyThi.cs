@@ -56,7 +56,7 @@ namespace UI.KyThi
             if (dgv.Columns["DaDangKy"] != null) dgv.Columns["DaDangKy"].HeaderText = "Đã đăng ký";
             if (dgv.Columns["SoLuongToiDa"] != null) dgv.Columns["SoLuongToiDa"].HeaderText = "Số lượng tối đa";
             if (dgv.Columns["TrangThai"] != null) dgv.Columns["TrangThai"].HeaderText = "Trạng thái";
-
+            dgv.DefaultCellStyle.ForeColor = Color.Black;
             UpdateButtonsState();
         }
 

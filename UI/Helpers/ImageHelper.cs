@@ -57,6 +57,7 @@ namespace UI.Helpers
                         using (var stream = new FileStream(destPath, FileMode.Open, FileAccess.Read))
                         {
                             pictureBox.Image = Image.FromStream(stream);
+                            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                         }
 
                         MessageBox.Show("Ảnh đã được lưu thành công!",

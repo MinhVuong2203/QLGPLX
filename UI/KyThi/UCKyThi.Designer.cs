@@ -69,22 +69,24 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgv.DefaultCellStyle = dataGridViewCellStyle2;
             dgv.EnableHeadersVisualStyles = false;
-            dgv.Location = new Point(54, 110);
+            dgv.Location = new Point(31, 82);
+            dgv.Margin = new Padding(3, 2, 3, 2);
             dgv.Name = "dgv";
             dgv.RowHeadersVisible = false;
             dgv.RowHeadersWidth = 51;
             dgv.RowTemplate.Height = 32;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv.Size = new Size(1529, 640);
+            dgv.Size = new Size(1295, 480);
             dgv.TabIndex = 12;
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.Locimg;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(37, 52);
+            pictureBox1.Location = new Point(32, 39);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(49, 39);
+            pictureBox1.Size = new Size(43, 29);
             pictureBox1.TabIndex = 11;
             pictureBox1.TabStop = false;
             // 
@@ -93,9 +95,10 @@
             comboBox1.Font = new Font("Segoe UI", 13.2000008F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Đang diễn ra", "Sắp diễn ra", "Đã kết thúc" });
-            comboBox1.Location = new Point(88, 52);
+            comboBox1.Location = new Point(77, 39);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(319, 38);
+            comboBox1.Size = new Size(280, 33);
             comboBox1.TabIndex = 10;
             // 
             // label13
@@ -107,7 +110,7 @@
             label13.ImageAlign = ContentAlignment.MiddleLeft;
             label13.Location = new Point(0, 0);
             label13.Name = "label13";
-            label13.Size = new Size(1630, 29);
+            label13.Size = new Size(1426, 22);
             label13.TabIndex = 9;
             label13.Text = "Quản lý kì thi";
             label13.TextAlign = ContentAlignment.MiddleLeft;
@@ -116,9 +119,10 @@
             // 
             btnThem.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThem.ForeColor = Color.Black;
-            btnThem.Location = new Point(551, 21);
+            btnThem.Location = new Point(374, 18);
+            btnThem.Margin = new Padding(3, 2, 3, 2);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(153, 45);
+            btnThem.Size = new Size(134, 34);
             btnThem.TabIndex = 13;
             btnThem.Text = "Tạo mới";
             btnThem.UseVisualStyleBackColor = true;
@@ -128,9 +132,10 @@
             // 
             btnSua.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSua.ForeColor = Color.Black;
-            btnSua.Location = new Point(816, 21);
+            btnSua.Location = new Point(606, 18);
+            btnSua.Margin = new Padding(3, 2, 3, 2);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(153, 45);
+            btnSua.Size = new Size(134, 34);
             btnSua.TabIndex = 14;
             btnSua.Text = "Cập nhật";
             btnSua.UseVisualStyleBackColor = true;
@@ -140,9 +145,10 @@
             // 
             button1.Font = new Font("Segoe UI Semibold", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(1100, 21);
+            button1.Location = new Point(854, 18);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(153, 45);
+            button1.Size = new Size(134, 34);
             button1.TabIndex = 15;
             button1.Text = "Thí sinh";
             button1.UseVisualStyleBackColor = true;
@@ -153,10 +159,10 @@
             panelMain.Controls.Add(dgv);
             panelMain.Controls.Add(pictureBox1);
             panelMain.Controls.Add(comboBox1);
-            panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(0, 0);
+            panelMain.Margin = new Padding(3, 2, 3, 2);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1630, 860);
+            panelMain.Size = new Size(1338, 645);
             panelMain.TabIndex = 16;
             // 
             // menuStrip1
@@ -164,7 +170,8 @@
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1630, 24);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(1338, 24);
             menuStrip1.TabIndex = 14;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -174,22 +181,20 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnThem);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 769);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(0, 577);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1630, 91);
+            panel1.Size = new Size(1426, 68);
             panel1.TabIndex = 17;
             // 
             // UCKyThi
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
             Controls.Add(label13);
             Controls.Add(panelMain);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "UCKyThi";
-            Size = new Size(1630, 860);
+            Size = new Size(1426, 645);
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMain.ResumeLayout(false);

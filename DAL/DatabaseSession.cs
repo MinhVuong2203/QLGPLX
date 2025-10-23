@@ -48,7 +48,9 @@ namespace DAL
                     using var ctx = new QLGPLXContext(_connectionString);
                     // Execute stored procedure - adjust if your SP name or syntax differs
                     ctx.Database.ExecuteSqlRaw("EXEC sp_CapNhatTrangThaiKyThi");
+                    ctx.Database.ExecuteSqlRaw("EXEC sp_ResetDiemGPLX");
                     Debug.WriteLine($"sp_CapNhatTrangThaiKyThi executed at {DateTime.Now}");
+                    Debug.WriteLine($"sp_ResetDiemGPLX executed at {DateTime.Now}");
                 }
                 catch (Exception ex)
                 {

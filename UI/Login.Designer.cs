@@ -118,6 +118,7 @@ namespace UI
             skyButton1.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             skyButton1.TabIndex = 6;
             skyButton1.Text = "Thoát";
+            skyButton1.Click += skyButton1_Click;
             // 
             // btnLogin
             // 

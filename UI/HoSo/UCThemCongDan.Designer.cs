@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL;
 using Newtonsoft.Json;
+using System.Windows.Forms;
 using UI.Models;
 
 namespace UI.HoSo
@@ -89,7 +90,6 @@ namespace UI.HoSo
             flowLayoutPanel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
-            
             // 
             // groupBox
             // 
@@ -116,11 +116,11 @@ namespace UI.HoSo
             groupBox.Controls.Add(label1);
             groupBox.Controls.Add(groupBox2);
             groupBox.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox.Location = new Point(8, 119);
+            groupBox.Location = new Point(34, 119);
             groupBox.Margin = new Padding(3, 4, 3, 4);
             groupBox.Name = "groupBox";
             groupBox.Padding = new Padding(3, 4, 3, 4);
-            groupBox.Size = new Size(1003, 650);
+            groupBox.Size = new Size(952, 651);
             groupBox.TabIndex = 0;
             groupBox.TabStop = false;
             groupBox.Text = " THÔNG TIN CHUNG";
@@ -129,7 +129,7 @@ namespace UI.HoSo
             // 
             label20.AutoSize = true;
             label20.ForeColor = Color.Red;
-            label20.Location = new Point(339, 244);
+            label20.Location = new Point(249, 244);
             label20.Name = "label20";
             label20.Size = new Size(23, 30);
             label20.TabIndex = 33;
@@ -139,7 +139,7 @@ namespace UI.HoSo
             // 
             label19.AutoSize = true;
             label19.ForeColor = Color.Red;
-            label19.Location = new Point(339, 184);
+            label19.Location = new Point(249, 184);
             label19.Name = "label19";
             label19.Size = new Size(23, 30);
             label19.TabIndex = 32;
@@ -149,7 +149,7 @@ namespace UI.HoSo
             // 
             label18.AutoSize = true;
             label18.ForeColor = Color.Red;
-            label18.Location = new Point(339, 120);
+            label18.Location = new Point(249, 120);
             label18.Name = "label18";
             label18.Size = new Size(23, 30);
             label18.TabIndex = 31;
@@ -159,7 +159,7 @@ namespace UI.HoSo
             // 
             label17.AutoSize = true;
             label17.ForeColor = Color.Red;
-            label17.Location = new Point(339, 56);
+            label17.Location = new Point(249, 56);
             label17.Name = "label17";
             label17.Size = new Size(23, 30);
             label17.TabIndex = 30;
@@ -169,7 +169,7 @@ namespace UI.HoSo
             // 
             btnChonAnh3x4.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnChonAnh3x4.ForeColor = Color.DimGray;
-            btnChonAnh3x4.Location = new Point(179, 457);
+            btnChonAnh3x4.Location = new Point(130, 351);
             btnChonAnh3x4.Margin = new Padding(3, 4, 3, 4);
             btnChonAnh3x4.Name = "btnChonAnh3x4";
             btnChonAnh3x4.Size = new Size(78, 37);
@@ -183,7 +183,7 @@ namespace UI.HoSo
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label12.ForeColor = SystemColors.ActiveCaptionText;
-            label12.Location = new Point(93, 461);
+            label12.Location = new Point(43, 355);
             label12.Name = "label12";
             label12.Size = new Size(84, 28);
             label12.TabIndex = 21;
@@ -193,17 +193,17 @@ namespace UI.HoSo
             // 
             txtEmail.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtEmail.ForeColor = Color.FromArgb(64, 0, 64);
-            txtEmail.Location = new Point(693, 238);
+            txtEmail.Location = new Point(602, 237);
             txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(286, 36);
+            txtEmail.Size = new Size(309, 36);
             txtEmail.TabIndex = 20;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(616, 241);
+            label7.Location = new Point(525, 241);
             label7.Name = "label7";
             label7.Size = new Size(71, 30);
             label7.TabIndex = 19;
@@ -213,10 +213,10 @@ namespace UI.HoSo
             // 
             txtSDT.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtSDT.ForeColor = Color.FromArgb(64, 0, 64);
-            txtSDT.Location = new Point(745, 114);
+            txtSDT.Location = new Point(654, 115);
             txtSDT.Margin = new Padding(3, 4, 3, 4);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(234, 36);
+            txtSDT.Size = new Size(256, 36);
             txtSDT.TabIndex = 18;
             txtSDT.TextChanged += textBox4_TextChanged;
             // 
@@ -224,7 +224,7 @@ namespace UI.HoSo
             // 
             label6.AutoSize = true;
             label6.ForeColor = SystemColors.ActiveCaptionText;
-            label6.Location = new Point(676, 117);
+            label6.Location = new Point(586, 117);
             label6.Name = "label6";
             label6.Size = new Size(58, 30);
             label6.TabIndex = 17;
@@ -234,7 +234,7 @@ namespace UI.HoSo
             // 
             radioNam.AutoSize = true;
             radioNam.Depth = 0;
-            radioNam.Location = new Point(466, 241);
+            radioNam.Location = new Point(375, 241);
             radioNam.Margin = new Padding(0);
             radioNam.MouseLocation = new Point(-1, -1);
             radioNam.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -251,7 +251,7 @@ namespace UI.HoSo
             // 
             radioNu.AutoSize = true;
             radioNu.Depth = 0;
-            radioNu.Location = new Point(535, 241);
+            radioNu.Location = new Point(444, 241);
             radioNu.Margin = new Padding(0);
             radioNu.MouseLocation = new Point(-1, -1);
             radioNu.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
@@ -268,7 +268,7 @@ namespace UI.HoSo
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(355, 244);
+            label4.Location = new Point(265, 244);
             label4.Name = "label4";
             label4.Size = new Size(104, 30);
             label4.TabIndex = 7;
@@ -280,17 +280,19 @@ namespace UI.HoSo
             dtpNgaySinh.CalendarForeColor = Color.FromArgb(64, 0, 64);
             dtpNgaySinh.CustomFormat = "dd-MM-yyyy";
             dtpNgaySinh.Format = DateTimePickerFormat.Custom;
-            dtpNgaySinh.Location = new Point(476, 114);
+            dtpNgaySinh.Location = new Point(385, 115);
             dtpNgaySinh.Margin = new Padding(3, 4, 3, 4);
+            dtpNgaySinh.MaxDate = new DateTime(2025, 10, 22, 22, 3, 31, 403);
             dtpNgaySinh.Name = "dtpNgaySinh";
             dtpNgaySinh.Size = new Size(194, 36);
             dtpNgaySinh.TabIndex = 6;
+            dtpNgaySinh.Value = new DateTime(2025, 10, 22, 22, 3, 31, 403);
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(357, 120);
+            label3.Location = new Point(266, 120);
             label3.Name = "label3";
             label3.Size = new Size(117, 30);
             label3.TabIndex = 5;
@@ -299,10 +301,10 @@ namespace UI.HoSo
             // pictureBoxAnhDaiDien
             // 
             pictureBoxAnhDaiDien.BorderStyle = BorderStyle.FixedSingle;
-            pictureBoxAnhDaiDien.Location = new Point(30, 52);
+            pictureBoxAnhDaiDien.Location = new Point(25, 57);
             pictureBoxAnhDaiDien.Margin = new Padding(3, 4, 3, 4);
             pictureBoxAnhDaiDien.Name = "pictureBoxAnhDaiDien";
-            pictureBoxAnhDaiDien.Size = new Size(300, 400);
+            pictureBoxAnhDaiDien.Size = new Size(210, 280);
             pictureBoxAnhDaiDien.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAnhDaiDien.TabIndex = 4;
             pictureBoxAnhDaiDien.TabStop = false;
@@ -311,17 +313,17 @@ namespace UI.HoSo
             // 
             txtTen.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtTen.ForeColor = Color.FromArgb(64, 0, 64);
-            txtTen.Location = new Point(476, 53);
+            txtTen.Location = new Point(385, 53);
             txtTen.Margin = new Padding(3, 4, 3, 4);
             txtTen.Name = "txtTen";
-            txtTen.Size = new Size(503, 36);
+            txtTen.Size = new Size(526, 36);
             txtTen.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(355, 56);
+            label2.Location = new Point(265, 56);
             label2.Name = "label2";
             label2.Size = new Size(114, 30);
             label2.TabIndex = 2;
@@ -331,7 +333,7 @@ namespace UI.HoSo
             // 
             txtCCCD.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold);
             txtCCCD.ForeColor = Color.FromArgb(64, 0, 64);
-            txtCCCD.Location = new Point(476, 176);
+            txtCCCD.Location = new Point(385, 176);
             txtCCCD.Margin = new Padding(3, 4, 3, 4);
             txtCCCD.Name = "txtCCCD";
             txtCCCD.Size = new Size(194, 36);
@@ -341,7 +343,7 @@ namespace UI.HoSo
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(359, 179);
+            label1.Location = new Point(268, 179);
             label1.Name = "label1";
             label1.Size = new Size(74, 30);
             label1.TabIndex = 0;
@@ -357,9 +359,9 @@ namespace UI.HoSo
             groupBox2.Controls.Add(txtSoNha);
             groupBox2.Controls.Add(cbPhuongXa);
             groupBox2.Controls.Add(label16);
-            groupBox2.Location = new Point(355, 295);
+            groupBox2.Location = new Point(265, 295);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(622, 231);
+            groupBox2.Size = new Size(646, 231);
             groupBox2.TabIndex = 34;
             groupBox2.TabStop = false;
             groupBox2.Text = "Địa chỉ";
@@ -369,7 +371,7 @@ namespace UI.HoSo
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label14.ForeColor = SystemColors.ActiveCaptionText;
-            label14.Location = new Point(82, 6);
+            label14.Location = new Point(82, 5);
             label14.Name = "label14";
             label14.Size = new Size(121, 23);
             label14.TabIndex = 24;
@@ -378,10 +380,10 @@ namespace UI.HoSo
             // cbTinh
             // 
             cbTinh.FormattingEnabled = true;
-            cbTinh.Location = new Point(225, 50);
+            cbTinh.Location = new Point(225, 51);
             cbTinh.Margin = new Padding(3, 4, 3, 4);
             cbTinh.Name = "cbTinh";
-            cbTinh.Size = new Size(346, 38);
+            cbTinh.Size = new Size(393, 38);
             cbTinh.TabIndex = 26;
             cbTinh.SelectedIndexChanged += cbTinh_SelectedIndexChanged;
             // 
@@ -413,7 +415,7 @@ namespace UI.HoSo
             txtSoNha.Location = new Point(225, 157);
             txtSoNha.Margin = new Padding(3, 4, 3, 4);
             txtSoNha.Name = "txtSoNha";
-            txtSoNha.Size = new Size(345, 36);
+            txtSoNha.Size = new Size(392, 36);
             txtSoNha.TabIndex = 29;
             // 
             // cbPhuongXa
@@ -422,7 +424,7 @@ namespace UI.HoSo
             cbPhuongXa.Location = new Point(225, 105);
             cbPhuongXa.Margin = new Padding(3, 4, 3, 4);
             cbPhuongXa.Name = "cbPhuongXa";
-            cbPhuongXa.Size = new Size(346, 38);
+            cbPhuongXa.Size = new Size(393, 38);
             cbPhuongXa.TabIndex = 27;
             // 
             // label16
@@ -446,11 +448,11 @@ namespace UI.HoSo
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label8);
             groupBox1.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(1017, 119);
+            groupBox1.Location = new Point(1006, 119);
             groupBox1.Margin = new Padding(3, 4, 34, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(601, 650);
+            groupBox1.Size = new Size(601, 651);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "SỨC KHỎE CÁ NHÂN";
@@ -472,7 +474,7 @@ namespace UI.HoSo
             // 
             rtxTinhTrang.Font = new Font("Segoe UI Semibold", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rtxTinhTrang.ForeColor = Color.FromArgb(64, 0, 64);
-            rtxTinhTrang.Location = new Point(19, 82);
+            rtxTinhTrang.Location = new Point(19, 83);
             rtxTinhTrang.Margin = new Padding(3, 4, 3, 4);
             rtxTinhTrang.Name = "rtxTinhTrang";
             rtxTinhTrang.Size = new Size(537, 192);
@@ -509,9 +511,11 @@ namespace UI.HoSo
             dtpNgayKham.Format = DateTimePickerFormat.Custom;
             dtpNgayKham.Location = new Point(155, 287);
             dtpNgayKham.Margin = new Padding(3, 4, 3, 4);
+            dtpNgayKham.MaxDate = new DateTime(2025, 10, 22, 22, 3, 31, 422);
             dtpNgayKham.Name = "dtpNgayKham";
             dtpNgayKham.Size = new Size(157, 36);
             dtpNgayKham.TabIndex = 21;
+            dtpNgayKham.Value = new DateTime(2025, 10, 22, 22, 3, 31, 422);
             // 
             // label9
             // 
@@ -554,7 +558,7 @@ namespace UI.HoSo
             btnSubmit.HoverBorderColorD = Color.FromArgb(150, 149, 149);
             btnSubmit.HoverForeColor = Color.White;
             btnSubmit.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
-            btnSubmit.Location = new Point(540, 4);
+            btnSubmit.Location = new Point(534, 4);
             btnSubmit.Margin = new Padding(3, 4, 3, 4);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.NormalBGColorA = Color.FromArgb(237, 175, 81);
@@ -565,7 +569,7 @@ namespace UI.HoSo
             btnSubmit.NormalBorderColorD = Color.FromArgb(150, 149, 149);
             btnSubmit.NormalForeColor = Color.Black;
             btnSubmit.NormalShadowForeColor = Color.White;
-            btnSubmit.Size = new Size(540, 57);
+            btnSubmit.Size = new Size(533, 57);
             btnSubmit.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnSubmit.TabIndex = 6;
             btnSubmit.Text = "Thêm mới";
@@ -579,7 +583,6 @@ namespace UI.HoSo
             panel3.Controls.Add(txtSearch);
             panel3.Controls.Add(groupBox);
             panel3.Controls.Add(groupBox1);
-            panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
@@ -667,7 +670,7 @@ namespace UI.HoSo
             btnReset.NormalBorderColorD = Color.FromArgb(150, 149, 149);
             btnReset.NormalForeColor = Color.Black;
             btnReset.NormalShadowForeColor = Color.White;
-            btnReset.Size = new Size(531, 57);
+            btnReset.Size = new Size(525, 57);
             btnReset.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnReset.TabIndex = 7;
             btnReset.Text = "Đặt lại";
@@ -695,7 +698,7 @@ namespace UI.HoSo
             btnCapNhat.HoverBorderColorD = Color.FromArgb(150, 149, 149);
             btnCapNhat.HoverForeColor = Color.White;
             btnCapNhat.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
-            btnCapNhat.Location = new Point(1086, 4);
+            btnCapNhat.Location = new Point(1073, 4);
             btnCapNhat.Margin = new Padding(3, 4, 3, 4);
             btnCapNhat.Name = "btnCapNhat";
             btnCapNhat.NormalBGColorA = Color.FromArgb(237, 175, 81);
@@ -706,7 +709,7 @@ namespace UI.HoSo
             btnCapNhat.NormalBorderColorD = Color.FromArgb(150, 149, 149);
             btnCapNhat.NormalForeColor = Color.Black;
             btnCapNhat.NormalShadowForeColor = Color.White;
-            btnCapNhat.Size = new Size(531, 57);
+            btnCapNhat.Size = new Size(525, 57);
             btnCapNhat.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             btnCapNhat.TabIndex = 8;
             btnCapNhat.Text = "Cập nhật";
@@ -785,8 +788,8 @@ namespace UI.HoSo
             this.radioNam.Checked = false;
             this.radioNu.Checked = false;
             this.txtEmail.Text = "";
-            this.dtpNgaySinh.Value = DateTime.Now;
-            this.dtpNgayKham.Value = DateTime.Now;
+            this.dtpNgaySinh.Value = new DateTime(2000, 1, 1);
+            this.dtpNgayKham.Value = new DateTime(2025, 1, 1);
             this.rtxTinhTrang.Text = "";
             this.txtSDT.Text = "";
             this.pictureBoxAnhDaiDien.Image = null;

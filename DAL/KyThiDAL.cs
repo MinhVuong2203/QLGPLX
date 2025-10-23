@@ -77,63 +77,53 @@ namespace DAL
         // Add a KetQuaThi entry for (kyThiId, hoSoId) with default values
         public void AddParticipant(int kyThiId, int hoSoId)
         {
-            // if already exists for same kyThi and hoSo, skip
             var exists = DatabaseSession.Context.KetQuaThis.Any(k => k.KyThiId == kyThiId && k.HoSoId == hoSoId);
             if (exists) return;
 
-            var newEntry = new KetQuaThi
-            {
-                HoSoId = hoSoId,
-                KyThiId = kyThiId,
-                LanThi = 1,
-                KetQuaTongHop = "Chưa thi",
-                NgayKetLuan = DateTime.Now
-            };
-            DatabaseSession.Context.KetQuaThis.Add(newEntry);
-            DatabaseSession.Context.SaveChanges();
-            DatabaseSession.Context.ChangeTracker.Clear();
+            DatabaseSession.Context.Database.ExecuteSqlRaw(
+                @"INSERT INTO KetQuaThi (HoSoId, KyThiId, LanThi, KetQuaTongHop, NgayKetLuan) 
+                VALUES ({0}, {1}, {2}, {3}, {4})",
+                hoSoId, kyThiId, 1, "Chưa thi", DateTime.Now
+            );
         }
 
         // Remove participant entries for a kyThi-hoSo pair (used when "Xóa" from a Sắp diễn ra kỳ thi)
         public void RemoveParticipant(int kyThiId, int hoSoId)
         {
-            var items = DatabaseSession.Context.KetQuaThis
-                .Where(k => k.KyThiId == kyThiId && k.HoSoId == hoSoId)
-                .ToList();
-            if (!items.Any()) return;
-
-            DatabaseSession.Context.KetQuaThis.RemoveRange(items);
-            DatabaseSession.Context.SaveChanges();
+            DatabaseSession.Context.Database.ExecuteSqlRaw(
+                @"DELETE FROM KetQuaThi 
+          WHERE KyThiId = {0} AND HoSoId = {1}",
+                kyThiId, hoSoId
+            );
         }
 
-        // Add a retry attempt for a participant in an ongoing exam.
-        // Returns true if new attempt added, false if already at max attempts (3).
         public bool RetryParticipant(int kyThiId, int hoSoId)
         {
-            // find max existing LanThi for this pair
-            var maxLan = DatabaseSession.Context.KetQuaThis
-                .Where(k => k.KyThiId == kyThiId && k.HoSoId == hoSoId)
+            // Find max existing LanThi for this pair
+            var maxLanResult = DatabaseSession.Context.KetQuaThis
+                .FromSqlRaw(
+                    @"SELECT TOP 1 * FROM KetQuaThi 
+              WHERE KyThiId = {0} AND HoSoId = {1} 
+              ORDER BY LanThi DESC",
+                    kyThiId, hoSoId
+                )
                 .Select(k => (int?)k.LanThi)
-                .Max();
+                .FirstOrDefault();
 
-            int currentMax = maxLan ?? 0;
+            int currentMax = maxLanResult ?? 0;
+
             if (currentMax >= 3)
             {
                 return false; // cannot retry more than 3 times
             }
 
-            var newEntry = new KetQuaThi
-            {
-                HoSoId = hoSoId,
-                KyThiId = kyThiId,
-                LanThi = currentMax + 1,
-                KetQuaTongHop = "Chưa thi",
-                NgayKetLuan = DateTime.Now
-            };
+            // Insert new retry record
+            DatabaseSession.Context.Database.ExecuteSqlRaw(
+                @"INSERT INTO KetQuaThi (HoSoId, KyThiId, LanThi, KetQuaTongHop, NgayKetLuan) 
+          VALUES ({0}, {1}, {2}, {3}, {4})",
+                hoSoId, kyThiId, currentMax + 1, "Chưa thi", DateTime.Now
+            );
 
-            DatabaseSession.Context.KetQuaThis.Add(newEntry);
-            DatabaseSession.Context.SaveChanges();
-            DatabaseSession.Context.ChangeTracker.Clear();
             return true;
         }
 
